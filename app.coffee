@@ -1,11 +1,13 @@
+i18n = require 'roots-i18n'
 browserify = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
 config = require 'roots-config'
 
 module.exports =
-	ignores: ['*.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
+	ignores: ['*.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf', 'translations/*']
 	
 	extensions: [
+		i18n(translations: 'translations/*', viewExtension: 'jade'),
 		browserify(files: 'assets/js/main.js', out: 'js/build.js', sourceMap: true),
 		css_pipeline(files: 'assets/css/main.css', out: 'css/build.css'),
 		config()

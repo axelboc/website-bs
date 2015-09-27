@@ -1,0 +1,6 @@
+dir: en/
+lang: en
+
+hello:
+  title: Hello World!
+  body: This is the English version of the site.

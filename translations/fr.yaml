@@ -1,0 +1,6 @@
+dir: fr/
+lang: fr
+
+hello:
+  title: Bonjour tout le monde !
+  body: Ceci est la version française du site.
