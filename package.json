@@ -11,7 +11,7 @@
     "start": "roots watch",
     "build": "roots compile",
     "clean": "roots clean",
-    "deploy": "roots deploy -e production"
+    "deploy": "roots compile -e production && ship public/ -to gh-pages"
   },
   "dependencies": {
     "normalize.css": "^3.0.3"
@@ -29,6 +29,7 @@
     "postcss-import": "^7.0.0",
     "postcss-nested": "^1.0.0",
     "roots-browserify": "^0.5.0",
-    "roots-config": "0.0.2"
+    "roots-config": "0.0.2",
+    "ship": "^0.2.5"
   }
 }
