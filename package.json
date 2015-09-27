@@ -10,9 +10,9 @@
   },
   "scripts": {
     "start": "roots watch",
-    "build": "roots compile",
     "clean": "roots clean",
-    "deploy": "roots compile -e production && node deploy"
+    "build": "roots compile",
+    "prod": "roots compile -e production"
   },
   "dependencies": {
     "normalize.css": "^3.0.3"
