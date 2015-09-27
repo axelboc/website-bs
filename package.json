@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Website of symphonic metal band Benighted Soul.",
   "author": "Axel Bocciarelli",
+  "license": "LICENSE.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/axelboc/website-bs"
@@ -28,6 +29,7 @@
     "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
     "postcss-nested": "^1.0.0",
+    "roots": "^3.1.0",
     "roots-browserify": "^0.5.0",
     "roots-config": "0.0.2",
     "ship": "^0.2.5"
