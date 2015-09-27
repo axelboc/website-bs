@@ -12,7 +12,7 @@
     "start": "roots watch",
     "build": "roots compile",
     "clean": "roots clean",
-    "deploy": "roots compile -e production && ship public/ -to gh-pages"
+    "deploy": "roots compile -e production && node deploy"
   },
   "dependencies": {
     "normalize.css": "^3.0.3"
