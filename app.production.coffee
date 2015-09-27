@@ -12,4 +12,9 @@ module.exports =
 	]
 
 	postcss:
-		use: []
+		use: [
+			require('postcss-import')({ path: 'assets/css' }),
+			require('postcss-nested'),
+			require('postcss-custom-properties'),
+			require('cssnano')({ autoprefixer: ['> 2% in AU'] })
+		]

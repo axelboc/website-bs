@@ -13,14 +13,21 @@
     "clean": "roots clean",
     "deploy": "roots deploy -e production"
   },
+  "dependencies": {
+    "normalize.css": "^3.0.3"
+  },
   "devDependencies": {
     "browserify": "^11.2.0",
     "css-pipeline": "0.3.x",
+    "cssnano": "^3.2.0",
     "jade": "1.x",
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "0.0.x",
     "marked": "0.3.x",
     "postcss": "^5.0.8",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^7.0.0",
+    "postcss-nested": "^1.0.0",
     "roots-browserify": "^0.5.0",
     "roots-config": "0.0.2"
   }
