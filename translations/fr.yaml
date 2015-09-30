@@ -1,6 +1,10 @@
 dir: fr/
 lang: fr
 
+meta:
+  title: Benighted Soul - Site Officiel
+  description: Site officiel du groupe français de metal symphonique et progressif Benighted Soul.
+
 hello:
   title: Bonjour tout le monde !
   body: Ceci est la version française du site.

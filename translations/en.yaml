@@ -1,6 +1,10 @@
 dir: en/
 lang: en
 
+meta:
+  title: Benighted Soul - Official Website
+  description: Official website of the symphonic and progressive metal band Benighted Soul.
+
 hello:
   title: Hello World!
   body: This is the English version of the site.
