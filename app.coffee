@@ -1,16 +1,27 @@
-i18n = require 'roots-i18n'
+roots_yaml = require('roots-yaml')
 browserify = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
-config = require 'roots-config'
 
 module.exports =
-  ignores: ['*.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf', 'translations/*']
+  ignores: [
+    '*.md'
+    '.gitignore'
+    '**/_*'
+    'views/layout.jade'
+  ]
 
   extensions: [
-    i18n(translations: 'translations/*', viewExtension: 'jade'),
-    browserify(files: 'assets/js/main.js', out: 'js/build.js', sourceMap: true),
-    css_pipeline(files: 'assets/css/main.css', out: 'css/build.css'),
-    config()
+    roots_yaml
+      source: 'data'
+    
+    browserify
+      files: 'assets/js/main.js'
+      out: 'js/build.js'
+      sourceMap: true
+    
+    css_pipeline
+      files: 'assets/css/main.css'
+      out: 'css/build.css'
   ]
 
   server:
@@ -18,10 +29,10 @@ module.exports =
 
   postcss:
     use: [
-      require('postcss-import')({ path: 'assets/css' }),
-      require('postcss-nested'),
+      require('postcss-import')(path: 'assets/css')
+      require('postcss-nested')
       require('postcss-custom-properties'),
-      require('cssnano')({ autoprefixer: ['> 2% in AU'] })
+      require('cssnano')(autoprefixer: ['> 2% in AU'])
     ]
     map: true
 
