@@ -1,14 +1,33 @@
-roots_yaml = require('roots-yaml')
+require('dotenv').load()
+
+marked = require 'marked'
+roots_config = require 'roots-config'
+roots_yaml = require 'roots-yaml'
+contentful = require 'roots-contentful'
 browserify = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
-config = require 'roots-config'
 
 module.exports =
-  ignores: ['*.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf', 'translations/*']
+  ignores: [
+    '*.md'
+    '.gitignore'
+    '**/_*'
+    'views/layout.jade'
+  ]
 
   extensions: [
+    roots_config
+      marked: marked
+    
     roots_yaml
       source: 'data'
+    
+    contentful
+      access_token: process.env.CONTENTFUL_KEY
+      space_id: process.env.CONTENTFUL_SPACE
+      content_types:
+        sections:
+          id: '4E63J3zDjOUE8k0ek0OM2K'
     
     browserify
       files: 'assets/js/main.js'

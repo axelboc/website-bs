@@ -21,6 +21,7 @@
     "browserify": "^11.2.0",
     "css-pipeline": "0.3.x",
     "cssnano": "^3.2.0",
+    "dotenv": "^1.2.0",
     "jade": "1.x",
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "0.0.x",
@@ -31,6 +32,7 @@
     "postcss-nested": "^1.0.0",
     "roots": "^3.1.0",
     "roots-browserify": "^0.5.0",
+    "roots-config": "0.0.2",
     "roots-contentful": "0.0.8",
     "roots-yaml": "0.0.4",
     "ship": "^0.2.5"
