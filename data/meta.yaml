@@ -1,0 +1,51 @@
+en:
+  index:
+    title: Benighted Soul
+    titleSuffix: Official Website
+    description: Official website of the symphonic and progressive metal band Benighted Soul.
+    
+  band:
+    title: The Band
+    description: The biography of the band since its creation, and a glimpse at the five members that make up Benighted Soul.
+  
+  discography:
+    title: Discography
+    description: 
+    
+  media:
+    title: Media
+    description:
+  
+  shop:
+    title: Shop
+    description: 
+  
+  contact:
+    title: Contact 
+    description:
+
+fr:
+  index:
+    title: Benighted Soul
+    titleSuffix: Site Officiel
+    description: Site officiel du groupe français de metal symphonique et progressif Benighted Soul.
+    
+  band:
+    title: The Band
+    description: La biographie du groupe depuis sa création, et un aperçu des cinq membres qui forment Benighted Soul.
+  
+  discographie:
+    title: Discographie
+    description: 
+    
+  media:
+    title: Média
+    description:
+  
+  shop:
+    title: Shop
+    description: 
+  
+  contact:
+    title: Contact 
+    description: 

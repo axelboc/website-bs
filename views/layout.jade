@@ -1,21 +1,22 @@
 //- Get the language and name of the page from its path
 - matches = /(en|fr)\/([a-z]+)/.exec(_path)
 - lang = matches ? matches[1] : 'en'
-- name = matches ? matches[2] : 'index'
+- page = matches ? matches[2] : 'index'
 
-//- Retrieve the page's data
-- page = data[lang][name]
+//- Retrieve the page's metadata
+- meta = data.meta[lang][page]
 
 doctype html
 html(lang=lang)
   head
     meta(charset="utf-8")
-    title= page.title
+    title= meta.title + ' | ' + (meta.titleSuffix || 'Benighted Soul')
     meta(name="description", content="{{ meta.description }}")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
+    h1= meta.title
     block content
     script(src="/assets/js/build.js")
     
