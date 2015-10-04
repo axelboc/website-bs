@@ -1,9 +1,3 @@
--
-  // Return the URL slug of a page given its name
-  function getSlug(name) {
-    return name === 'index' ? '' : name;
-  }
-
 // Wrap the logo with the appropriate element
 mixin logoWrap
   if isIndex
@@ -32,4 +26,4 @@ mixin releases(items, showType)
       if release.date
         span= release.date.substring(0, release.date.indexOf('-'))
       if showType
-        span= release.type
+        span= translate(release.type, pageData.releaseTypes)

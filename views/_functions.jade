@@ -1,0 +1,16 @@
+-
+  // Return the URL slug of a page given its name
+  function getSlug(name) {
+    return name === 'index' ? '' : name;
+  }
+  
+  // Translate a value with a dictionary
+  // Useful for translating fields displayed as drop-down menus in Contentful
+  function translate(value, dict) {
+    if (dict && dict[value]) {
+      return dict[value];
+    }
+      
+    return value;
+  }
+  

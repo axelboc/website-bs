@@ -1,3 +1,14 @@
 extends ../layout
 
 block content
+  section
+    h2= pageData.headings.albums
+    ol
+      + releases(contentful.albums)
+  
+  section
+    h2= pageData.headings.other
+    ol
+      + releases(contentful.other_releases, true)
+    
+    

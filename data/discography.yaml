@@ -11,4 +11,7 @@ fr:
   headings:
     albums: Albums studio
     other: Autres sorties
-    
+  releaseTypes:
+    Studio album: Album studio
+    Demo: Démo
+  

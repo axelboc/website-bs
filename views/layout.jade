@@ -1,3 +1,7 @@
+// Import functions and mixins
+include ./_functions
+include ./_mixins
+
 //- Get the language and name of the page from its path
 - matches = /(en|fr)\/([a-z]+)/.exec(_path)
 - lang = matches ? matches[1] : 'en'
@@ -6,9 +10,6 @@
 
 //- Retrieve the page's data
 - pageData = data[page][lang]
-
-// Import mixins
-include ./_mixins
 
 doctype html
 html(lang=lang)
