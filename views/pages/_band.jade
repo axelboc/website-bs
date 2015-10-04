@@ -1,4 +1,10 @@
 extends ../layout
 
 block content
+  ul
+    each member in contentful.members
+      li
+        = member.photo
+        p: strong= member.name
+        p= member[lang + 'Role']
   != config.marked(contentful.sections[0][lang + 'Biography'])

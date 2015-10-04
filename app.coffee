@@ -10,7 +10,7 @@ css_pipeline = require 'css-pipeline'
 module.exports =
   ignores: [
     '*.md'
-    '.gitignore'
+    '.git*'
     '**/_*'
     'views/layout.jade'
   ]
@@ -28,6 +28,9 @@ module.exports =
       content_types:
         sections:
           id: '4E63J3zDjOUE8k0ek0OM2K'
+        members:
+          id: '3tZoAWiIJ2aMYikSUkEyGc'
+          filters: { order: 'fields.order' }
     
     browserify
       files: 'assets/js/main.js'
