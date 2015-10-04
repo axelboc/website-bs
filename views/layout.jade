@@ -4,9 +4,8 @@
 - page = matches ? matches[2] : 'index'
 - isIndex = page === 'index'
 
-//- Retrieve the page's metadata
-- meta = data.meta[lang]
-- pageMeta = data.meta[lang][page]
+//- Retrieve the page's data
+- pageData = data[page][lang]
 
 // Import mixins
 include ./_mixins
@@ -15,31 +14,31 @@ doctype html
 html(lang=lang)
   head
     meta(charset="utf-8")
-    title= pageMeta.title + ' | ' + (pageMeta.titleSuffix || 'Benighted Soul')
-    meta(name="description", content="{{ pageMeta.description }}")
+    title= pageData.title + ' | ' + (pageData.titleSuffix || 'Benighted Soul')
+    meta(name="description", content="{{ pageData.description }}")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
     header
-      +wrapLogo
-        a(href="/#{lang}/")= meta.index.title
+      +logoWrap
+        a(href="/#{lang}/")= data.index[lang].title
         
       div
         +languageLink('en')
-        span |
+        span  | 
         +languageLink('fr')
 
       ul
-        li: a(href="/#{lang}/band")= meta.band.title
-        li: a(href="/#{lang}/discography")= meta.discography.title
-        li: a(href="/#{lang}/media")= meta.media.title
-        li: a(href="/#{lang}/shop")= meta.shop.title
-        li: a(href="/#{lang}/contact")= meta.contact.title
+        +navItem('band')
+        +navItem('discography')
+        +navItem('media')
+        +navItem('shop')
+        +navItem('contact')
     
     main
       unless page === 'index'
-        h1= pageMeta.title
+        h1= pageData.title
       block content
       
     footer

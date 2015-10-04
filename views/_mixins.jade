@@ -1,14 +1,35 @@
+-
+  // Return the URL slug of a page given its name
+  function getSlug(name) {
+    return name === 'index' ? '' : name;
+  }
+
 // Wrap the logo with the appropriate element
-mixin wrapLogo
+mixin logoWrap
   if isIndex
     h1: block
   else
     div: block
 
-// Language link (or a simple span if it is the current language)
+// Output a language link (or a simple span if it is the current language)
 mixin languageLink(code)
-  - var label = meta.languages[code]
+  - label = data.languages[lang][code]
   if lang === code
-    span= label
+    span(title=label)= code.toUpperCase()
   else
-    a(href="/#{code}/#{isIndex ? '' : page}")= label
+    a(href="/#{code}/#{getSlug(page)}", title=label)= code.toUpperCase()
+
+mixin navItem(name)
+  li
+    a(href="/#{lang}/#{getSlug(name)}")= data[name][lang].title
+
+// Output releases as list items, optionally showing the type of the releases
+mixin releases(items, showType)
+  each release in items
+    li
+      = release.cover
+      h3= release.title
+      if release.date
+        span= release.date.substring(0, release.date.indexOf('-'))
+      if showType
+        span= release.type
