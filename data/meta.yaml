@@ -1,4 +1,8 @@
 en:
+  languages:
+    en: English version
+    fr: French version
+
   index:
     title: Benighted Soul
     titleSuffix: Official Website
@@ -25,6 +29,10 @@ en:
     description:
 
 fr:
+  languages:
+    en: Version anglaise
+    fr: Version française
+  
   index:
     title: Benighted Soul
     titleSuffix: Site Officiel

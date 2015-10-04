@@ -21,20 +21,29 @@ html(lang=lang)
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
-    +wrapLogo
-      a(href="/#{lang}/")= meta.index.title
+    header
+      +wrapLogo
+        a(href="/#{lang}/")= meta.index.title
+        
+      div
+        +languageLink('en')
+        span |
+        +languageLink('fr')
+
+      ul
+        li: a(href="/#{lang}/band")= meta.band.title
+        li: a(href="/#{lang}/discography")= meta.discography.title
+        li: a(href="/#{lang}/media")= meta.media.title
+        li: a(href="/#{lang}/shop")= meta.shop.title
+        li: a(href="/#{lang}/contact")= meta.contact.title
+    
+    main
+      unless page === 'index'
+        h1= pageMeta.title
+      block content
       
-    ul
-      li: a(href="/#{lang}/band")= meta.band.title
-      li: a(href="/#{lang}/discography")= meta.discography.title
-      li: a(href="/#{lang}/media")= meta.media.title
-      li: a(href="/#{lang}/shop")= meta.shop.title
-      li: a(href="/#{lang}/contact")= meta.contact.title
+    footer
       
-    unless page === 'index'
-      h1= pageMeta.title
-      
-    block content
     
     script(src="/assets/js/build.js")
     

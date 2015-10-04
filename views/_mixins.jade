@@ -4,3 +4,11 @@ mixin wrapLogo
     h1: block
   else
     div: block
+
+// Language link (or a simple span if it is the current language)
+mixin languageLink(code)
+  - var label = meta.languages[code]
+  if lang === code
+    span= label
+  else
+    a(href="/#{code}/#{isIndex ? '' : page}")= label
