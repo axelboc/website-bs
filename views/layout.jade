@@ -8,6 +8,9 @@
 - meta = data.meta[lang]
 - pageMeta = data.meta[lang][page]
 
+// Import mixins
+include ./_mixins
+
 doctype html
 html(lang=lang)
   head
@@ -18,10 +21,8 @@ html(lang=lang)
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
-    if isIndex
-      h1: a(href="/#{lang}/")= meta.index.title
-    else
-      h2: a(href="/#{lang}/")= meta.index.title
+    +wrapLogo
+      a(href="/#{lang}/")= meta.index.title
       
     ul
       li: a(href="/#{lang}/band")= meta.band.title
