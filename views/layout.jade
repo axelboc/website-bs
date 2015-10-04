@@ -2,21 +2,38 @@
 - matches = /(en|fr)\/([a-z]+)/.exec(_path)
 - lang = matches ? matches[1] : 'en'
 - page = matches ? matches[2] : 'index'
+- isIndex = page === 'index'
 
 //- Retrieve the page's metadata
-- meta = data.meta[lang][page]
+- meta = data.meta[lang]
+- pageMeta = data.meta[lang][page]
 
 doctype html
 html(lang=lang)
   head
     meta(charset="utf-8")
-    title= meta.title + ' | ' + (meta.titleSuffix || 'Benighted Soul')
-    meta(name="description", content="{{ meta.description }}")
+    title= pageMeta.title + ' | ' + (pageMeta.titleSuffix || 'Benighted Soul')
+    meta(name="description", content="{{ pageMeta.description }}")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
-    h1= meta.title
+    if isIndex
+      h1: a(href="/#{lang}/")= meta.index.title
+    else
+      h2: a(href="/#{lang}/")= meta.index.title
+      
+    ul
+      li: a(href="/#{lang}/band")= meta.band.title
+      li: a(href="/#{lang}/discography")= meta.discography.title
+      li: a(href="/#{lang}/media")= meta.media.title
+      li: a(href="/#{lang}/shop")= meta.shop.title
+      li: a(href="/#{lang}/contact")= meta.contact.title
+      
+    unless page === 'index'
+      h1= pageMeta.title
+      
     block content
+    
     script(src="/assets/js/build.js")
     
