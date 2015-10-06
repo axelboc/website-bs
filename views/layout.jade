@@ -3,13 +3,13 @@ include ./_functions
 include ./_mixins
 
 //- Get the language and name of the page from its path
-- matches = /(en|fr)\/([a-z]+)/.exec(_path)
-- lang = matches ? matches[1] : 'en'
-- page = matches ? matches[2] : 'index'
-- isIndex = page === 'index'
+- var matches = /(en|fr)\/([a-z]+)/.exec(_path)
+- var lang = matches ? matches[1] : 'en'
+- var page = matches ? matches[2] : 'index'
+- var isIndex = page === 'index'
 
 //- Retrieve the page's data
-- pageData = data[page][lang]
+- var pageData = data[page][lang]
 
 doctype html
 html(lang=lang)

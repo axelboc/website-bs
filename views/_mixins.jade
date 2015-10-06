@@ -7,7 +7,7 @@ mixin logoWrap
 
 // Output a language link (or a simple span if it is the current language)
 mixin languageLink(code)
-  - label = data.languages[lang][code]
+  - var label = data.languages[lang][code]
   if lang === code
     span(title=label)= code.toUpperCase()
   else
@@ -17,13 +17,17 @@ mixin navItem(name)
   li
     a(href="/#{lang}/#{getSlug(name)}")= data[name][lang].title
 
+mixin widget(entry)
+  p= entry.fields.label
+
 // Output releases as list items, optionally showing the type of the releases
-mixin releases(items, showType)
-  each release in items
+mixin releases(entries, showType)
+  each release in entries
     li
       = release.cover
       h3= release.title
       if release.date
         span= release.date.substring(0, release.date.indexOf('-'))
       if showType
+        |  
         span= translate(release.type, pageData.releaseTypes)

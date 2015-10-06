@@ -1,3 +1,14 @@
 extends ../layout
 
 block content
+
+  - var homepage = contentful.homepages[0]
+  
+  case homepage.layout
+    when 'simple'
+      each widget in homepage.widgets
+        +widget(widget)
+  
+  section
+    h2= pageData.headings.news
+    h2= pageData.headings.twitter

@@ -26,6 +26,8 @@ module.exports =
       access_token: process.env.CONTENTFUL_KEY
       space_id: process.env.CONTENTFUL_SPACE
       content_types:
+        homepage:
+          id: '2R0y7K4EZGuiAKE2SQi8q4'
         sections:
           id: '4E63J3zDjOUE8k0ek0OM2K'
         members:

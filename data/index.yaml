@@ -2,9 +2,15 @@ en:
   title: Benighted Soul
   titleSuffix: Official Website
   description: Official website of the symphonic and progressive metal band Benighted Soul.
+  headings:
+    news: Latest news
+    twitter: Twitter
   
 fr:
   title: Benighted Soul
   titleSuffix: Site Officiel
   description: Site officiel du groupe français de metal symphonique et progressif Benighted Soul.
+  headings:
+    news: Dernières nouvelles
+    twitter: Twitter
   
