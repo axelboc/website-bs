@@ -23,7 +23,8 @@ html(lang=lang)
   body
     header
       +logoWrap
-        a(href="/#{lang}/")= data.index[lang].title
+        a(href="/#{lang}/")
+          img(src="/images/logo.png" width="477" height="150" alt=data.index[lang].title)
         
       div
         +languageLink('en')
