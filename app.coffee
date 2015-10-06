@@ -1,17 +1,11 @@
 require('dotenv').load()
+config = require './config'
 
-marked = require 'marked'
 roots_config = require 'roots-config'
 roots_yaml = require 'roots-yaml'
 contentful = require 'roots-contentful'
 browserify = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
-
-contentTypeIds = 
-  homepage: '2R0y7K4EZGuiAKE2SQi8q4'
-  section: '4E63J3zDjOUE8k0ek0OM2K'
-  member: '3tZoAWiIJ2aMYikSUkEyGc'
-  release: '4dQwa7ovxCwuAeAi0KE80G'
 
 module.exports =
   ignores: [
@@ -22,9 +16,7 @@ module.exports =
   ]
 
   extensions: [
-    roots_config
-      marked: marked
-      contentTypeIds: contentTypeIds
+    roots_config config
     
     roots_yaml
       source: 'data'
@@ -32,24 +24,7 @@ module.exports =
     contentful
       access_token: process.env.CONTENTFUL_KEY
       space_id: process.env.CONTENTFUL_SPACE
-      content_types:
-        homepages:
-          id: contentTypeIds.homepage
-          filter: 'fields.isCurrent': true
-        sections: id: contentTypeIds.section
-        members:
-          id: contentTypeIds.member
-          filters: order: 'fields.order'
-        albums:
-          id: contentTypeIds.release
-          filters:
-            'fields.type': 'Studio album'
-            order: 'fields.date'
-        other_releases:
-          id: contentTypeIds.release
-          filters:
-            'fields.type[ne]': 'Studio album'
-            order: 'fields.date'
+      content_types: config.contentTypes
     
     browserify
       files: 'assets/js/main.js'

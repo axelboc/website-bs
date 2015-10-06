@@ -1,6 +1,6 @@
 require('dotenv').load()
+config = require './config'
 
-marked = require 'marked'
 roots_config = require 'roots-config'
 roots_yaml = require 'roots-yaml'
 contentful = require 'roots-contentful'
@@ -16,8 +16,7 @@ module.exports =
   ]
 
   extensions: [
-    roots_config
-      marked: marked
+    roots_config config
     
     roots_yaml
       source: 'data'
@@ -25,25 +24,7 @@ module.exports =
     contentful
       access_token: process.env.CONTENTFUL_KEY
       space_id: process.env.CONTENTFUL_SPACE
-      content_types:
-        homepage:
-          id: '2R0y7K4EZGuiAKE2SQi8q4'
-        sections:
-          id: '4E63J3zDjOUE8k0ek0OM2K'
-        members:
-          id: '3tZoAWiIJ2aMYikSUkEyGc'
-          filters:
-            order: 'fields.order'
-        albums:
-          id: '4dQwa7ovxCwuAeAi0KE80G'
-          filters:
-            'fields.type': 'Studio album'
-            order: 'fields.date'
-        other_releases:
-          id: '4dQwa7ovxCwuAeAi0KE80G'
-          filters:
-            'fields.type[ne]': 'Studio album'
-            order: 'fields.date'
+      content_types: config.contentTypes
     
     browserify
       files: 'assets/js/main.js'
