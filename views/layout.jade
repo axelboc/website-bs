@@ -3,7 +3,7 @@ include _functions
 include _mixins
 
 //- Get the language and name of the page from its path
-- var matches = /(en|fr)\/([a-z]+)/.exec(_path)
+- var matches = /(en|fr)\/([a-z\-]+)/.exec(_path)
 - var lang = matches ? matches[1] : 'en'
 - var page = matches ? matches[2] : 'index'
 - var isIndex = page === 'index'

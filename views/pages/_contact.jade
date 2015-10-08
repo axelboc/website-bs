@@ -1,3 +1,16 @@
 extends ../layout
 
 block content
+  != config.marked(contentful.sections[0][lang + 'ContactIntro'])
+  form(name="contact", action="thank-you" netlify)
+    fieldset
+      div
+        label(for="name")= pageData.form.name
+        input#name(name="name", type="text")
+      div
+        label(for="email")= pageData.form.email
+        input#email(name="email", type="text")
+      div
+        label(for="message")= pageData.form.message
+        textarea#message(name="message")
+    button= pageData.form.send

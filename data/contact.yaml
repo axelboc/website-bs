@@ -1,7 +1,18 @@
 en:
   title: Contact 
   description:
+  form:
+    name: Name
+    email: Email
+    message: Message
+    send: Send
 
 fr:
   title: Contact 
-  description: 
+  description:
+  form:
+    name: Nom
+    email: Email
+    message: Message
+    send: Envoyer
+    
