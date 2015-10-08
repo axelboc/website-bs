@@ -1,4 +1,10 @@
 
 @import 'normalize.css';
 
+body {
+  background: url(/images/bg.jpg); /* subtlepatterns.com */
+}
 
+.icons {
+  display: none;
+}

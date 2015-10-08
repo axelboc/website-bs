@@ -5,6 +5,11 @@ mixin logoWrap
   else
     div: block
 
+// Output an SVG icon
+mixin icon(name)
+  svg.icon
+    use(xlink:href="#icon-#{name}")
+
 // Output a language link (or a simple span if it is the current language)
 mixin languageLink(code)
   - var label = data.languages[lang][code]

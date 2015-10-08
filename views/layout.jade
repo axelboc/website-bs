@@ -1,6 +1,6 @@
 // Import functions and mixins
-include ./_functions
-include ./_mixins
+include _functions
+include _mixins
 
 //- Get the language and name of the page from its path
 - var matches = /(en|fr)\/([a-z]+)/.exec(_path)
@@ -21,11 +21,18 @@ html(lang=lang)
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
+    include _icons.svg
+  
     header
       +logoWrap
         a(href="/#{lang}/")
           img(src="/images/logo.png" width="477" height="150" alt=data.index[lang].title)
-        
+      
+      ul
+        li: a(href="https://www.facebook.com/benightedsoul/"): +icon('facebook')
+        li: a(href="https://twitter.com/benightedsoul/"): +icon('twitter')
+        li: a(href="https://www.youtube.com/user/benightedsoul"): +icon('youtube')
+      
       div
         +languageLink('en')
         span  | 
