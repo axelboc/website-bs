@@ -36,11 +36,18 @@ config.contentTypes = {
     }
   },
   
-  other_releases: {
+  otherReleases: {
     id: config.contentTypeIds.release,
     filters: {
       'fields.type[ne]': 'Studio album',
       order: 'fields.date'
+    }
+  },
+  
+  videoPlaylists: {
+    id: config.contentTypeIds.videoPlaylist,
+    filters: {
+      order: 'fields.order'
     }
   }
   

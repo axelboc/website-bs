@@ -17,7 +17,7 @@ html(lang=lang)
     meta(charset="utf-8")
     title= pageData.title + ' | ' + (pageData.titleSuffix || 'Benighted Soul')
     meta(name="description", content="{{ pageData.description }}")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
@@ -26,7 +26,7 @@ html(lang=lang)
     header
       +logoWrap
         a(href="/#{lang}/")
-          img(src="/images/logo.png" width="477" height="150" alt=data.index[lang].title)
+          img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
       
       ul
         li: a(href="https://www.facebook.com/benightedsoul/"): +icon('facebook')

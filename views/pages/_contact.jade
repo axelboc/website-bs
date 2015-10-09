@@ -1,8 +1,8 @@
 extends ../layout
 
 block content
-  != config.marked(contentful.sections[0][lang + 'ContactIntro'])
-  form(name="contact", action="thank-you" netlify)
+  != config.marked(getSection('Contact intro'))
+  form(name="contact", action="thank-you", netlify)
     fieldset
       div
         label(for="name")= pageData.form.name

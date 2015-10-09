@@ -1,4 +1,4 @@
 extends ../layout
 
 block content
-  != config.marked(contentful.sections[0][lang + 'ThankYou'])
+  != config.marked(getSection('Thank you'))

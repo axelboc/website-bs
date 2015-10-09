@@ -14,3 +14,15 @@
     return value;
   }
   
+  // Find entries by the value of one of their fields
+  function findEntries(entries, field, value) {
+    return entries.filter(function (entry) {
+      return entry[field] === value;
+    });
+  }
+  
+  // Retrieve the localised content of a section by name
+  function getSection(name) {
+    return findEntries(contentful.sections, 'name', name)[0][lang];
+  }
+  

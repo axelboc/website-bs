@@ -1,7 +1,15 @@
 en:
   title: Media
   description:
+  headings:
+    press: Press
+    videos: Videos
+    photos: Photos
 
 fr:
   title: Média
   description:
+  headings:
+    press: Press
+    videos: Vidéos
+    photos: Photos
