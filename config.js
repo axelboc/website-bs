@@ -1,11 +1,12 @@
 
-var package = require('./package.json');
-var marked = require('marked');
-
-var config = package.config;
+// Load initial config from package.json
+var config = require('./package.json').config;
 
 // Markdown filter for use in Jade templates
-config.marked = marked;
+config.marked = require('marked');
+
+// Cloudinary API for assets
+config.cloudinary = require('cloudinary');
 
 // Custom Contentful content types 
 config.contentTypes = {

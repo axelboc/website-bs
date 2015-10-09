@@ -4,7 +4,7 @@ block content
   ul
     each member in contentful.members
       li
-        = member.photo
+        img(src=member.photoUrl, alt="Jay")
         p: strong= member.name
         p= member[lang + 'Role']
   
