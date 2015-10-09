@@ -5,6 +5,8 @@ en:
     press: Press
     videos: Videos
     photos: Photos
+    kenoticBooklet: Kenotic booklet 
+    promo2013: Promo 2013
 
 fr:
   title: Média
@@ -13,3 +15,14 @@ fr:
     press: Press
     videos: Vidéos
     photos: Photos
+    kenoticBooklet: Plaquette Kenotic 
+    promo2013: Promo 2013
+
+galleries:
+  - name: kenoticBooklet
+    prefix: kenotic-booklet
+    photos: 1 2 3 4 5 6 7
+  - name: promo2013
+    prefix: promo2013
+    photos: band-01 band-03 band-03 jay flav jeyms djang harko
+    

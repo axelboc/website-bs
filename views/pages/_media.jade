@@ -16,3 +16,8 @@ block content
     
   section
     h2= pageData.headings.photos
+    each gallery in data.media.galleries
+      section
+        h3= pageData[gallery.name]
+        each photo in gallery.photos.split(' ')
+          img(src="#{config.cloudinaryUrl}/t_gallery_thumb/#{gallery.prefix}-#{photo}.jpg", alt="")
