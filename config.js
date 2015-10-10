@@ -16,7 +16,7 @@ config.contentTypes = {
     id: config.contentTypeIds.release,
     filters: {
       'fields.type': 'Studio album',
-      order: 'fields.date'
+      order: '-fields.date'
     }
   },
   
@@ -38,7 +38,14 @@ config.contentTypes = {
     id: config.contentTypeIds.release,
     filters: {
       'fields.type[ne]': 'Studio album',
-      order: 'fields.date'
+      order: '-fields.date'
+    }
+  },
+  
+  photoGalleries: {
+    id: config.contentTypeIds.photoGallery,
+    filters: {
+      order: 'fields.order'
     }
   },
   

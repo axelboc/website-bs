@@ -4,7 +4,7 @@ block content
   ul
     each member in contentful.members
       li
-        img(src=member.photoUrl, alt="Jay")
+        img(src!=asset(member.photo), alt=member.pseudo)
         p: strong= member.name
         p= member[lang + 'Role']
   
