@@ -5,10 +5,6 @@ var config = require('./package.json').config;
 // Markdown filter for use in Jade templates
 config.marked = require('marked');
 
-// Cloudinary API and URL for assets
-config.cloudinary = require('cloudinary');
-config.cloudinaryUrl = 'http://res.cloudinary.com/benightedsoul/image/upload';
-
 // Custom Contentful content types 
 config.contentTypes = {
   

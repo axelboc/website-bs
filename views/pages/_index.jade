@@ -9,6 +9,14 @@ block content
       each widget in homepage.widgets
         +widget(widget)
   
-  section
-    h2= pageData.headings.news
+  aside
+    section.FacebookFeed
+      #fb-root
+      .FacebookFeed__loading(hidden)
+        img.FacebookFeed_spinner(src="images/spinner.png", alt="", width="100", height="100")
+        p= pageData.text.loadingFB
+      .FacebookFeed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="500", data-height="700", data-show-facepile="false", data-show-posts="true")
+        .fb-xfbml-parse-ignore
+            
     h2= pageData.headings.twitter
+    

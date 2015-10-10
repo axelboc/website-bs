@@ -25,7 +25,6 @@
     }
   },
   "dependencies": {
-    "cloudinary": "^1.2.4",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
