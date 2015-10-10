@@ -2,21 +2,19 @@ en:
   title: Media
   description:
   headings:
-    press: Press
     videos: Videos
     photos: Photos
     kenoticBooklet: Kenotic booklet 
-    promo2013: Promo 2013
+    promo2013: 2013 promo photos
 
 fr:
   title: Média
   description:
   headings:
-    press: Press
     videos: Vidéos
     photos: Photos
-    kenoticBooklet: Plaquette Kenotic 
-    promo2013: Promo 2013
+    kenoticBooklet: Livret de Kenotic 
+    promo2013: Photos promo 2013
 
 galleries:
   - name: kenoticBooklet

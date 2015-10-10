@@ -2,22 +2,15 @@ extends ../layout
 
 block content
   
-  section
-    h2= pageData.headings.press
+  each playlist in contentful.videoPlaylists
+    section
+      h2= playlist[lang + 'Title']
+      each index in [1, 2]
+        - var videoUrl = playlist['featuredVideo' + index];
+        iframe(width="640", height="360", src="#{videoUrl.replace('watch?v=', 'embed/')}?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
     
-  section
-    h2= pageData.headings.videos
-    each playlist in contentful.videoPlaylists
-      section
-        h3= playlist[lang + 'Title']
-        each index in [1, 2]
-          - var videoUrl = playlist['featuredVideo' + index];
-          iframe(width="640", height="360", src="#{videoUrl.replace('watch?v=', 'embed/')}?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
-    
-  section
-    h2= pageData.headings.photos
-    each gallery in data.media.galleries
-      section
-        h3= pageData[gallery.name]
-        each photo in gallery.photos.split(' ')
-          img(src="#{config.cloudinaryUrl}/t_gallery_thumb/#{gallery.prefix}-#{photo}.jpg", alt="")
+  each gallery in data.media.galleries
+    section
+      h2= pageData.headings[gallery.name]
+      each photo in gallery.photos.split(' ')
+        img(src="#{config.cloudinaryUrl}/t_gallery_thumb/#{gallery.prefix}-#{photo}.jpg", alt="")
