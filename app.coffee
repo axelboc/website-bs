@@ -1,4 +1,4 @@
-require('dotenv').load()
+require('dotenv').config({ silent: true }).load()
 config = require './config'
 
 roots_config = require 'roots-config'
@@ -35,6 +35,9 @@ module.exports =
       files: 'assets/css/main.css'
       out: 'css/build.css'
   ]
+
+  after: (roots) ->
+    roots.compileContentfulViews()
 
   server:
     clean_urls: true

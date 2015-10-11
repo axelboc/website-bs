@@ -1,26 +1,29 @@
 extends ../layout
 
 block content
+
   section
     h2= pageData.headings.albums
     ol
       each album in contentful.albums
         li
-          img(src!=asset(album.cover, { w: 350, h: 350, q: 80 }), alt="")
-          h3= album.title
-          if album.date
-            span= album.date.substring(0, album.date.indexOf('-'))
+          a(href=album._urls[langIndex])
+            img(src!=asset(album.cover, { w: 350, h: 350, q: 80 }), alt="")
+            h3= album.title
+            if album.date
+              span= album.date.substring(0, album.date.indexOf('-'))
   
   section
     h2= pageData.headings.other
     ol
       each release in contentful.otherReleases
         li
-          img(src!=asset(release.cover, { w: 200, h: 200, q: 80 }), alt="")
-          h3= release.title
-          if release.date
-            span= release.date.substring(0, release.date.indexOf('-'))
-            |  
-            span= translate(release.type, pageData.contentTypes)
+          a(href=release._urls[langIndex])
+            img(src!=asset(release.cover, { w: 200, h: 200, q: 80 }), alt="")
+            h3= release.title
+            if release.date
+              span= release.date.substring(0, release.date.indexOf('-'))
+              |  
+              span= translate(release.type, pageData.contentTypes)
     
     

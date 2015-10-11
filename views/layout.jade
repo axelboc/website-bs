@@ -1,48 +1,33 @@
 // Import functions and mixins
-include _functions
-include _mixins
+include partials/_functions
+include partials/_mixins
+
+//- Determine whether an entry is being compiled, and get the path accordingly
+- var isEntry = !!entry
+- var path = isEntry ? entry._url : _path
 
 //- Get the language and name of the page from its path
-- var matches = /(en|fr)\/([a-z\-]+)/.exec(_path)
+- var matches = /^\/(en|fr)\/([a-z\-\/]+)\.html$/.exec(path)
 - var lang = matches ? matches[1] : 'en'
 - var page = matches ? matches[2] : 'index'
+- var langIndex = config.languages.indexOf(lang)
 - var isIndex = page === 'index'
 
 //- Retrieve the page's data
-- var pageData = data[page][lang]
+- var pageData = isEntry ? entry : data[page][lang]
 
 doctype html
 html(lang=lang)
   head
     meta(charset="utf-8")
     title= pageData.title + ' | ' + (pageData.titleSuffix || 'Benighted Soul')
-    meta(name="description", content="{{ pageData.description }}")
+    meta(name="description", content=(pageData.description || ''))
     meta(name="viewport", content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
   body
-    include _icons.svg
-  
-    header
-      +logoWrap
-        a(href="/#{lang}/")
-          img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
-      
-      ul
-        each url, name in config.networkUrls
-          li: a(href=url): +icon(name)
-      
-      div
-        +languageLink('en')
-        span  | 
-        +languageLink('fr')
-
-      ul
-        +navItem('band')
-        +navItem('discography')
-        +navItem('media')
-        +navItem('shop')
-        +navItem('contact')
+    include partials/_icons.svg
+    include partials/_header
     
     main
       unless page === 'index'

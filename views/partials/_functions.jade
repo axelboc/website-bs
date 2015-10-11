@@ -4,6 +4,11 @@
     return name === 'index' ? '' : name;
   }
   
+  // Remove the file extension from a path
+  function removeExt(path) {
+    return path.substring(0, path.lastIndexOf('.'));
+  }
+  
   // Translate a value with a dictionary
   // Useful for translating fields displayed as drop-down menus in Contentful
   function translate(value, dict) {

@@ -1,0 +1,14 @@
+// Wrap the logo with the appropriate element
+mixin logoWrap
+  if isIndex
+    h1: block
+  else
+    div: block
+
+// Output an SVG icon
+mixin icon(name)
+  svg.icon
+    use(xlink:href="#icon-#{name}")
+
+mixin widget(entry)
+  p= entry.fields.label

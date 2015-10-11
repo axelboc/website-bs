@@ -15,6 +15,10 @@
     "prod": "roots compile -e production"
   },
   "config": {
+    "languages": [
+      "en",
+      "fr"
+    ],
     "networkUrls": {
       "facebook": "https://www.facebook.com/benightedsoul/",
       "youtube": "https://www.youtube.com/user/benightedsoul",
@@ -50,7 +54,7 @@
     "roots": "^3.1.0",
     "roots-browserify": "^0.5.0",
     "roots-config": "0.0.2",
-    "roots-contentful": "0.0.8",
+    "roots-contentful": "git://github.com/axelboc/roots-contentful.git#752ed6643d",
     "roots-yaml": "0.0.4",
     "ship": "^0.2.5"
   }

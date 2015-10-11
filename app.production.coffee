@@ -38,6 +38,9 @@ module.exports =
       hash: true
   ]
 
+  after: (roots) ->
+    roots.compileContentfulViews()
+
   postcss:
     use: [
       require('postcss-import')(path: 'assets/css'),

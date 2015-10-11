@@ -1,0 +1,23 @@
+header
+  +logoWrap
+    a(href="/#{lang}/")
+      img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
+
+  ul
+    each url, name in config.networkUrls
+      li: a(href=url): +icon(name)
+
+  ul
+    each code in config.languages
+      - var label = data.languages[lang][code]
+      li
+        if lang === code
+          span(title=label)= code.toUpperCase()
+        else
+          - 
+          a(href="/#{code}/#{getSlug(page)}", title=label)= code.toUpperCase()
+
+  ul
+    each item in ['band', 'discography', 'media', 'shop', 'contact']
+      li
+        a(href="/#{lang}/#{getSlug(item)}")= data[item][lang].title
