@@ -1,11 +1,14 @@
-require('dotenv').config({ silent: true }).load()
-config = require './config'
+dotenv = require('dotenv')
+dotenv.config(silent: true)
+dotenv.load()
 
 roots_config = require 'roots-config'
 roots_yaml = require 'roots-yaml'
 contentful = require 'roots-contentful'
 browserify = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
+
+config = require './config'
 
 module.exports =
   ignores: [
