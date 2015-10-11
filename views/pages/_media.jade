@@ -8,9 +8,15 @@ block content
       each index in [1, 2]
         - var videoUrl = playlist['video' + index];
         iframe(width="640", height="360", src="#{videoUrl.replace('watch?v=', 'embed/')}?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
+      a(href=playlist.playlistUrl)= pageData.ctaPlaylist
+  
+  a(href=config.networkUrls.youtube)= pageData.ctaYoutube
     
   each gallery in contentful.photoGalleries
     section
       h2= gallery[lang + 'Title']
-      each photo in gallery.photos
-        img(src=asset(photo, { w: 300, h: 300, q: 80 }), alt="")
+      ul
+        each photo in gallery.photos
+          li
+            img(src=asset(photo, { w: 300, h: 300, q: 80 }), alt="")
+  a(href=config.networkUrls.instagram)= pageData.ctaInstagram

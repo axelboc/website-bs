@@ -1,8 +1,13 @@
 en:
   title: Media
   description:
+  ctaPlaylist: Full playlist
+  ctaYoutube: Visit our YouTube channel
+  ctaInstagram: Find us on Instagram
 
 fr:
   title: Média
   description:
-  
+  ctaPlaylist: Playlist complète
+  ctaYoutube: Visitez notre chaîne YouTube
+  ctaInstagram: Suivez-nous sur Instagram

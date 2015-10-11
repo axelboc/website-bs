@@ -5,10 +5,8 @@
 function FacebookFeed(elem) {
   this.elem = elem;
   this.loading = this.elem.querySelector('.FacebookFeed__loading');
-  this.fallback = this.elem.querySelector('.FacebookFeed__fallback');
   
-  // Hide fallback and show loading spinner
-  this.fallback.setAttribute('hidden', 'hidden');
+  // Show loading spinner
   this.loading.removeAttribute('hidden');
   
   // Insert the Facebook SDK on the page
