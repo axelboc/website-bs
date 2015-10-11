@@ -15,6 +15,13 @@
     "prod": "roots compile -e production"
   },
   "config": {
+    "networkUrls": {
+      "facebook": "https://www.facebook.com/benightedsoul/",
+      "youtube": "https://www.youtube.com/user/benightedsoul",
+      "instagram": "https://www.instagram.com/benightedsoul",
+      "twitter": "https://twitter.com/benightedsoul/",
+      "googleplus": "https://plus.google.com/+Benightedsoulofficial"
+    },
     "contentTypeIds": {
       "homepage": "2R0y7K4EZGuiAKE2SQi8q4",
       "member": "3tZoAWiIJ2aMYikSUkEyGc",

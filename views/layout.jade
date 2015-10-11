@@ -29,11 +29,8 @@ html(lang=lang)
           img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
       
       ul
-        li: a(href="https://www.facebook.com/benightedsoul/"): +icon('facebook')
-        li: a(href="https://www.youtube.com/user/benightedsoul"): +icon('youtube')
-        li: a(href="https://www.instagram.com/benightedsoul"): +icon('instagram')
-        li: a(href="https://twitter.com/benightedsoul/"): +icon('twitter')
-        li: a(href="https://plus.google.com/+Benightedsoulofficial"): +icon('googleplus')
+        each url, name in config.networkUrls
+          li: a(href=url): +icon(name)
       
       div
         +languageLink('en')
