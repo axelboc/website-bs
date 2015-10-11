@@ -5,6 +5,8 @@ include partials/_mixins
 //- Determine whether an entry is being compiled, and get the path accordingly
 - var isEntry = !!entry
 - var path = isEntry ? entry._url : _path
+if isEntry
+  - console.log(entry._url)
 
 //- Get the language and name of the page from its path
 - var matches = /^\/(en|fr)\/([a-z\-\/]+)\.html$/.exec(path)
