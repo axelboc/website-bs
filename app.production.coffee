@@ -1,4 +1,4 @@
-require('dotenv')load(silent: true)
+require('dotenv').load(silent: true)
 config = require './config'
 
 roots_config = require 'roots-config'
