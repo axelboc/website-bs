@@ -4,6 +4,11 @@ en:
   headings:
     albums: Studio albums
     other: Other releases
+  releaseTypes:
+    album: Studio album
+    ep: EP
+    dvd: DVD
+    demo: Demo
       
 fr:
   title: Discographie
@@ -12,6 +17,76 @@ fr:
     albums: Albums studio
     other: Autres sorties
   releaseTypes:
-    Studio album: Album studio
-    Demo: Démo
-  
+    album: Album studio
+    ep: EP
+    dvd: DVD
+    demo: Démo
+    
+albums:
+  - kenotic
+  - start-from-scratch
+otherReleases:
+  - anesidora
+  - catharsis-live
+  - catharsis
+  - enchantment
+
+kenotic:
+  type: album
+  year: 2014
+  en:
+    title: Kenotic
+    description: 
+  fr:
+    title: Kenotic
+    description: 
+
+start-from-scratch:
+  type: album
+  year: 2011
+  en:
+    title: Start from Scratch
+    description: 
+  fr:
+    title: Start from Scratch
+    description: 
+
+anesidora:
+  type: ep
+  year: 2008
+  en:
+    title: Anesidora
+    description: 
+  fr:
+    title: Anesidora
+    description: 
+
+catharsis-live:
+  type: dvd
+  year: 2006
+  en:
+    title: Catharsis Live
+    description: 
+  fr:
+    title: Catharsis Live
+    description: 
+
+catharsis:
+  type: demo
+  year: 2006
+  en:
+    title: Catharsis
+    description: 
+  fr:
+    title: Catharsis
+    description: 
+
+enchantment:
+  type: demo
+  year: 2004
+  en:
+    title: Enchantment
+    description: 
+  fr:
+    title: Enchantment
+    description: 

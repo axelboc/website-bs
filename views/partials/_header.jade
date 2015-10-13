@@ -17,9 +17,9 @@ header
           span(title=label)= code.toUpperCase()
         else
           - 
-          a(href="/#{code}/#{getSlug(page)}", title=label)= code.toUpperCase()
+          a(href="/#{code}/#{getCorePath(page.crumbs)}", title=label)= code.toUpperCase()
 
   ul
     each item in ['band', 'discography', 'media', 'shop', 'contact']
       li
-        a(href="/#{lang}/#{getSlug(item)}")= data[item][lang].title
+        a(href="/#{lang}/#{item}")= data[item][lang].title

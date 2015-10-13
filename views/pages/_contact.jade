@@ -5,12 +5,12 @@ block content
   form(name="contact", action="thank-you", netlify)
     fieldset
       div
-        label(for="name")= pageData.form.name
+        label(for="name")= d.form.name
         input#name(name="name", type="text")
       div
-        label(for="email")= pageData.form.email
+        label(for="email")= d.form.email
         input#email(name="email", type="text")
       div
-        label(for="message")= pageData.form.message
+        label(for="message")= d.form.message
         textarea#message(name="message")
-    button= pageData.form.send
+    button= d.form.send

@@ -2,28 +2,17 @@
 include partials/_functions
 include partials/_mixins
 
-//- Determine whether an entry is being compiled, and get the path accordingly
-- var isEntry = !!entry
-- var path = isEntry ? entry._url : _path
-if isEntry
-  - console.log(entry._url)
-
-//- Get the language and name of the page from its path
-- var matches = /^\/(en|fr)\/([a-z\-\/]+)\.html$/.exec(path)
-- var lang = matches ? matches[1] : 'en'
-- var page = matches ? matches[2] : 'index'
-- var langIndex = config.languages.indexOf(lang)
-- var isIndex = page === 'index'
-
-//- Retrieve the page's data
-- var pageData = isEntry ? entry : data[page][lang]
+//- Initialise the page object and alias some common info
+- var page = initPage(_path);
+- var lang = page.lang;
+- var d = page.data;
 
 doctype html
 html(lang=lang)
   head
     meta(charset="utf-8")
-    title= pageData.title + ' | ' + (pageData.titleSuffix || 'Benighted Soul')
-    meta(name="description", content=(pageData.description || ''))
+    title= d.title + ' | ' + (d.titleSuffix || 'Benighted Soul')
+    meta(name="description", content=(d.description || ''))
     meta(name="viewport", content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     != css('/')
@@ -32,12 +21,10 @@ html(lang=lang)
     include partials/_header
     
     main
-      unless page === 'index'
-        h1= pageData.title
+      unless page.isHome
+        h1= d.title
       block content
       
-    footer
-      
-    
+    include partials/_footer    
     script(src="/js/build.js")
     

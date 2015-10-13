@@ -26,6 +26,7 @@
       "twitter": "https://twitter.com/benightedsoul/",
       "googleplus": "https://plus.google.com/+Benightedsoulofficial"
     },
+    "spaceId": "v8by0dt6oh1j",
     "contentTypeIds": {
       "homepage": "2R0y7K4EZGuiAKE2SQi8q4",
       "member": "3tZoAWiIJ2aMYikSUkEyGc",
@@ -54,7 +55,7 @@
     "roots": "^3.1.0",
     "roots-browserify": "^0.5.0",
     "roots-config": "0.0.2",
-    "roots-contentful": "git://github.com/axelboc/roots-contentful.git#752ed6643d",
+    "roots-contentful": "0.0.8",
     "roots-yaml": "0.0.4",
     "ship": "^0.2.5"
   }

@@ -1,0 +1,30 @@
+extends ../../layout
+
+block content
+  - var disco = data.discography
+  
+  section
+    h2= d.headings.albums
+    ol
+      each album in disco.albums
+        - var albumData = disco[album]
+        li
+          a(href=page.path + '/' + album)
+            //- img(src!=asset(album.cover, { w: 350, h: 350, q: 80 }), alt="")
+            h3= albumData.title
+            span= albumData.year
+  
+  section
+    h2= d.headings.other
+    ol
+      each release in disco.otherReleases
+        - var releaseData = disco[release]
+        li
+          a(href=page.path + '/' + release)
+            //- img(src!=asset(release.cover, { w: 200, h: 200, q: 80 }), alt="")
+            h3= releaseData.title
+            span= releaseData.year
+            |  
+            span= disco[lang].releaseTypes[releaseData.type]
+    
+    

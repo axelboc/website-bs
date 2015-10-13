@@ -5,17 +5,6 @@ var config = require('./package.json').config;
 // Markdown filter for use in Jade templates
 config.marked = require('marked');
 
-// Slugify a string
-config.slugify = function (str) {
-  return str.replace(/\s+/g, '-').toLowerCase();
-};
-
-config.getLocalisedPaths = function (path) {
-  return config.languages.map(function (lang) {
-    return lang + '/' + path;
-  });
-};
-
 // Custom Contentful content types 
 config.contentTypes = {
   
@@ -24,10 +13,6 @@ config.contentTypes = {
     filters: {
       'fields.type': 'Studio album',
       order: '-fields.date'
-    },
-    template: 'views/entries/_release.jade',
-    path: function (entry) {
-      return config.getLocalisedPaths('discography/' + config.slugify(entry.title));
     }
   },
   
@@ -50,10 +35,6 @@ config.contentTypes = {
     filters: {
       'fields.type[ne]': 'Studio album',
       order: '-fields.date'
-    },
-    template: 'views/entries/_release.jade',
-    path: function (entry) {
-      return config.getLocalisedPaths('discography/' + config.slugify(entry.title));
     }
   },
   

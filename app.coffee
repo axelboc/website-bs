@@ -23,7 +23,7 @@ module.exports =
     
     contentful
       access_token: process.env.CONTENTFUL_KEY
-      space_id: process.env.CONTENTFUL_SPACE
+      space_id: config.spaceId
       content_types: config.contentTypes
     
     browserify
@@ -35,9 +35,6 @@ module.exports =
       files: 'assets/css/main.css'
       out: 'css/build.css'
   ]
-
-  after: (roots) ->
-    roots.compileContentfulViews()
 
   server:
     clean_urls: true

@@ -1,12 +1,44 @@
 -
-  // Return the URL slug of a page given its name
-  function getSlug(name) {
-    return name === 'index' ? '' : name;
+  // Parse the page's path and retrieve its data
+  function initPage(path) {
+    path = path === '/index.html' ? '/en/index.html' : path;
+    path = path.replace('\\', '/').replace('.html', '');
+    
+    // Get the language and breadcrumbs
+    var lang = path.substr(1, 2);
+    var crumbs = path.substr(4).split('/');
+    
+    // Use the crumbs to retrieve the page's data from the global `data` object
+    var isHome = false;
+    var pageData = crumbs.reduce(function (pageData, crumb, num) {
+      if (crumb === 'index') {
+        if (num === 0) {
+          isHome = true;
+          return pageData.index;
+        }
+        return pageData;
+      }
+      return pageData[crumb];
+    }, data);
+    
+    // Debugging
+    if (!pageData || !pageData[lang]) {
+      console.log(path, lang, crumbs);
+      throw new Error('unable to retrieve page data');
+    }
+    
+    return {
+      path: path,
+      lang: lang,
+      crumbs: crumbs,
+      isHome: isHome,
+      data: pageData[lang]
+    };
   }
   
-  // Remove the file extension from a path
-  function removeExt(path) {
-    return path.substring(0, path.lastIndexOf('.'));
+  // Join crumbs into a path and remove final 'index' crumb if present
+  function getCorePath(crumbs) {
+    return crumbs.join('/').replace(/\/?index/, '');
   }
   
   // Translate a value with a dictionary
@@ -19,15 +51,15 @@
     return value;
   }
   
-  // Find entries by the value of one of their fields
-  function findEntries(entries, field, value) {
-    return entries.filter(function (entry) {
-      return entry[field] === value;
+  // Filter an array of objects by the value of one of their keys
+  function filterByValue(arr, key, value) {
+    return arr.filter(function (obj) {
+      return obj[key] === value;
     });
   }
   
   // Retrieve the localised content of a section by name
   function getSection(name) {
-    return findEntries(contentful.sections, 'name', name)[0][lang];
+    return filterByValue(contentful.sections, 'name', name)[0][lang];
   }
   

@@ -23,7 +23,7 @@ module.exports =
     
     contentful
       access_token: process.env.CONTENTFUL_KEY
-      space_id: process.env.CONTENTFUL_SPACE
+      space_id: config.spaceId
       content_types: config.contentTypes
     
     browserify
@@ -37,9 +37,6 @@ module.exports =
       minify: true
       hash: true
   ]
-
-  after: (roots) ->
-    roots.compileContentfulViews()
 
   postcss:
     use: [
