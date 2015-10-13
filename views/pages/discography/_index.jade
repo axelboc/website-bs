@@ -10,7 +10,7 @@ block content
         - var albumData = disco[album]
         li
           a(href=page.path + '/' + album)
-            //- img(src!=asset(album.cover, { w: 350, h: 350, q: 80 }), alt="")
+            img(src='/images/covers/' + album + '.jpg', width="350" height="350" alt="")
             h3= albumData.title
             span= albumData.year
   
@@ -21,7 +21,7 @@ block content
         - var releaseData = disco[release]
         li
           a(href=page.path + '/' + release)
-            //- img(src!=asset(release.cover, { w: 200, h: 200, q: 80 }), alt="")
+            img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
             h3= releaseData.title
             span= releaseData.year
             |  

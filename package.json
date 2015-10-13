@@ -19,7 +19,14 @@
       "en",
       "fr"
     ],
-    "networkUrls": {
+    "nav": [
+      "band",
+      "discography",
+      "media",
+      "shop",
+      "contact"
+    ],
+    "socialUrls": {
       "facebook": "https://www.facebook.com/benightedsoul/",
       "youtube": "https://www.youtube.com/user/benightedsoul",
       "instagram": "https://www.instagram.com/benightedsoul",

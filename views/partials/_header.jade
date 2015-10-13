@@ -6,7 +6,7 @@ header
       img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
 
   ul
-    each url, name in config.networkUrls
+    each url, name in config.socialUrls
       li: a(href=url): +icon(name)
 
   ul
@@ -17,9 +17,9 @@ header
           span(title=label)= code.toUpperCase()
         else
           - 
-          a(href="/#{code}/#{getCorePath(page.crumbs)}", title=label)= code.toUpperCase()
+          a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
 
   ul
-    each item in ['band', 'discography', 'media', 'shop', 'contact']
+    each item in config.nav
       li
         a(href="/#{lang}/#{item}")= data[item][lang].title

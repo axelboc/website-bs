@@ -28,17 +28,12 @@
     }
     
     return {
-      path: path,
+      path: path.replace(/\/?index/, ''),
       lang: lang,
       crumbs: crumbs,
       isHome: isHome,
       data: pageData[lang]
     };
-  }
-  
-  // Join crumbs into a path and remove final 'index' crumb if present
-  function getCorePath(crumbs) {
-    return crumbs.join('/').replace(/\/?index/, '');
   }
   
   // Translate a value with a dictionary
