@@ -21,7 +21,7 @@ header.layout__header
         else
           a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
 
-  ul
+  ul.nav
     each item in config.nav
-      li
-        a(href="/#{lang}/#{item}")= data[item][lang].title
+      li.nav__item
+        a.nav__link(href="/#{lang}/#{item}")= data[item][lang].title
