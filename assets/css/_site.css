@@ -1,0 +1,61 @@
+
+/**
+ * Site variables.
+ */
+:root {
+  --font-text: 'Open Sans', sans-serif;
+  --font-heading: 'Quicksand', sans-serif;
+
+/*
+  --col-bg: #f1f1f1;
+
+  --col-primary: rgb(175, 54, 54);
+  --col-primary-80: rgba(175, 54, 54, 0.8);
+
+  --col-secondary: rgb(32, 32, 48);
+  --col-secondary-80: rgba(32, 32, 48, 0.8);
+  --col-secondary-20: rgba(32, 32, 48, 0.2);
+*/
+}
+
+
+/**
+ * Global styles.
+ */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/images/bg.jpg); /* subtlepatterns.com */
+  font-family: var(--font-text);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2, h3 {
+  font-size: 2rem;
+}
+
+a:focus,
+button:focus {
+  outline: 1px dashed #333;
+}
+
+.symbols {
+  display: none;
+}
+
+.icon {
+  max-width: 100%;
+  fill: currentColor;
+}
