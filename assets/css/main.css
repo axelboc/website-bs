@@ -1,14 +1,98 @@
 
 @import 'normalize.css';
 
-body {
-  background: url(/images/bg.jpg); /* subtlepatterns.com */
+:root {
+  --font-text: 'Open Sans', sans-serif;
+  --font-heading: 'Quicksand', sans-serif;
+
+/*
+  --col-bg: #f1f1f1;
+
+  --col-primary: rgb(175, 54, 54);
+  --col-primary-80: rgba(175, 54, 54, 0.8);
+
+  --col-secondary: rgb(32, 32, 48);
+  --col-secondary-80: rgba(32, 32, 48, 0.8);
+  --col-secondary-20: rgba(32, 32, 48, 0.2);
+*/
 }
 
-.icons {
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/images/bg.jpg); /* subtlepatterns.com */
+  font-family: var(--font-text);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2, h3 {
+  font-size: 2rem;
+}
+
+a:focus,
+button:focus {
+  outline: 1px dashed #333;
+}
+
+.symbols {
   display: none;
 }
 
-.FacebookFeed {
+.icon {
+  max-width: 100%;
+  fill: currentColor;
+}
+
+.social-bar {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  &__item {
+    flex: 1;
+    margin: 0 .5rem;
+  }
+  
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: .3rem;
+    color: inherit;
+    font-size: .75rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s ease;
+    
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+  
+  &__icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
+  }
+}
+
+.fb-feed {
   width: 100%;
 }

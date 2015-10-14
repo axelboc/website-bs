@@ -4,7 +4,7 @@
  */
 function FacebookFeed(elem) {
   this.elem = elem;
-  this.loading = this.elem.querySelector('.FacebookFeed__loading');
+  this.loading = this.elem.querySelector('.fb-feed__loading');
   
   // Show loading spinner
   this.loading.removeAttribute('hidden');

@@ -15,9 +15,12 @@ html(lang=lang)
     meta(name="description", content=(d.description || ''))
     meta(name="viewport", content="width=device-width, initial-scale=1")
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand:400|Open+Sans")
     != css('/')
   body
-    include partials/_icons.svg
+    .symbols
+      include partials/_icons.svg
+    
     include partials/_header
     
     main

@@ -11,8 +11,10 @@ block content
         li
           a(href=page.path + '/' + album)
             img(src='/images/covers/' + album + '.jpg', width="350" height="350" alt="")
-            h3= albumData.title
-            span= albumData.year
+            p
+              strong= albumData[lang].title
+              |  
+              span= albumData.year
   
   section
     h2= d.headings.other
@@ -22,9 +24,11 @@ block content
         li
           a(href=page.path + '/' + release)
             img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
-            h3= releaseData.title
-            span= releaseData.year
-            |  
-            span= disco[lang].releaseTypes[releaseData.type]
+            p
+              strong= releaseData[lang].title
+              |  
+              span= releaseData.year
+              |  
+              span= disco[lang].releaseTypes[releaseData.type]
     
     

@@ -1,0 +1,15 @@
+languages:
+  en:
+    en: English version
+    fr: French version
+
+  fr:
+    en: Version anglaise
+    fr: Version française
+
+social:
+  facebook: Facebook
+  youtube: YouTube
+  instagram: Instagram
+  twitter: Twitter
+  googleplus: Google+

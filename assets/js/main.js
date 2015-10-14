@@ -4,7 +4,7 @@ var FacebookFeed = require('./facebook-feed').FacebookFeed;
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var fbFeedElem = document.querySelector('.FacebookFeed');
+  var fbFeedElem = document.querySelector('.fb-feed');
   if (fbFeedElem) {
     // Initialise the Facebook feed
     new FacebookFeed(fbFeedElem);

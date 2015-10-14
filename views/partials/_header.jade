@@ -5,18 +5,20 @@ header
         - console.log(isEntry, path, lang, page)
       img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
 
-  ul
+  ul.social-bar
     each url, name in config.socialUrls
-      li: a(href=url): +icon(name)
+      li.social-bar__item
+        a.social-bar__link(href=url)
+          +icon(name, 'social-bar__icon')
+          | #{data.shared.social[name]}
 
   ul
     each code in config.languages
-      - var label = data.languages[lang][code]
+      - var label = data.shared.languages[lang][code]
       li
         if lang === code
           span(title=label)= code.toUpperCase()
         else
-          - 
           a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
 
   ul

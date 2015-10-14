@@ -6,8 +6,8 @@ mixin logoWrap
     div: block
 
 // Output an SVG icon
-mixin icon(name)
-  svg.icon
+mixin icon(name, classes)
+  svg.icon(class=classes)
     use(xlink:href="#icon-#{name}")
 
 mixin widget(entry)
