@@ -33,7 +33,6 @@
       "twitter": "https://twitter.com/benightedsoul/",
       "googleplus": "https://plus.google.com/+Benightedsoulofficial"
     },
-    "spaceId": "v8by0dt6oh1j",
     "contentTypeIds": {
       "homepage": "2R0y7K4EZGuiAKE2SQi8q4",
       "member": "3tZoAWiIJ2aMYikSUkEyGc",
@@ -56,6 +55,7 @@
     "jstransformer-marked": "0.0.x",
     "marked": "0.3.x",
     "postcss": "^5.0.8",
+    "postcss-custom-media": "^5.0.0",
     "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
     "postcss-nested": "^1.0.0",
