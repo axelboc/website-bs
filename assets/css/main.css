@@ -2,8 +2,9 @@
 @import 'normalize.css';
 
 @import '_site';
-@import '_layout';
+@import '_debug';
 @import '_header';
+@import '_nav';
 
 
 .fb-feed {

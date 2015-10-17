@@ -1,9 +1,9 @@
 // Wrap the logo with the appropriate element
 mixin logoWrap
   if isIndex
-    h1: block
+    h1.logo: block
   else
-    div: block
+    .logo: block
 
 // Output an SVG icon
 mixin icon(name, classes)

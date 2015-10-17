@@ -1,27 +1,22 @@
-header.layout__header
-  +logoWrap
-    a(href="/#{lang}/")
-      if !data
-        - console.log(isEntry, path, lang, page)
-      img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
+header.header
+  .layout__max
+    +logoWrap
+      a.logo__link(href="/#{lang}/")
+        img.logo__img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
 
-  ul.social-bar
-    each url, name in config.socialUrls
-      li.social-bar__item
-        a.social-bar__link(href=url)
-          +icon(name, 'social-bar__icon')
-          | #{data.shared.social[name]}
+    ul.social-bar
+      each url, name in config.socialUrls
+        li.social-bar__item
+          a.social-bar__link(href=url)
+            +icon(name, 'social-bar__icon')
+            | #{data.shared.social[name]}
 
-  ul
-    each code in config.languages
-      - var label = data.shared.languages[lang][code]
-      li
-        if lang === code
-          span(title=label)= code.toUpperCase()
-        else
-          a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
-
-  ul.nav
-    each item in config.nav
-      li.nav__item
-        a.nav__link(href="/#{lang}/#{item}")= data[item][lang].title
+    ul
+      each code in config.languages
+        - var label = data.shared.languages[lang][code]
+        li
+          if lang === code
+            span(title=label)= code.toUpperCase()
+          else
+            a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
+            

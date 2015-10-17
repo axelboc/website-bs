@@ -1,0 +1,35 @@
+/**
+ * Nav bar.
+ */
+.nav {
+  background-color: #000;
+  
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  &__item {
+    flex: 1;
+  }
+  
+  &__link {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease, color .3s ease;
+    
+    &:hover {
+      background-color: transparent;
+      color: #000;
+    }
+  }
+}

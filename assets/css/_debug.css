@@ -1,0 +1,37 @@
+
+/**
+ * Breakpoint debugger.
+ */
+body:before {
+  content: "none";
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: .5rem;
+  background-color: rgba(0, 25, 72, .9);
+  color: #fff;
+  
+  @media (--bp-x-sml) {
+    content: "x-sml";
+  }
+  
+  @media (--bp-sml) {
+    content: "sml";
+  }
+  
+  @media (--bp-x-med) {
+    content: "x-med";
+  }
+  
+  @media (--bp-med) {
+    content: "med";
+  }
+  
+  @media (--bp-x-lge) {
+    content: "x-lge";
+  }
+  
+  @media (--bp-lge) {
+    content: "lge";
+  }
+}

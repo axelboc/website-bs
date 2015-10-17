@@ -20,11 +20,29 @@
 
 
 /**
+ * Breakpoints.
+ */
+@custom-media --bp-x-sml (min-width: 25em);
+@custom-media --bp-sml (min-width: 30em);
+@custom-media --bp-x-med (min-width: 40em);
+@custom-media --bp-med (min-width: 45em);
+@custom-media --bp-x-lge (min-width: 55em);
+@custom-media --bp-lge (min-width: 60em);
+
+
+/**
  * Global styles.
  */
-
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 90%;
+  
+  @media (min-width: 30em) {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -51,6 +69,12 @@ button:focus {
   outline: 1px dashed #333;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .symbols {
   display: none;
 }
@@ -59,3 +83,14 @@ button:focus {
   max-width: 100%;
   fill: currentColor;
 }
+
+
+/**
+ * Layout
+ */
+.layout{
+  &__max {
+    padding: 0 .5rem;
+  }
+}
+
