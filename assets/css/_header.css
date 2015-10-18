@@ -1,4 +1,15 @@
 /**
+ * Header.
+ */
+.header {
+  @media (--bp-lge) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/**
  * Logo.
  */
 .logo {
@@ -9,12 +20,16 @@
     max-width: 477px;
     margin: 0 auto;
   }
+  
+  @media (--bp-lge) {
+    margin: 2.5rem 2.5rem 2.5rem 0;
+  }
 }
 
 /**
  * Social bar with icons and labels.
  */
-.social-bar {
+.social {
   display: flex;
   justify-content: center;
   margin: 1rem 0;
@@ -83,6 +98,17 @@
     &__icon {
       width: 3rem;
       height: 3rem;
+    }
+  }
+  
+  @media (--bp-lge) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 20rem;
+    
+    /* Force Instagram icon to wrap by setting the flex-basis of the YouTube icon. */
+    &__item:nth-child(2) {
+      flex-basis: 50%;
     }
   }
 }

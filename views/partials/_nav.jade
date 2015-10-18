@@ -2,5 +2,5 @@ nav.nav.layout__max
   ul.nav__list
     each item in config.nav
       li.nav__item
-        a.nav__link(class=(item === page.crumbs[0] ? 'nav__link--current' : null), href="/#{lang}/#{item}")
+        a.nav__link(class={ 'nav__link--current': item === page.crumbs[0] }, href="/#{lang}/#{item}")
           = data[item][lang].title

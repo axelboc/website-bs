@@ -1,13 +1,12 @@
-header.header
-  .layout__max
-    +logoWrap
-      a.logo__link(href="/#{lang}/")
-        img.logo__img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
+header.header.layout__max
+  +logoWrap(['logo', 'header__logo'])
+    a.logo__link(href="/#{lang}/")
+      img.logo__img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
 
-    ul.social-bar
-      each url, name in config.socialUrls
-        li.social-bar__item
-          a.social-bar__link(href=url)
-            +icon(name, 'social-bar__icon')
-            | #{data.shared.social[name]}
-            
+  ul.social.header__social
+    each url, name in config.socialUrls
+      li.social__item
+        a.social__link(href=url)
+          +icon(name, 'social__icon')
+          | #{data.shared.social[name]}
+          

@@ -1,9 +1,9 @@
 // Wrap the logo with the appropriate element
-mixin logoWrap
+mixin logoWrap(classes)
   if isIndex
-    h1.logo: block
+    h1(class=classes): block
   else
-    .logo: block
+    div(class=classes): block
 
 // Output an SVG icon
 mixin icon(name, classes)

@@ -86,7 +86,16 @@ img {
  */
 .layout{
   &__max {
+    margin: 0 auto;
     padding: 0 .5rem;
+    
+    @media (--bp-med) {
+      max-width: 45em;
+    }
+    
+    @media (--bp-lge) {
+      max-width: 65em;
+    }
   }
 }
 

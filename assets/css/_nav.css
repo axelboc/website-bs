@@ -2,7 +2,6 @@
  * Nav bar.
  */
 .nav {
-  
   &__list {
     max-width: 22rem;
     margin: 0 auto;
@@ -79,6 +78,10 @@
     
     @media (--bp-x-med) {
       font-size: 1rem;
+    }
+    
+    @media (--bp-x-lge) {
+      font-size: 1.2rem;
     }
   }
 }
