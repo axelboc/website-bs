@@ -1,1 +1,9 @@
-footer
+footer.layout__max
+  ul
+    each code in config.languages
+      - var label = data.shared.languages[lang][code]
+      li
+        if lang === code
+          span(title=label)= code.toUpperCase()
+        else
+          a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
