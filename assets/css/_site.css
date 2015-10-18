@@ -6,16 +6,12 @@
   --font-text: 'Open Sans', sans-serif;
   --font-heading: 'Quicksand', sans-serif;
 
-/*
-  --col-bg: #f1f1f1;
+  --col-primary: rgb(0, 0, 0);
+  --col-primary-80: rgba(0, 0, 0, 0.8);
 
-  --col-primary: rgb(175, 54, 54);
-  --col-primary-80: rgba(175, 54, 54, 0.8);
-
-  --col-secondary: rgb(32, 32, 48);
-  --col-secondary-80: rgba(32, 32, 48, 0.8);
-  --col-secondary-20: rgba(32, 32, 48, 0.2);
-*/
+  --col-secondary: rgb(52, 58, 78);
+  --col-secondary-80: rgba(52, 58, 78, 0.8);
+  --col-secondary-20: rgba(52, 58, 78, 0.2);
 }
 
 

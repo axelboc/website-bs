@@ -54,7 +54,8 @@
   }
   
   @media (--bp-x-sml) {
-    margin: 0 -.5rem;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
     
     &__item {
       margin: 0 .5rem;
