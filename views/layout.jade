@@ -24,10 +24,11 @@ html(lang=lang)
     include partials/_header
     include partials/_nav
     
-    main.layout__max
-      unless page.isHome
-        h1= d.title
-      block content
+    main.main.layout__max
+      .main__inner
+        unless page.isHome
+          h1= d.title
+        block content
       
     include partials/_footer    
     script(src="/js/build.js")

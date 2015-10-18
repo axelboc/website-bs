@@ -1,11 +1,23 @@
 
 @import 'normalize.css';
 
-@import '_site';
+/**
+ * Breakpoint debugging
+ * (Comment out before commiting)
+ */
 @import '_debug';
+
+/**
+ * Site-wide styles.
+ */
+@import '_site';
 @import '_header';
 @import '_nav';
 
+/**
+ * Page-specific styles.
+ */
+@import '_discography';
 
 .fb-feed {
   width: 100%;
