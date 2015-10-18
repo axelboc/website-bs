@@ -3,18 +3,18 @@ extends ../../layout
 block content
   - var disco = data.discography
   
-  section
+  section.albums
     h2= d.headings.albums
-    ol
+    ol.albums__list
       each album in disco.albums
         - var albumData = disco[album]
-        li
-          a(href=page.path + '/' + album)
-            img(src='/images/covers/' + album + '.jpg', width="350" height="350" alt="")
-            p
-              strong= albumData[lang].title
-              |  
-              span= albumData.year
+        li.album
+          a.album__link-cover(href=page.path + '/' + album)
+            img.album__cover(src='/images/covers/' + album + '.jpg', width="350" height="350" alt="")
+          div.album__content
+            h3.album__heading
+              a.album__link(href=page.path + '/' + album)= albumData[lang].title
+            p= albumData.year
   
   section
     h2= d.headings.other
