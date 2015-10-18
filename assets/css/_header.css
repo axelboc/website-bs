@@ -107,8 +107,23 @@
     max-width: 20rem;
     
     /* Force Instagram icon to wrap by setting the flex-basis of the YouTube icon. */
-    &__item:nth-child(2) {
-      flex-basis: 50%;
+    &__item {
+      margin: .2rem .3rem;
+      
+      &:nth-child(2) {
+        flex-basis: 50%;
+      }
+    }
+    
+    &__link {
+      width: 4.5rem;
+      height: 4.5rem;
+      font-size: .7rem;
+    }
+    
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 }
