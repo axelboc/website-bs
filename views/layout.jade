@@ -24,6 +24,15 @@ html(lang=lang)
     include partials/_header
     include partials/_nav
     
+    ul
+      each code in config.languages
+        - var label = data.shared.languages[lang][code]
+        li
+          if lang === code
+            span(title=label)= code.toUpperCase()
+          else
+            a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
+    
     main
       unless page.isHome
         h1= d.title

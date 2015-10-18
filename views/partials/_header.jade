@@ -10,13 +10,4 @@ header.header
           a.social-bar__link(href=url)
             +icon(name, 'social-bar__icon')
             | #{data.shared.social[name]}
-
-    ul
-      each code in config.languages
-        - var label = data.shared.languages[lang][code]
-        li
-          if lang === code
-            span(title=label)= code.toUpperCase()
-          else
-            a(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
             
