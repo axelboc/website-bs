@@ -3,12 +3,14 @@ extends ../layout
 block content
   
   each playlist in contentful.videoPlaylists
-    section
+    section.playlist
       h2= playlist[lang + 'Title']
-      each index in [1, 2]
-        - var videoUrl = playlist['video' + index];
-        iframe(width="640", height="360", src="#{videoUrl.replace('watch?v=', 'embed/')}?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
-      a(href=playlist.playlistUrl)= d.ctaPlaylist
+      .playlist__inner
+        each index in [1, 2]
+          - var videoUrl = playlist['video' + index];
+          .playlist__video
+            iframe.playlist__iframe(width="640", height="360", src="#{videoUrl.replace('watch?v=', 'embed/')}?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
+        a.playlist__link(href=playlist.playlistUrl)= d.ctaPlaylist
   
   a(href=config.socialUrls.youtube)= d.ctaYoutube
     

@@ -104,7 +104,7 @@
   @media (--bp-lge) {
     flex-wrap: wrap;
     justify-content: flex-start;
-    max-width: 20rem;
+    max-width: 15.5rem;
     
     /* Force Instagram icon to wrap by setting the flex-basis of the YouTube icon. */
     &__item {

@@ -18,6 +18,7 @@
  * Page-specific styles.
  */
 @import '_discography';
+@import '_media';
 
 .fb-feed {
   width: 100%;
