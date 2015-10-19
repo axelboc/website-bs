@@ -15,10 +15,10 @@ block content
   a(href=config.socialUrls.youtube)= d.ctaYoutube
     
   each gallery in contentful.photoGalleries
-    section
+    section.gallery
       h2= gallery[lang + 'Title']
-      ul
+      ul.gallery__list
         each photo in gallery.photos
-          li
-            img(src=asset(photo, { w: 300, h: 300, q: 80 }), alt="")
+          li.gallery__item
+            img.gallery__photo(src=asset(photo, { w: 400, h: 400, q: 80 }), alt="")
   a(href=config.socialUrls.instagram)= d.ctaInstagram
