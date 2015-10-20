@@ -31,6 +31,10 @@
   &__link {
     color: inherit;
     text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
   
   @media (--bp-x-med) {
@@ -44,6 +48,75 @@
   
     &__content {
       margin-bottom: 0;
+    }
+  }
+  
+  @media (--bp-lge) {
+    margin: 2rem 0;
+    
+    &__link-cover {
+      width: 350px;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+/**
+ * Other releases
+ */
+.releases {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.25rem;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.release {
+  width: 50%;
+  padding: .25rem;
+  text-align: center;
+  
+  &__link {
+    display: block;
+    max-width: 200px;
+    color: inherit;
+    text-decoration: none;
+    
+    &:hover .release__title {
+      text-decoration: underline;
+    }
+  }
+  
+  &__content {
+     margin-top: .5rem;
+  }
+  
+  &__title {
+    display: block;
+    font-size: 1.1rem;
+  }
+  
+  &--dvd {
+    .release__cover {
+      background-color: var(--col-secondary-subtle);
+    }
+    
+    .release__img {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (--bp-x-med) {
+    width: 25%;
+  }
+  
+  @media (--bp-lge) {
+    &__title {
+      font-size: 1.2rem;
     }
   }
 }

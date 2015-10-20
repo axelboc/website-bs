@@ -16,19 +16,18 @@ block content
               a.album__link(href=page.path + '/' + album)= albumData[lang].title
             p= albumData.year
   
-  section
+  section.releases
     h2= d.headings.other
-    ol
+    ol.releases__list
       each release in disco.otherReleases
         - var releaseData = disco[release]
-        li
-          a(href=page.path + '/' + release)
-            img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
-            p
-              strong= releaseData[lang].title
+        li.release(class=(releaseData.type === 'dvd' ? 'release--dvd' : null))
+          a.release__link(href=page.path + '/' + release)
+            .release__cover
+              img.release__img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
+            p.release__content
+              strong.release__title= releaseData[lang].title
               |  
-              span= releaseData.year
-              |  
-              span= disco[lang].releaseTypes[releaseData.type]
+              span= releaseData.year + ', ' + disco[lang].releaseTypes[releaseData.type]
     
     
