@@ -1,11 +1,18 @@
 extends ../layout
 
 block content
-  ul
-    each member in contentful.members
-      li
-        img(src!=asset(member.photo), alt=member.pseudo)
-        p: strong= member.name
-        p= member[lang + 'Role']
+  .two-column
+    aside.members.two-column__sidebar
+      ul.members__list
+        each member in contentful.members
+          li.member
+            .member__inner
+              img.member__img(src!=asset(member.photo), alt=member.pseudo)
+              p.member__content
+                strong.member__name= member.name
+                |  
+                span= member[lang + 'Role']
   
-  != config.marked(getSection('Biography'))
+    .two-column__main
+      != config.marked(getSection('Biography'))
+    

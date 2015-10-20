@@ -92,6 +92,15 @@ h3 {
   font-size: 1.5rem;
 }
 
+a,
+button {
+  color: var(--col-secondary);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 a:focus,
 button:focus {
   outline: 1px dashed #333;
@@ -143,3 +152,17 @@ img {
   }
 }
 
+/**
+ * Two-column layout (main + sidebar)
+ */
+.two-column {
+  @media (--bp-lge) {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    &__main {
+      margin-top: -1.5rem;
+      padding-right: 2rem;
+    }
+  }
+}
