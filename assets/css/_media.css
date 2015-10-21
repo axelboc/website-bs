@@ -63,35 +63,19 @@
 .gallery {
   margin-bottom: 2.5rem;
   
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    margin: -.5rem;
-    padding: 0;
-  }
-  
   &__item {
     width: 100%;
-    margin: .5rem 0;
   }
   
   @media (--bp-x-sml) {
     &__item {
-      width: 48.5%;
-    }
-  }
-  
-  @media (--bp-x-med) {
-    &__list {
-      margin: -.5rem 0;
+      width: 50%;
     }
   }
   
   @media (--bp-lge) {
     &__item {
-      width: 32.3%;
+      width: 33.33%;
     }
   }
 }

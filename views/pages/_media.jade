@@ -17,8 +17,8 @@ block content
   each gallery in contentful.photoGalleries
     section.gallery
       h2= gallery[lang + 'Title']
-      ul.gallery__list
+      ul.gallery__list.flex-grid
         each photo in gallery.photos
-          li.gallery__item
+          li.gallery__item.flex-grid__item
             img.gallery__photo(src=asset(photo, { w: 400, h: 400, q: 80 }), alt="")
   a(href=config.socialUrls.instagram)= d.ctaInstagram

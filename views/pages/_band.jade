@@ -3,9 +3,9 @@ extends ../layout
 block content
   .two-column
     aside.members.two-column__sidebar
-      ul.members__list
+      ul.members__list.flex-grid
         each member in contentful.members
-          li.member
+          li.member.flex-grid__item
             .member__inner
               img.member__img(src!=asset(member.photo), alt=member.pseudo)
               p.member__content

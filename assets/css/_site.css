@@ -7,9 +7,13 @@
   --font-heading: 'Quicksand', sans-serif;
 
   --col-primary: rgb(0, 0, 0);
-
   --col-secondary: rgb(52, 58, 78);
   --col-secondary-subtle: rgba(52, 58, 78, 0.1);
+  
+  /* Grid layout gutters */
+  --gutter-sml: .25rem;
+  --gutter-med: .5rem;
+  --gutter-lge: 1rem;
 }
 
 
@@ -163,6 +167,31 @@ img {
     &__main {
       margin-top: -1.5rem;
       padding-right: 2rem;
+    }
+  }
+}
+
+/**
+ * Grid layout with Flexbox
+ */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -var(--gutter-sml);
+  padding: 0;
+  
+  &__item {
+    padding: 0 var(--gutter-sml) var(--gutter-med);
+  }
+  
+  @media (--bp-med) {
+    &__list {
+      margin: 0 -var(--gutter-med);
+    }
+    
+    &__item {
+      padding: 0 var(--gutter-med) var(--gutter-lge);
     }
   }
 }

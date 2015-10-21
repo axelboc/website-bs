@@ -3,16 +3,6 @@
  */
 .members {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -.25em;
-    padding: 0;
-    list-style: none;
-    
-    @media (--bp-med) {
-      margin: 0 -.5rem;
-    }
-  
     @media (--bp-lge) {
       flex-wrap: nowrap;
       flex-direction: column;
@@ -23,15 +13,14 @@
 
 .member {
   width: 50%;
-  padding: 0 .25rem;
-  text-align: center;
   
   &__inner {
     max-width: 216px;
   }
   
   &__content {
-    margin: .5rem 0 1.5rem;
+    margin-top: .5rem;
+    text-align: center;
   }
   
   &__name {
@@ -40,10 +29,6 @@
   
   @media (--bp-sml) {
     width: 33.33%;
-  }
-  
-  @media (--bp-med) {
-    padding: 0 .5rem;
   }
   
   @media (--bp-lge) {

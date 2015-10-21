@@ -64,25 +64,14 @@
 /**
  * Other releases
  */
-.releases {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -.25rem;
-    padding: 0;
-    list-style: none;
-  }
-}
-
 .release {
   width: 50%;
-  padding: 0 .25rem;
-  text-align: center;
   
   &__link {
     display: block;
     max-width: 200px;
     color: inherit;
+    text-align: center;
     text-decoration: none;
     
     &:hover .release__title {
@@ -91,7 +80,7 @@
   }
   
   &__content {
-     margin: .5rem 0 1.5rem;
+     margin-top: .5rem;
   }
   
   &__title {
@@ -110,7 +99,7 @@
     }
   }
   
-  @media (--bp-x-med) {
+  @media (--bp-med) {
     width: 25%;
   }
   

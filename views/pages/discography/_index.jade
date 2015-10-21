@@ -18,10 +18,10 @@ block content
   
   section.releases
     h2= d.headings.other
-    ol.releases__list
+    ol.releases__list.flex-grid
       each release in disco.otherReleases
         - var releaseData = disco[release]
-        li.release(class=(releaseData.type === 'dvd' ? 'release--dvd' : null))
+        li.release.flex-grid__item(class=(releaseData.type === 'dvd' ? 'release--dvd' : null))
           a.release__link(href=page.path + '/' + release)
             .release__cover
               img.release__img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
