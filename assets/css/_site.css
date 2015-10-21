@@ -75,6 +75,7 @@ h1 {
 }
 
 h2 {
+  margin-top: 2.5rem;
   font-size: 1.5rem;
   
   &::before {
@@ -125,7 +126,6 @@ img {
   fill: currentColor;
 }
 
-
 /**
  * Layout
  */
@@ -147,12 +147,14 @@ img {
 /**
  * Main
  */
-.main__inner {
-  padding: 2rem 0;
-  
-  @media (--bp-x-med) {
-    padding: 2rem;
-    background-color: var(--col-secondary-subtle);
+.main {
+  &__inner {
+    padding: 2rem 0;
+
+    @media (--bp-x-med) {
+      padding: 2rem;
+      background-color: var(--col-secondary-subtle);
+    }
   }
 }
 
@@ -165,7 +167,6 @@ img {
     flex-direction: row-reverse;
     
     &__main {
-      margin-top: -1.5rem;
       padding-right: 2rem;
     }
   }
@@ -192,6 +193,42 @@ img {
     
     &__item {
       padding: 0 var(--gutter-med) var(--gutter-lge);
+    }
+  }
+}
+
+/**
+ * Big, call-to-action button
+ */
+.button {
+  margin: 3rem 0 4rem;
+  text-align: center;
+  
+  &--closer {
+    margin: 2rem 0 3rem;
+  }
+  
+  &__link {
+    display: inline-block;
+    padding: 1rem .65rem;
+    border: 2px solid #000;
+    border-radius: .3rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::after {
+      content: " →";
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    
+    &:hover {
+      border-color: var(--col-secondary);
+      background-color: var(--col-secondary);
+      color: #fff;
     }
   }
 }

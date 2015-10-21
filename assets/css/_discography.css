@@ -3,6 +3,10 @@
  * Studio albmus
  */
 .albums {
+  & > h2:first-child {
+    margin-top: 0;
+  }
+  
   &__list {
     margin: 0 0 3rem;
     padding: 0;
@@ -52,8 +56,6 @@
   }
   
   @media (--bp-lge) {
-    margin: 2rem 0;
-    
     &__link-cover {
       width: 350px;
       margin-right: 1.5rem;
