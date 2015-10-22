@@ -2,15 +2,16 @@ extends ../layout
 
 block content
   != config.marked(getSection('Contact intro'))
-  form(name="contact", action="thank-you", netlify)
-    fieldset
-      div
-        label(for="name")= d.form.name
-        input#name(name="name", type="text")
-      div
-        label(for="email")= d.form.email
-        input#email(name="email", type="text")
-      div
-        label(for="message")= d.form.message
-        textarea#message(name="message")
-    button= d.form.send
+  form.contact(name="contact", action="thank-you", netlify)
+    fieldset.contact__inner
+      .contact__info
+        label.contact__label(for="name")= d.form.name
+        input.contact__field#name(name="name", type="text")
+      .contact__info
+        label.contact__label(for="email")= d.form.email
+        input.contact__field#email(name="email", type="text")
+      .contact__info
+        label.contact__label(for="message")= d.form.message
+        textarea.contact__field.contact__field--area#message(name="message", rows="5")
+    .contact__submit.button.button--closer
+      button.button__link= d.form.send

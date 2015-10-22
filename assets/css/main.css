@@ -20,6 +20,7 @@
 @import '_band';
 @import '_discography';
 @import '_media';
+@import '_contact';
 
 .fb-feed {
   width: 100%;

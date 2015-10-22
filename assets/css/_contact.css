@@ -1,0 +1,49 @@
+/**
+ * Contact form
+ */
+.contact {
+  max-width: 30rem;
+  margin-top: 2rem;
+  
+  &__inner {
+    padding: 0;
+    border: none;
+  }
+  
+  &__info {
+    display: flex;
+    margin: 1rem 0;
+  }
+  
+  &__label {
+    min-width: 6rem;
+    font-weight: bold;
+    padding: .5rem;
+    text-align: right;
+  }
+  
+  &__field {
+    flex: 1;
+    padding: .5rem;
+    width: 100%;
+    min-width: 0;
+  }
+  
+  &__submit {
+    text-align: left;
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (--bp-lge) {
+    &__label {
+      min-width: 8rem;
+      font-size: 1.1rem;
+      padding: .5rem 1rem;
+    }
+    
+    &__submit {
+      margin-left: 8rem;
+    }
+  }
+}
