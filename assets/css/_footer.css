@@ -1,0 +1,11 @@
+/**
+ * Sponsors
+ */
+.sponsors {
+  display: none;
+  margin: 1rem 0;
+  
+  @media (--bp-med) {
+    display: block;
+  }
+}
