@@ -56,7 +56,7 @@
     transition: background-color .3s ease, color .3s ease;
     
     &:hover {
-      background-color: var(--col-primary);
+      background-color: #000;
       color: #fff;
     }
   }

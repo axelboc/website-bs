@@ -34,7 +34,7 @@
   &__link {
     display: block;
     padding: .3rem .5rem;
-    background-color: var(--col-primary);
+    background-color: #000;
     color: #fff;
     font-family: var(--font-heading);
     font-size: 1rem;
@@ -45,12 +45,12 @@
     transition: background-color .3s ease, color .3s ease;
     
     &:hover {
-      background-color: var(--col-secondary-subtle);
+      background-color: var(--col-accent-subtle);
       color: #000;
     }
 
     &--current {
-      background-color: var(--col-secondary);
+      background-color: var(--col-accent);
       color: #fff;
     }
     
@@ -68,7 +68,7 @@
           margin-left: -3px;
           border-left: 6px solid transparent;
           border-right: 6px solid transparent;
-          border-top: 6px solid var(--col-secondary);
+          border-top: 6px solid var(--col-accent);
           transition: border-top-color .3s ease;
         }
 

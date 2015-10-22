@@ -92,7 +92,7 @@
   
   &--dvd {
     .release__cover {
-      background-color: var(--col-secondary-subtle);
+      background-color: var(--col-accent-subtle);
     }
     
     .release__img {

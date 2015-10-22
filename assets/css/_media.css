@@ -29,7 +29,7 @@
   &__link {
     display: block;
     padding: .5rem;
-    background-color: var(--col-primary);
+    background-color: #000;
     color: #fff;
     font-size: 1.1rem;
     text-align: center;
@@ -45,7 +45,7 @@
     }
     
     &:hover {
-      background-color: var(--col-secondary);
+      background-color: var(--col-accent);
       
       &::after {
         transform: scale(2);

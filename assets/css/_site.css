@@ -3,12 +3,13 @@
  * Site variables
  */
 :root {
+  /* Fonts */
   --font-text: 'Open Sans', sans-serif;
   --font-heading: 'Quicksand', sans-serif;
-
-  --col-primary: rgb(0, 0, 0);
-  --col-secondary: rgb(52, 58, 78);
-  --col-secondary-subtle: rgba(52, 58, 78, 0.1);
+  
+  /* Accent colour */
+  --col-accent: rgb(52, 58, 78);
+  --col-accent-subtle: rgba(52, 58, 78, .1);
   
   /* Grid layout gutters */
   --gutter-sml: .25rem;
@@ -45,6 +46,7 @@ html {
 
 body {
   background: url(/images/bg.jpg); /* subtlepatterns.com */
+  color: #000;
   font-family: var(--font-text);
 }
 
@@ -99,7 +101,7 @@ h3 {
 
 a,
 button {
-  color: var(--col-secondary);
+  color: var(--col-accent);
 }
 
 a:hover {
@@ -153,7 +155,7 @@ img {
 
     @media (--bp-x-med) {
       padding: 2rem;
-      background-color: var(--col-secondary-subtle);
+      background-color: var(--col-accent-subtle);
     }
   }
 }
@@ -213,6 +215,7 @@ img {
     padding: 1rem .65rem;
     border: 2px solid #000;
     border-radius: .3rem;
+    background-color: #f0f0f0;
     color: #000;
     font-size: 1rem;
     font-weight: bold;
@@ -226,8 +229,8 @@ img {
     }
     
     &:hover {
-      border-color: var(--col-secondary);
-      background-color: var(--col-secondary);
+      border-color: var(--col-accent);
+      background-color: var(--col-accent);
       color: #fff;
     }
   }
