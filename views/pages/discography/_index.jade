@@ -9,11 +9,13 @@ block content
       each album in disco.albums
         - var albumData = disco[album]
         li.album
-          a.album__link-cover(href=page.path + '/' + album)
+          //a.album__link-cover(href=page.path + '/' + album)
+          .album__link-cover
             img.album__cover(src='/images/covers/' + album + '.jpg', width="350" height="350" alt="")
           div.album__content
             h3.album__heading
-              a.album__link(href=page.path + '/' + album)= albumData[lang].title
+              //a.album__link(href=page.path + '/' + album)= albumData[lang].title
+              .album__link= albumData[lang].title
             p= albumData.year
   
   section.releases
@@ -22,7 +24,8 @@ block content
       each release in disco.otherReleases
         - var releaseData = disco[release]
         li.release.flex-grid__item(class=(releaseData.type === 'dvd' ? 'release--dvd' : null))
-          a.release__link(href=page.path + '/' + release)
+          //a.release__link(href=page.path + '/' + release)
+          .release__link
             .release__cover
               img.release__img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
             p.release__content
