@@ -6,6 +6,7 @@
   /* Fonts */
   --font-text: 'Open Sans', sans-serif;
   --font-heading: 'Quicksand', sans-serif;
+  --font-quote: 'Georgia', sans-serif;
   
   /* Accent colour */
   --col-accent: rgb(52, 58, 78);
@@ -119,6 +120,10 @@ img {
   height: auto;
 }
 
+blockquote {
+  quotes: "“" "”";
+}
+
 .symbols {
   display: none;
 }
@@ -203,12 +208,7 @@ img {
  * Big, call-to-action button
  */
 .button {
-  margin: 3rem 0 4rem;
-  text-align: center;
-  
-  &--closer {
-    margin: 2rem 0 3rem;
-  }
+  margin: 1.5rem 0;
   
   &__link {
     display: inline-block;
@@ -228,10 +228,44 @@ img {
       line-height: 1;
     }
     
+    & + & {
+      margin-left: 1rem;
+    }
+    
     &:hover {
       border-color: var(--col-accent);
       background-color: var(--col-accent);
       color: #fff;
+    }
+  }
+}
+
+
+.quote {
+  margin: 1rem 0;
+  
+  &__text {
+    display: inline;
+    margin: 0;
+    font-family: var(--font-quote);
+    font-size: 1.2rem;
+    font-style: italic;
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+  
+  &__cite {
+    font-style: normal;
+    font-weight: bold;
+    
+    &::before {
+      content: " — ";
     }
   }
 }

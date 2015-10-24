@@ -1,4 +1,19 @@
 /**
+ * Call-to-action buttons
+ */
+.media-cta {
+  text-align: center;
+  
+  &--youtube {
+    margin: 3rem 0 4rem;
+  }
+  
+  &--instagram {
+    margin: 2rem 0 3rem;
+  }
+}
+
+/**
  * Playlist
  */
 .playlist {

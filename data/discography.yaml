@@ -22,9 +22,6 @@ fr:
     dvd: DVD
     demo: Démo
     
-albums:
-  - kenotic
-  - start-from-scratch
 otherReleases:
   - anesidora
   - catharsis-live
@@ -32,8 +29,6 @@ otherReleases:
   - enchantment
 
 kenotic:
-  type: album
-  year: 2014
   en:
     title: Kenotic
     description: 
@@ -42,8 +37,6 @@ kenotic:
     description: 
 
 start-from-scratch:
-  type: album
-  year: 2011
   en:
     title: Start from Scratch
     description: 

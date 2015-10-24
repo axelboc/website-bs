@@ -15,7 +15,7 @@
 }
 
 .album {
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
   
   &__link-cover {
     display: block;
@@ -41,6 +41,10 @@
     }
   }
   
+  &__credits {
+    font-size: .9rem;
+  }
+  
   @media (--bp-x-med) {
     display: flex;
     
@@ -57,9 +61,23 @@
   
   @media (--bp-lge) {
     &__link-cover {
-      width: 350px;
+      width: 380px;
       margin-right: 1.5rem;
     }
+  }
+}
+
+/**
+ * Special edition
+ */
+.special {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--col-accent-subtle);
+  border-left: 5px solid var(--col-accent);
+  
+  & > p {
+    margin: 0;
   }
 }
 
