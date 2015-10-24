@@ -1,6 +1,9 @@
 extends ../layout
 
 block content
+
+  section#audio.audio
+    h2.audio__heading= d.audioHeading
   
   each playlist in contentful.videoPlaylists
     section.playlist

@@ -1,6 +1,7 @@
 en:
   title: Media
   description:
+  audioHeading: Audio
   ctaPlaylist: Full playlist
   ctaYoutube: Visit our YouTube channel
   ctaInstagram: Find us on Instagram
@@ -8,6 +9,7 @@ en:
 fr:
   title: Média
   description:
+  audioHeading: Audio
   ctaPlaylist: Playlist complète
   ctaYoutube: Visitez notre chaîne YouTube
   ctaInstagram: Suivez-nous sur Instagram

@@ -14,13 +14,22 @@
 }
 
 /**
+ * Audio section
+ */
+.audio {
+  /* Give section padding to add some space above the heading when visiting `#audio` */
+  margin-top: -1rem;
+  padding-top: .5rem;
+  
+  &__heading {
+    margin-top: .5rem;
+  }
+}
+
+/**
  * Playlist
  */
 .playlist {
-  h1 + & > h2 {
-    margin-top: 0;
-  }
-  
   &__inner {
     margin: 0 -.5rem;
   }
