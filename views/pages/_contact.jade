@@ -2,6 +2,7 @@ extends ../layout
 
 block content
   != config.marked(getSection('Contact intro'))
+  
   form.contact(name="contact", action="thank-you", netlify)
     fieldset.contact__inner
       .contact__info

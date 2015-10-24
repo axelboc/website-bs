@@ -1,3 +1,99 @@
 extends ../layout
 
 block content
+  
+  section
+    h2 Studio albums
+    section
+      div
+        img(src='/images/covers/kenotic.jpg', width="280" height="280" alt="")
+      div
+        h3 Kenotic
+        ul
+          li Digipack
+          li 68 minutes
+          li 16-page booklet
+        div
+          p: strong Buy the CD on:
+          .button
+            a.button__link(href="http://shop.season-of-mist.com/benighted-soul-kenotic-cd-digipack") Season of Myst
+            a.button__link(href="http://musique.fnac.com/a7874186/Benighted-Soul-Kenotic-CD-album") fnac
+            a.button__link(href="http://www.amazon.fr/dp/B00P1ECAO4") Amazon
+        div
+          p: strong Download it from:
+          .button
+            a.button__link(href="https://itunes.apple.com/us/album/kenotic/id929600908") iTunes
+            a.button__link(href="http://www.amazon.fr/dp/B00OLRCUU6") Amazon
+        div
+          p: strong Listen to it on:
+          .button
+            a.button__link(href="https://play.spotify.com/album/1NGM4fJaIO2TJsxhKjl8Bn") Spotify
+            a.button__link(href="http://www.deezer.com/album/8924571") Deezer
+    section
+      div
+        img(src='/images/covers/start-from-scratch.jpg', width="280" height="280" alt="")
+      div
+        h3 Start from Scratch
+        ul
+          li Digipack
+          li 68 minutes
+          li 16-page booklet
+        div
+          p: strong Buy the CD on:
+          .button
+            a.button__link(href="http://shop.season-of-mist.com/benighted-soul-start-from-scratch-cd") Season of Myst
+            a.button__link(href="http://www.emp-online.fr/art_186691/") EMP
+            a.button__link(href="http://musique.fnac.com/a3417096/Benighted-Soul-Start-from-scratch-CD-album") fnac
+            a.button__link(href="http://www.amazon.fr/dp/B004JKDXTW") Amazon
+        div
+          p: strong Download it from:
+          .button
+            a.button__link(href="https://itunes.apple.com/fr/album/id459523644?affId=1108120") iTunes
+            a.button__link(href="http://www.amazon.fr/dp/B005JAVNIO") Amazon
+        div
+          p: strong Listen to it on:
+          .button
+            a.button__link(href="https://play.spotify.com/album/5nDZjlk3EwybWy9J27A0ei") Spotify
+            a.button__link(href="http://www.deezer.com/album/1246749") Deezer
+  section
+    h2 Other products
+    ul.flex-grid
+      li.flex-grid__item
+        div
+          img(src="/images/shop/t-shirt.jpg", width="250", height="215", alt="")
+        p
+          strong T-Shirt (homme)
+          form(target="paypal", action="https://www.paypal.com/cgi-bin/webscr", method="post")
+            input(name="cmd", value="_s-xclick", type="hidden")
+            input(name="hosted_button_id", value="55NA6843SMJQC", type="hidden")
+            table: tbody: tr: td
+              input(name="on0", value="Size", type="hidden")
+              strong 15€ 
+              | Tailles :
+              select(name="os0")
+                option(value="XL") XL
+                option(value="L") L
+                option(value="M") M
+                option(value="S") S
+            input(src="img/shop/ajouter_panier.gif", name="submit", alt="Add to cart", border="0", type="image")
+            img(alt="", src="https://www.paypal.com/fr_FR/i/scr/pixel.gif", border="0", height="1", width="1")
+      li.flex-grid__item
+        div
+          img(src="/images/shop/girlie.jpg", width="250", height="215", alt="")
+        p
+          strong Girlie (femme)
+          form(target="paypal", action="https://www.paypal.com/cgi-bin/webscr", method="post")
+            input(name="cmd", value="_s-xclick", type="hidden")
+            input(name="hosted_button_id", value="ZB8F6G5MQ438E", type="hidden")
+            table: tbody: tr: td
+              input(name="on0", value="Size", type="hidden")
+              strong 15€ 
+              | Tailles :
+              select(name="os0")
+                option(value="XL") XL
+                option(value="L") L
+                option(value="M") M
+                option(value="S") S
+            input(src="img/shop/ajouter_panier.gif", name="submit", alt="Add to cart", border="0", type="image")
+            img(alt="", src="https://www.paypal.com/fr_FR/i/scr/pixel.gif", border="0", height="1", width="1")
+    
