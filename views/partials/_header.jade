@@ -12,8 +12,8 @@ header.header.layout__max
     li.social__item.languages
       ul.languages__list
         each code in config.languages
-          - var label = data.shared.languages[lang][code]
           li.languages__item
+            - var label = data.shared.languages[code]
             if lang === code
               span.languages__link.languages__link--current(title=label)= code.toUpperCase()
             else

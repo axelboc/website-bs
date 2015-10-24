@@ -1,11 +1,6 @@
 languages:
-  en:
-    en: English version
-    fr: French version
-
-  fr:
-    en: Version anglaise
-    fr: Version française
+  en: English version
+  fr: Version française
 
 social:
   facebook: Facebook
