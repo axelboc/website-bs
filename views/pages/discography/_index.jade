@@ -19,11 +19,11 @@ block content
             blockquote.quote
               p.quote__text= albumData[lang].quote
               cite.quote__cite= albumData[lang].quoteSource
-            .button
-              a.button__link(href=albumData.buyUrl) Get it
-              a.button__link(href="/#{lang}/media#audio") Listen to it
+            .album__buttons.button
+              a.album__button.button__link(href=albumData.buyUrl) Get it
+              a.album__button.button__link(href="/#{lang}/media#audio") Listen to it
               if albumData.infoUrl
-                a.button__link(href=albumData.infoUrl) More info
+                a.album__button.button__link(href=albumData.infoUrl) More info
             if albumData.specialEntry
               != config.marked(getSection(albumData.specialEntry))
             div.album__credits!= config.marked(getSection(albumData.creditsEntry))

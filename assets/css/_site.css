@@ -10,6 +10,7 @@
   
   /* Accent colour */
   --col-accent: rgb(52, 58, 78);
+  --col-accent-half: rgba(52, 58, 78, .5);
   --col-accent-subtle: rgba(52, 58, 78, .1);
   
   /* Grid layout gutters */
@@ -79,7 +80,7 @@ h1 {
 
 h2 {
   margin-top: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   
   &::before {
     content: ">>";
@@ -97,6 +98,7 @@ h2 {
 }
 
 h3 {
+  margin: 1rem 0;
   font-size: 1.5rem;
 }
 
@@ -209,6 +211,7 @@ blockquote {
  */
 .button {
   margin: 1.5rem 0;
+  font-size: 1rem;
   
   &__link {
     display: inline-block;
@@ -217,19 +220,15 @@ blockquote {
     border-radius: .3rem;
     background-color: #f0f0f0;
     color: #000;
-    font-size: 1rem;
+    font-size: 100%;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
 
     &::after {
       content: " →";
-      font-size: 1.25rem;
+      font-size: 125%;
       line-height: 1;
-    }
-    
-    & + & {
-      margin-left: 1rem;
     }
     
     &:hover {
