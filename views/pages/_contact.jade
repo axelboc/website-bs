@@ -1,18 +1,22 @@
 extends ../layout
 
 block content
-  != config.marked(getSection('Contact intro'))
+  #thank-you.success
+    .success__message!= config.marked(getSection('Thank you'))
   
-  form.contact(name="contact", action="thank-you", netlify)
-    fieldset.contact__inner
-      .contact__info
-        label.contact__label(for="name")= d.form.name
-        input.contact__field#name(name="name", type="text")
-      .contact__info
-        label.contact__label(for="email")= d.form.email
-        input.contact__field#email(name="email", type="text")
-      .contact__info
-        label.contact__label(for="message")= d.form.message
-        textarea.contact__field.contact__field--area#message(name="message", rows="5")
-    .contact__submit.button
-      button.button__link= d.form.send
+  .contact__wrap
+    != config.marked(getSection('Contact intro'))
+
+    form.contact(name="contact", action="/#{lang}/contact#thank-you", netlify)
+      fieldset.contact__inner
+        .contact__info
+          label.contact__label(for="name")= d.form.name
+          input.contact__field#name(name="name", type="text")
+        .contact__info
+          label.contact__label(for="email")= d.form.email
+          input.contact__field#email(name="email", type="text")
+        .contact__info
+          label.contact__label(for="message")= d.form.message
+          textarea.contact__field.contact__field--area#message(name="message", rows="5")
+      .contact__submit.button
+        button.button__link= d.form.send

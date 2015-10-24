@@ -45,3 +45,29 @@
     }
   }
 }
+
+/**
+ * Thank you message
+ */
+.success {
+  display: none;
+  margin: 2rem 0;
+  
+  &:target {
+    display: block;
+    
+    & + .contact__wrap {
+      display: none;
+    }
+  }
+  
+  &__message {
+    padding: 1rem;
+    border-left: 5px solid rgb(51, 77, 51);
+    background-color: rgba(51, 77, 51, .1);
+    
+    & > p {
+      margin: 0;
+    }
+  }
+}
