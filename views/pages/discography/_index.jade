@@ -6,44 +6,27 @@ block content
   section.albums
     h2= d.headings.albums
     .albums__list
-      section.album
-        - var kenotic = disco.kenotic[lang]
-        //a.album__link-cover(href=page.path + '/' + album)
-        .album__link-cover
-          img.album__cover(src='/images/covers/kenotic.jpg', width="380" height="380" alt="")
-        div.album__content
-          h3.album__heading
-            //a.album__link(href=page.path + '/' + album)= albumData[lang].title
-            .album__link= kenotic.title
-          blockquote.quote
-            p.quote__text Ce premier essai aventureux, intelligent, et étonnement mature frise le coup de maître.
-            cite.quote__cite Metal Obs'
-          .button
-            a.button__link(href="#") Get it
-            a.button__link(href="/#{lang}/media#audio") Listen to it
-          section.special
-            p
-              strong New! 
-              | Bonus Edition 2015, digital release
-          div.album__credits: small
-            != config.marked(getSection('Kenotic credits'))
-      section.album
-        - var sfs = disco['start-from-scratch'][lang]
-        //a.album__link-cover(href=page.path + '/' + album)
-        .album__link-cover
-          img.album__cover(src='/images/covers/start-from-scratch.jpg', width="380" height="380" alt="")
-        div.album__content
-          h3.album__heading
-            //a.album__link(href=page.path + '/' + album)= albumData[lang].title
-            .album__link= sfs.title
-          blockquote.quote
-            p.quote__text Ce premier essai aventureux, intelligent, et étonnement mature frise le coup de maître.
-            cite.quote__cite Metal Obs'
-          .button
-            a.button__link(href="#") Get it
-            a.button__link(href="#") Listen to it
-          div.album__credits: small
-            != config.marked(getSection('Start from Scratch credits'))
+      each album in disco.albums
+        section.album
+          - var albumData = disco[album]
+          //a.album__link-cover(href=page.path + '/' + album)
+          .album__link-cover
+            img.album__cover(src='/images/covers/' + album + '.jpg', width="380" height="380" alt="")
+          div.album__content
+            h3.album__heading
+              //a.album__link(href=page.path + '/' + album)= albumData[lang].title
+              .album__link= albumData[lang].title
+            blockquote.quote
+              p.quote__text= albumData[lang].quote
+              cite.quote__cite= albumData[lang].quoteSource
+            .button
+              a.button__link(href=albumData.buyUrl) Get it
+              a.button__link(href="/#{lang}/media#audio") Listen to it
+              if albumData.infoUrl
+                a.button__link(href=albumData.infoUrl) More info
+            if albumData.specialEntry
+              != config.marked(getSection(albumData.specialEntry))
+            div.album__credits!= config.marked(getSection(albumData.creditsEntry))
   
   section.releases
     h2= d.headings.other

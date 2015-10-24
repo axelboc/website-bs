@@ -43,7 +43,7 @@
   }
   
   &__credits {
-    font-size: .9rem;
+    font-size: .72rem;
   }
   
   @media (--bp-x-med) {

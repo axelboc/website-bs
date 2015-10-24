@@ -4,6 +4,10 @@ en:
   headings:
     albums: Studio albums
     other: Other releases
+  links:
+    buy: Get it
+    listen: Listen to it
+    more: More info
   releaseTypes:
     album: Studio album
     ep: EP
@@ -16,12 +20,19 @@ fr:
   headings:
     albums: Albums studio
     other: Autres sorties
+  links:
+    buy: Acheter
+    listen: Ecouter
+    more: Plus d'infos
   releaseTypes:
     album: Album studio
     ep: EP
     dvd: DVD
     demo: Démo
-    
+
+albums:
+  - kenotic
+  - start-from-scratch
 otherReleases:
   - anesidora
   - catharsis-live
@@ -29,20 +40,34 @@ otherReleases:
   - enchantment
 
 kenotic:
+  buyUrl: http://shop.season-of-mist.com/benighted-soul-kenotic-cd-digipack
+  infoUrl: https://kenoticalbum.wordpress.com/
+  specialEntry: Kenotic special box
+  creditsEntry: Kenotic credits
   en:
     title: Kenotic
     description: 
+    quote: This first attempt, adventurous, intelligent, and surprisingly mature nears a master stroke.
+    quoteSource: Metal Obs'
   fr:
     title: Kenotic
     description: 
+    quote: Ce premier essai aventureux, intelligent, et étonnement mature frise le coup de maître.
+    quoteSource: Metal Obs'
 
 start-from-scratch:
+  buyUrl: http://shop.season-of-mist.com/benighted-soul-start-from-scratch-cd
+  creditsEntry: Start from Scratch credits
   en:
     title: Start from Scratch
     description: 
+    quote: This first attempt, adventurous, intelligent, and surprisingly mature nears a master stroke.
+    quoteSource: Metal Obs'
   fr:
     title: Start from Scratch
     description: 
+    quote: Ce premier essai aventureux, intelligent, et étonnement mature frise le coup de maître.
+    quoteSource: Metal Obs'
 
 anesidora:
   type: ep
