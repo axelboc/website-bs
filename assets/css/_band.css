@@ -48,4 +48,8 @@
   & > h2:first-child {
     margin-top: 0;
   }
+  
+  @media (--bp-lge) {
+    margin-right: 2rem;
+  }
 }

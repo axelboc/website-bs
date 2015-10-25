@@ -10,7 +10,7 @@ block content
     //-        +widget(widget)
     
     section.banner.widget
-      h2.banner__heading Kenotic
+      h2.widget__heading Kenotic
         strong.kenotic-divider Bonus Edition 2015
       p 
         | New 
@@ -22,19 +22,24 @@ block content
         a.button__link(href="") Download it now
   
     div.two-column
-      section.widget.two-column__main
-        h2 Kenotic 
-          span | 
-          | Music video
-        div
-          h3 Chapter 1 - 
-            strong Halcyon Days
-          .video
-            //iframe.video__iframe(width="640", height="360", src="https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
-        div
-          h3 Chapter 2 - 
-            strong Lorem Ipsum
-          p D-21
+      .two-column__main
+        section.widget.widget--left-col
+          h2.widget__heading.widget__heading--sub Music video
+            strong.kenotic-divider Kenotic
+          div
+            h3 Chapter 1 - 
+              strong Halcyon Days
+            .video
+              //iframe.video__iframe(width="640", height="360", src="https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
+          div
+            h3 Chapter 2 - 
+              strong Lorem Ipsum
+            p D-21
+            
+        section.widget.widget--left-col
+          h2.widget__heading.widget__heading--sub Live
+            strong.kenotic-divider Craddle of Filth
+          
           
       aside.fb-feed.widget
         #fb-root
