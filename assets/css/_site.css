@@ -177,10 +177,14 @@ blockquote {
 .two-column {
   @media (--bp-lge) {
     display: flex;
-    flex-direction: row-reverse;
+    
+    &--reverse {
+      flex-direction: row-reverse;
+    }
     
     &__main {
-      padding-right: 2rem;
+      flex: 1;
+      margin-right: 2rem;
     }
   }
 }
@@ -243,7 +247,9 @@ blockquote {
   }
 }
 
-
+/**
+ * Quote
+ */
 .quote {
   margin: 1rem 0;
   
@@ -271,4 +277,16 @@ blockquote {
       content: " — ";
     }
   }
+}
+
+/**
+ * Kenotic divider
+ */
+.kenotic-divider::before {
+  content: "|";
+  position: relative;
+  top: -.12rem;
+  margin: 0 .8rem;
+  font-size: 88%;
+  font-weight: normal;
 }

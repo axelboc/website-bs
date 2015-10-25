@@ -13,6 +13,7 @@
     
     @media (--bp-sml) {
       max-width: none;
+      margin: 0 -1px;
     }
     
     @media (--bp-x-med) {
