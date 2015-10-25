@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var fbFeedElem = document.querySelector('.fb-feed');
   if (fbFeedElem) {
     // Initialise the Facebook feed
-    //new FacebookFeed(fbFeedElem);
+    new FacebookFeed(fbFeedElem);
   }
   
 });

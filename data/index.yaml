@@ -5,7 +5,7 @@ en:
   headings:
     twitter: Twitter
   text:
-    fbLoading: Retrieving latest news from Facebook...
+    fbLoading: Retrieving latest news from Facebook.
   
 fr:
   title: Benighted Soul
@@ -14,5 +14,5 @@ fr:
   headings:
     twitter: Twitter
   text:
-    fbLoading: Chargement des dernières nouvelles...
+    fbLoading: Chargement des dernières nouvelles.
   

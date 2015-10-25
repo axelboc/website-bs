@@ -6,7 +6,7 @@
   /* Fonts */
   --font-text: 'Open Sans', sans-serif;
   --font-heading: 'Quicksand', sans-serif;
-  --font-quote: 'Georgia', sans-serif;
+  --font-serif: 'Georgia', sans-serif;
   
   /* Accent colour */
   --col-accent: rgb(52, 58, 78);
@@ -255,7 +255,7 @@ blockquote {
   &__text {
     display: inline;
     margin: 0;
-    font-family: var(--font-quote);
+    font-family: var(--font-serif);
     font-size: 1.2rem;
     font-style: italic;
 
@@ -288,4 +288,23 @@ blockquote {
   margin: 0 .8rem;
   font-size: 80%;
   font-weight: normal;
+}
+
+/**
+ * Video
+ */
+.video {
+  position: relative;
+  height: 0;
+  margin: 1rem 0;
+  padding-bottom: 56.25%;
+  
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
 }

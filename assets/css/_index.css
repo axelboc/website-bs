@@ -4,10 +4,7 @@
 .widget {
   background-color: var(--col-accent-subtle);
   margin-bottom: 1.5rem;
-  
-  &--left-col {
-    margin-right: 1.5rem;
-  }
+  overflow: hidden;
   
   &__heading {
     &::before {
@@ -15,8 +12,14 @@
     }
     
     &--sub {
-      margin: 0;
+      margin: 1rem 1rem .5rem;
       font-size: 1.5rem;
+    }
+  }
+  
+  @media (--bp-lge) {
+    &--left-col {
+      margin-right: 1.5rem;
     }
   }
 }
@@ -37,8 +40,55 @@
 }
 
 /**
+ * Kenotic music videos
+ */
+.kenotic-clips {
+  &__title {
+    margin: .5rem 1rem .75rem;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  @media (--bp-x-med) {
+    &__chapters {
+      display: flex;
+    }
+    
+    &__chapter {
+      width: 50%;
+      
+      &:first-child {
+        border-right: 1px solid transparent;
+      }
+      
+      &:last-child {
+        border-left: 1px solid transparent;
+      }
+    }
+    
+    &__video {
+      margin: 0;
+    }
+  }
+}
+
+/**
  * Facebook feed
  */
 .fb-feed {
-  width: 400px;
+  width: 380px;
+  
+  &__loading {
+    max-width: 10rem;
+    margin: 4rem auto;
+    text-align: center;
+    font-size: .9rem;
+  }
+  
+  &__spinner {
+    margin: 2rem auto;
+  }
 }
