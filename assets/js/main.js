@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialise the Facebook feed
     new FacebookFeed(fbFeedElem);
   }
-  
 });
 
 

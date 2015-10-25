@@ -23,6 +23,35 @@ block content
   
     .two-column
       .two-column__main
+        section.widget-live.widget.widget--left-col
+          h2.widget__heading.widget__heading--sub Live
+            strong.kenotic-divider Craddle of Filth
+          .widget-live__inner
+            .widget-live__poster
+              a.widget-live__poster__link(href="/images/live/craddle.jpg")
+                img(src="/images/live/craddle.jpg", width="220", height="311" alt="Craddle of Filth, Inquisitional Tourture 2015")
+            .widget-live__content
+              p Come and see us open for 
+                strong Craddle of Filth
+                | ! We're playing on the French dates of their European tour.
+              ul.widget-live__list
+                li.widget-live__item
+                  .widget-live__date.date
+                    .date__day Tuesday
+                    .date__label OCT 27
+                      sup th
+                  .widget-live__location
+                    strong Strasbourg 
+                    | La Laiterie
+                li.widget-live__item
+                  .widget-live__date.date
+                    .date__day Wednesday
+                    .date__label OCT 28
+                      sup th
+                  .widget-live__location
+                    strong Paris 
+                    | Cabaret Sauvage
+                    
         section.widget-clips.widget.widget--left-col
           h2.widget__heading.widget__heading--sub Music video
             strong.kenotic-divider Kenotic
@@ -34,34 +63,16 @@ block content
                 iframe.video__inner(width="640", height="360", src="https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
             .widget-clips__chapter
               h3.widget-clips__title Chapter 2 - 
-                strong Lorem Ipsum
+                strong To Be Announced
               .video.widget-clips__video
-                .video__inner
-                  p D-21
-            
-        section.widget-live.widget.widget--left-col
-          h2.widget__heading.widget__heading--sub Live
-            strong.kenotic-divider Craddle of Filth
-          .widget-live__inner
-            .widget-live__poster
-              a.widget-live__poster__link(href="/images/live/craddle.jpg")
-                img(src="/images/live/craddle.jpg", width="250", height="" alt="Craddle of Filth, Inquisitional Tourture 2015")
-            .widget-live__content
-              p(style="font-size: 1.2rem") Come and see us open for 
-                strong Craddle&nbsp;of&nbsp;Filth
-                | !
-              p We're playing on the French dates of their European tour in 
-                strong Starsbourg
-                |  and 
-                strong Paris
-                | .
-          
+                .video__inner.widget-clips__soon
+                  p Coming soon
           
       aside.fb-feed.widget
         #fb-root
         .fb-feed__loading(hidden)
           img.fb-feed__spinner(src="/images/spinner.png", alt="", width="100", height="100")
           p= d.text.fbLoading
-        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="380", data-height="600", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
+        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="380", data-height="660", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
           .fb-xfbml-parse-ignore
     

@@ -13,7 +13,7 @@
     
     &--sub {
       margin: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
   
@@ -52,6 +52,21 @@
     text-align: center;
   }
   
+  &__soon {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    
+    & > p {
+      padding: .5rem 0;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+  
   @media (--bp-x-med) {
     &__chapters {
       display: flex;
@@ -85,6 +100,63 @@
   
   &__content {
     padding: 0 1rem;
+    
+    & > p:first-child {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+  }
+  
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--col-accent-subtle);
+    border-left: 5px solid var(--col-accent);
+    
+    & > p {
+      margin: 0;
+    }
+  }
+  
+  &__date {
+    margin-right: 1rem;
+  }
+  
+  &__location {
+    & > strong {
+      display: block;
+    }
+  }
+}
+
+/**
+ * Date
+ */
+.date {
+  font-weight: bold;
+  
+  &__day {
+    padding-top: .2rem;
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  &__label {
+    line-height: 1.2;
+    font-size: 1.2rem;
+    
+    & > sup {
+      margin-left: .1rem;
+      font-size: .8rem;
+    }
   }
 }
 
@@ -92,12 +164,17 @@
  * Facebook feed
  */
 .fb-feed {
+  position: relative;
   width: 380px;
-  min-height: 600px;
+  min-height: 660px;
   
   &__loading {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10rem;
     max-width: 10rem;
-    margin: 4rem auto;
+    margin: 3rem 0 0 -5rem;
     text-align: center;
     font-size: .9rem;
   }

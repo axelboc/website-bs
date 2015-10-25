@@ -26,26 +26,30 @@
     margin: 3px 1px;
     
     @media (--bp-x-med) {
-      flex: 1;
+      flex: 5;
       display: block;
       margin: 0 1px;
+      
+      &--icon {
+        flex: 2;
+      }
     }
   }
   
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
     padding: .3rem .5rem;
     background-color: #000;
     color: #fff;
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: bold;
-    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: background-color .3s ease, color .3s ease;
     
-    &:hover {
+    &:not(&--current):hover {
       background-color: var(--col-accent-subtle);
       color: #000;
     }
@@ -72,10 +76,6 @@
           border-top: 6px solid var(--col-accent);
           transition: border-top-color .3s ease;
         }
-
-        &:hover::after {
-          border-top-color: transparent;
-        }
       }
     }
     
@@ -86,6 +86,10 @@
     @media (--bp-x-lge) {
       font-size: 1.2rem;
     }
+  }
+  
+  &__icon {
+    height: 1.5rem;
   }
   
   @media (--bp-x-med) {

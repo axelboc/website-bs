@@ -177,6 +177,7 @@ blockquote {
 .two-column {
   @media (--bp-lge) {
     display: flex;
+    align-items: flex-start;
     
     &--reverse {
       flex-direction: row-reverse;
