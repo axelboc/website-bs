@@ -10,69 +10,47 @@ block content
     //-        +widget(widget)
     
     section.banner.widget
-      h2.widget__heading Kenotic
-        strong.kenotic-divider Bonus Edition 2015
-      p 
-        | New 
-        strong digital release
-        |  with 
-        strong 2 bonus tracks
-        | .
+      h2.widget__heading!= d.banner.heading
+      p!= d.banner.text
       .button.banner__cta
-        a.button__link(href="") Download it now
+        a.button__link(href="")= d.banner.cta
   
     .two-column
       .two-column__main
         section.widget-live.widget.widget--left-col
-          h2.widget__heading.widget__heading--sub Live
-            strong.kenotic-divider Craddle of Filth
+          h2.widget__heading.widget__heading--sub!= d.live.heading
           .widget-live__inner
             .widget-live__poster
               a.widget-live__poster__link(href="/images/live/craddle.jpg")
                 img(src="/images/live/craddle.jpg", width="220", height="311" alt="Craddle of Filth, Inquisitional Tourture 2015")
             .widget-live__content
-              p Come and see us open for 
-                strong Craddle of Filth
-                | ! We're playing on the French dates of their European tour.
+              p!= d.live.text
               ul.widget-live__list
-                li.widget-live__item
-                  .widget-live__date.date
-                    .date__day Tuesday
-                    .date__label OCT 27
-                      sup th
-                  .widget-live__location
-                    strong Strasbourg 
-                    | La Laiterie
-                li.widget-live__item
-                  .widget-live__date.date
-                    .date__day Wednesday
-                    .date__label OCT 28
-                      sup th
-                  .widget-live__location
-                    strong Paris 
-                    | Cabaret Sauvage
+                each date in d.live.dates
+                  li.widget-live__item
+                    .widget-live__date.date
+                      .date__day= date.day
+                      .date__label!= date.date
+                    .widget-live__location!= date.location
                     
         section.widget-clips.widget.widget--left-col
-          h2.widget__heading.widget__heading--sub Music video
-            strong.kenotic-divider Kenotic
+          h2.widget__heading.widget__heading--sub!= d.clips.heading
           .widget-clips__chapters
-            .widget-clips__chapter
-              h3.widget-clips__title Chapter 1 - 
-                strong Halcyon Days
-              .video.widget-clips__video
-                iframe.video__inner(width="640", height="360", src="https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
-            .widget-clips__chapter
-              h3.widget-clips__title Chapter 2 - 
-                strong To Be Announced
-              .video.widget-clips__video
-                .video__inner.widget-clips__soon
-                  p Coming soon
+            each video in d.clips.videos
+              .widget-clips__chapter
+                h3.widget-clips__title!= video.title
+                .video.widget-clips__video
+                  if video.url
+                    iframe.video__inner(width="640", height="360", src=video.url, frameborder="0", allowfullscreen)
+                  else
+                    .video__inner.widget-clips__soon
+                      p= video.soon
           
       aside.fb-feed.widget
         #fb-root
         .fb-feed__loading(hidden)
           img.fb-feed__spinner(src="/images/spinner.png", alt="", width="100", height="100")
-          p= d.text.fbLoading
+          p= d.fbFeed.loading
         .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="380", data-height="660", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
           .fb-xfbml-parse-ignore
     
