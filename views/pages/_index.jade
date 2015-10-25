@@ -21,27 +21,40 @@ block content
       .button.banner__cta
         a.button__link(href="") Download it now
   
-    div.two-column
+    .two-column
       .two-column__main
-        section.kenotic-clips.widget.widget--left-col
+        section.widget-clips.widget.widget--left-col
           h2.widget__heading.widget__heading--sub Music video
             strong.kenotic-divider Kenotic
-          div.kenotic-clips__chapters
-            div.kenotic-clips__chapter
-              h3.kenotic-clips__title Chapter 1 - 
+          .widget-clips__chapters
+            .widget-clips__chapter
+              h3.widget-clips__title Chapter 1 - 
                 strong Halcyon Days
-              .video.kenotic-clips__video
+              .video.widget-clips__video
                 iframe.video__inner(width="640", height="360", src="https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
-            div.kenotic-clips__chapter
-              h3.kenotic-clips__title Chapter 2 - 
+            .widget-clips__chapter
+              h3.widget-clips__title Chapter 2 - 
                 strong Lorem Ipsum
-              .video.kenotic-clips__video
+              .video.widget-clips__video
                 .video__inner
                   p D-21
             
-        section.widget.widget--left-col
+        section.widget-live.widget.widget--left-col
           h2.widget__heading.widget__heading--sub Live
             strong.kenotic-divider Craddle of Filth
+          .widget-live__inner
+            .widget-live__poster
+              a.widget-live__poster__link(href="/images/live/craddle.jpg")
+                img(src="/images/live/craddle.jpg", width="250", height="" alt="Craddle of Filth, Inquisitional Tourture 2015")
+            .widget-live__content
+              p(style="font-size: 1.2rem") Come and see us open for 
+                strong Craddle&nbsp;of&nbsp;Filth
+                | !
+              p We're playing on the French dates of their European tour in 
+                strong Starsbourg
+                |  and 
+                strong Paris
+                | .
           
           
       aside.fb-feed.widget
@@ -49,6 +62,6 @@ block content
         .fb-feed__loading(hidden)
           img.fb-feed__spinner(src="/images/spinner.png", alt="", width="100", height="100")
           p= d.text.fbLoading
-        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="380", data-height="550", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
+        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="380", data-height="600", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
           .fb-xfbml-parse-ignore
     

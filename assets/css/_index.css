@@ -12,7 +12,7 @@
     }
     
     &--sub {
-      margin: 1rem 1rem .5rem;
+      margin: 1rem;
       font-size: 1.5rem;
     }
   }
@@ -40,11 +40,11 @@
 }
 
 /**
- * Kenotic music videos
+ * Widget videos
  */
-.kenotic-clips {
+.widget-clips {
   &__title {
-    margin: .5rem 1rem .75rem;
+    margin: 0 1rem .75rem;
     font-family: var(--font-serif);
     font-size: 1.2rem;
     font-style: italic;
@@ -76,10 +76,24 @@
 }
 
 /**
+ * Widget live
+ */
+.widget-live {
+  &__inner {
+    display: flex;
+  }
+  
+  &__content {
+    padding: 0 1rem;
+  }
+}
+
+/**
  * Facebook feed
  */
 .fb-feed {
   width: 380px;
+  min-height: 600px;
   
   &__loading {
     max-width: 10rem;
