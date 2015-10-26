@@ -6,7 +6,7 @@
     @media (--bp-lge) {
       flex-wrap: nowrap;
       flex-direction: column;
-      margin: 0;
+      margin: 1rem 0 0;
     }
   }
 }
@@ -45,10 +45,6 @@
  * Biography
  */
 .bio {
-  & > h2:first-child {
-    margin-top: 0;
-  }
-  
   @media (--bp-lge) {
     margin-right: 2rem;
   }

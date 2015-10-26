@@ -4,6 +4,16 @@ block content
 
   section#audio.audio
     h2.audio__heading= d.audioHeading
+    div.audio__inner
+      .audio__player
+        iframe.audio__iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1NGM4fJaIO2TJsxhKjl8Bn", width="300", height="380", frameborder="0", allowtransparency="true")
+      .audio__player
+        iframe.audio__iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5nDZjlk3EwybWy9J27A0ei", width="300", height="380", frameborder="0", allowtransparency="true")
+      div.audio__listen
+        p: strong Listen to us on...
+        .button
+          a.button__link(href="https://play.spotify.com/artist/3MtjDKooE6Vf3g4uyeyX4L") Spotify
+          a.button__link(href="http://www.deezer.com/artist/1416188") Deezer
   
   each playlist in contentful.videoPlaylists
     section.playlist
