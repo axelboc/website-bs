@@ -29,18 +29,44 @@
  */
 .banner {
   position: relative;
-  min-height: 501px;
-  padding: 2.5rem 2rem 0 42%;
-  background: url(/images/index/kenotic-bird.png) no-repeat top left / auto 100%;
+  min-height: 380px;
+  padding: 1.5rem 2rem 0;
+  background: var(--col-accent-subtle) url(/images/index/kenotic-bird--mob.png) no-repeat bottom right;
+  
+  &__heading {
+    margin-top: 0;
+  }
   
   &__cta {
     margin: 2.5rem 0;
   }
   
   &__player {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    display: none;
+  }
+  
+  @media (--bp-x-med) {
+    padding: 2.5rem 1rem 0 48%;
+    background-position: top left;
+    background-size: auto 100%;
+    background-image: url(/images/index/kenotic-bird.png);
+  }
+  
+  @media (--bp-med) {
+    min-height: 450px;
+    padding: 4rem 2rem 0 52%;
+  }
+  
+  @media (--bp-lge) {
+    min-height: 501px;
+    padding: 5rem 2rem 0 42%;
+    
+    &__player {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+    }
   }
 }
 
@@ -99,13 +125,13 @@
  * Widget live
  */
 .widget-live {
-  &__inner {
-    display: flex;
+  &__poster {
+    float: left;
+    width: 80px;
+    margin: 0 1rem 1rem 0;
   }
   
   &__content {
-    padding: 0 1rem;
-    
     & > p:first-child {
       margin-top: 0;
       font-size: 1.1rem;
@@ -116,6 +142,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    clear: left;
   }
   
   &__item {
@@ -138,6 +165,32 @@
   &__location {
     & > strong {
       display: block;
+    }
+  }
+  
+  @media (--bp-sml) {
+    &__inner {
+      display: flex;
+    }
+    
+    &__content {
+      padding: 0 1rem;
+    }
+    
+    &__poster {
+      float: none;
+      width: 130px;
+      margin: 0;
+    }
+    
+    &__list {
+      clear: none;
+    }
+  }
+  
+  @media (--bp-x-med) {
+    &__poster {
+      width: 220px;
     }
   }
 }
@@ -170,8 +223,7 @@
  */
 .fb-feed {
   position: relative;
-  width: 380px;
-  min-height: 660px;
+  text-align: center;
   
   &__loading {
     position: absolute;
@@ -186,5 +238,10 @@
   
   &__spinner {
     margin: 2rem auto;
+  }
+
+  @media (--bp-lge) {
+    width: 380px;
+    min-height: 660px;
   }
 }

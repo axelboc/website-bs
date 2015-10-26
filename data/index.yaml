@@ -21,7 +21,7 @@ en:
     videos:
       - title: Chapter 1 - <strong>Halcyon Days</strong>
         url: https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0
-      - title: Chapter 2 - <strong>To Be Announced</strong>
+      - title: Chapter 2
         soon: Coming soon
   fbFeed:
     loading: Retrieving latest news from Facebook.

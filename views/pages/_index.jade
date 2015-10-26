@@ -11,7 +11,7 @@ block content
     
     section.banner.widget
       .banner__inner
-        h2.widget__heading!= d.banner.heading
+        h2.banner__heading.widget__heading!= d.banner.heading
         p!= d.banner.text
         .button.banner__cta
           a.button__link(href="/#{lang}/shop")= d.banner.cta
@@ -53,6 +53,6 @@ block content
         .fb-feed__loading(hidden)
           img.fb-feed__spinner(src="/images/spinner.png", alt="", width="100", height="100")
           p= d.fbFeed.loading
-        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="380", data-height="660", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
+        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="500", data-height="660", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
           .fb-xfbml-parse-ignore
     
