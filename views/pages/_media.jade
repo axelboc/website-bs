@@ -23,7 +23,6 @@ block content
           - var videoUrl = playlist['video' + index];
           .playlist__video.video
             iframe.video__inner(width="640", height="360", src="#{videoUrl.replace('watch?v=', 'embed/')}?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
-        - playlist.playlistUrl = '#'
         a.playlist__link(href=playlist.playlistUrl)= d.ctaPlaylist
   .button.media-cta.media-cta--youtube
     a.button__link(href=config.socialUrls.youtube)= d.ctaYoutube
