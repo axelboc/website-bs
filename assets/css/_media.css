@@ -27,14 +27,27 @@
   
   &__inner {
     display: flex;
+/*    flex-direction: column;*/
   }
+/*
+  
+  &__players {
+    display: flex;
+  }
+*/
   
   &__player {
     border-right: 2px solid transparent;
+    
+    &--minor {
+      display: none;
+    }
   }
-  
+    
   &__iframe {
-    width: 300px;
+    display: none;
+    width: 220px;
+    height: 300px;
     background-color: #000;
   }
   
@@ -54,6 +67,29 @@
     .button__link {
       display: block;
       margin-bottom: 1rem;
+    }
+  }
+  
+  @media (--bp-x-sml) {
+    &__iframe {
+      display: block;
+    }
+  }
+  
+  @media (--bp-x-med) {
+    &__iframe {
+      width: 300px;
+      height: 380px;
+    }
+  }
+  
+  @media (--bp-lge) {
+    &__inner {
+/*      flex-direction: row;*/
+    }
+    
+    &__player--minor {
+      display: block;
     }
   }
 }
