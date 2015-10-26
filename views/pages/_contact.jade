@@ -2,10 +2,11 @@ extends ../layout
 
 block content
   #thank-you.success
-    .success__message!= config.marked(getSection('Thank you'))
+    .success__message
+      p!= d.thankYou
   
   .contact__wrap
-    != config.marked(getSection('Contact intro'))
+    p!= d.intro
 
     form.contact(name="contact", action="/#{lang}/contact#thank-you", netlify)
       fieldset.contact__inner

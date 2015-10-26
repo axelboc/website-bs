@@ -1,6 +1,8 @@
 en:
   title: Contact 
   description:
+  intro: To get in touch with us, please fill in the form below.
+  thankYou: Your message has been sent, <strong>thank you</strong>. We'll get back to you as soon as possible.
   form:
     name: Name
     email: Email
@@ -10,6 +12,8 @@ en:
 fr:
   title: Contact 
   description:
+  intro: Pour nous contacter, remplissez le formulaire ci-dessous.
+  thankYou: Votre message a été envoyé, <strong>merci</strong>. Nous vous répondrons dès que possible.
   form:
     name: Nom
     email: Email

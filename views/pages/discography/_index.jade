@@ -26,7 +26,7 @@ block content
                 a.album__button.button__link(href=albumData.infoUrl) More info
             if albumData[lang].special
               .special: p!= albumData[lang].special
-            div.album__credits!= config.marked(getSection(albumData.creditsEntry))
+            div.album__credits!= albumData[lang].credits
   
   section.releases
     h2= d.headings.other
