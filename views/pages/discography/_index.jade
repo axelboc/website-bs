@@ -24,8 +24,8 @@ block content
               a.album__button.button__link(href="/#{lang}/media#audio") Listen to it
               if albumData.infoUrl
                 a.album__button.button__link(href=albumData.infoUrl) More info
-            if albumData.specialEntry
-              != config.marked(getSection(albumData.specialEntry))
+            if albumData[lang].special
+              .special: p!= albumData[lang].special
             div.album__credits!= config.marked(getSection(albumData.creditsEntry))
   
   section.releases
