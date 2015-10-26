@@ -28,12 +28,19 @@
  * Banner
  */
 .banner {
+  position: relative;
+  min-height: 501px;
   padding: 2.5rem 2rem 0 42%;
   background: url(/images/index/kenotic-bird.png) no-repeat top left / auto 100%;
-  min-height: 501px;
   
   &__cta {
     margin: 2.5rem 0;
+  }
+  
+  &__player {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
