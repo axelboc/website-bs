@@ -13,7 +13,7 @@ block content
       h2.widget__heading!= d.banner.heading
       p!= d.banner.text
       .button.banner__cta
-        a.button__link(href="")= d.banner.cta
+        a.button__link(href="/#{lang}/shop")= d.banner.cta
   
     .two-column
       .two-column__main
@@ -21,8 +21,8 @@ block content
           h2.widget__heading.widget__heading--sub!= d.live.heading
           .widget-live__inner
             .widget-live__poster
-              a.widget-live__poster__link(href="/images/live/craddle.jpg")
-                img(src="/images/live/craddle.jpg", width="220", height="311" alt="Craddle of Filth, Inquisitional Tourture 2015")
+              a.widget-live__poster__link(href="/images/index/craddle.jpg")
+                img(src="/images/index/craddle.jpg", width="220", height="311" alt="Craddle of Filth, Inquisitional Tourture 2015")
             .widget-live__content
               p!= d.live.text
               ul.widget-live__list

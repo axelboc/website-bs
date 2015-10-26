@@ -28,11 +28,9 @@
  * Banner
  */
 .banner {
-  padding: 2.5rem 2rem 12rem 42%;
-  background-image: url(/images/covers/kenotic-bird.png);
-  background-repeat: no-repeat;
-  background-position: top -50px left -250px;
-  background-size: 100% auto;
+  padding: 2.5rem 2rem 0 42%;
+  background: url(/images/index/kenotic-bird.png) no-repeat top left / auto 100%;
+  min-height: 501px;
   
   &__cta {
     margin: 2.5rem 0;
