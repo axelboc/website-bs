@@ -1,0 +1,96 @@
+/**
+ * Album on the shop
+ */
+.album-shop {
+  margin: 0 0 2.5rem;
+  
+  &__cover-link {
+    display: block;
+  }
+  
+  &__heading {
+    margin-bottom: .8rem;
+  }
+
+  &__features {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+  
+  &__feature {
+    margin: .2rem 0;
+    
+    &::before {
+      content: "✓ ";
+      font-weight: bold;
+    }
+  }
+  
+  &__block > p {
+    margin: .5rem 0;
+  }
+  
+  &__buttons {
+    margin: .5rem 0 .5rem 0;
+  }
+  
+  &__button {
+    margin: 0 .5rem .5rem 0;
+  }
+  
+  @media (--bp-sml) {
+    &__cover-link {
+      float: left;
+      width: 180px;
+      margin: 0 1rem 1rem 0;
+    }
+    
+    &__heading {
+      margin-top: 0;
+    }
+    
+    &__blocks {
+      clear: left;
+    }
+  }
+  
+  @media (--bp-med) {
+    display: flex;
+    
+    &__cover-link {
+      float: none;
+    }
+    
+    &__features {
+      flex-direction: row;
+      margin: 0 -.5rem 1rem;
+    }
+    
+    &__feature {
+      margin: 0 .5rem;
+    }
+  }
+  
+  @media (--bp-lge) {
+    &__cover-link {
+      width: auto;
+    }
+    
+    &__heading {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    &__features {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    &__block > p {
+      margin: 1rem 0;
+    }
+  }
+}
