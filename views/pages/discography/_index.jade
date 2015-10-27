@@ -20,10 +20,10 @@ block content
               p.quote__text= albumData[lang].quote
               cite.quote__cite= albumData[lang].quoteSource
             .album__buttons.button
-              a.album__button.button__link(href=albumData.buyUrl) Get it
-              a.album__button.button__link(href="/#{lang}/media#audio") Listen to it
+              a.album__button.button__link(href=albumData.buyUrl)= d.links.buy
+              a.album__button.button__link(href="/#{lang}/media#audio")= d.links.listen
               if albumData.infoUrl
-                a.album__button.button__link(href=albumData.infoUrl) More info
+                a.album__button.button__link(href=albumData.infoUrl)= d.links.more
             if albumData[lang].special
               .special: p!= albumData[lang].special
             div.album__credits!= albumData[lang].credits
