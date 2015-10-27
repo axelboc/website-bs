@@ -5,3 +5,139 @@ en:
 fr:
   title: Shop
   description: Découvrez où acheter et télécharger nos derniers albums, et jetez un oeil à notre merchandising.
+
+albums:
+  - kenotic-bonus
+  - kenotic
+  - start-from-scratch
+  
+kenotic-bonus:
+  cover: kenotic
+  en:
+    title: Kenotic - Bonus Edition 2015
+    features:
+      - Digital release
+      - 2 bonus tracks
+      - 78 minutes
+    blocks:
+      - text: <strong>Download</strong> the album or the bonus tracks on...
+        links:
+          - label: iTunes
+            url: https://itunes.apple.com/us/album/kenotic-bonus-edition-2015/id1052161790
+          - label: Google Play
+            url: https://play.google.com/store/music/album/Benighted_Soul_Kenotic_Bonus_Edition_2015?id=Bhlqbma3cd46u44gv65rnvlhtd4&hl=fr
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B0173AZ6AI
+          - label: Fnac Jukebox
+            url: http://www.fnacjukebox.com/fr/album/kenotic-1149871
+  fr:
+    title: Kenotic - Edition Bonus 2015
+    features:
+      - Sortie digitale
+      - 2 pistes bonus
+      - 78 minutes
+    blocks:
+      - text: <strong>Télécharger</strong> l'album ou les pistes bonus sur...
+        links:
+          - label: iTunes
+            url: https://itunes.apple.com/us/album/kenotic-bonus-edition-2015/id1052161790
+          - label: Google Play
+            url: https://play.google.com/store/music/album/Benighted_Soul_Kenotic_Bonus_Edition_2015?id=Bhlqbma3cd46u44gv65rnvlhtd4&hl=fr
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B0173AZ6AI
+          - label: Fnac Jukebox
+            url: http://www.fnacjukebox.com/fr/album/kenotic-1149871
+
+kenotic:
+  cover: kenotic
+  en:
+    title: Kenotic
+    features:
+      - Digipack
+      - 68 minutes
+      - 16-page booklet
+    blocks:
+      - text: <strong>Buy</strong> the CD on...
+        links:
+          - label: Season of Mist
+            url: http://shop.season-of-mist.com/benighted-soul-kenotic-cd-digipack
+          - label: Fnac
+            url: http://musique.fnac.com/a7874186/Benighted-Soul-Kenotic-CD-album
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B00P1ECAO4
+      - text: <strong>Download</strong> the album on...
+        links:
+          - label: iTunes
+            url: https://itunes.apple.com/us/album/kenotic/id929600908
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B00OLRCUU6
+  fr:
+    title: Kenotic
+    features:
+      - Digipack
+      - 68 minutes
+      - Livret 16 pages
+    blocks:
+      - text: <strong>Acheter</strong> le CD sur...
+        links:
+          - label: Season of Mist
+            url: http://shop.season-of-mist.com/benighted-soul-kenotic-cd-digipack
+          - label: Fnac
+            url: http://musique.fnac.com/a7874186/Benighted-Soul-Kenotic-CD-album
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B00P1ECAO4
+      - text: <strong>Télécharger</strong> l'album sur...
+        links:
+          - label: iTunes
+            url: https://itunes.apple.com/us/album/kenotic/id929600908
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B00OLRCUU6
+
+start-from-scratch:
+  cover: start-from-scratch
+  en:
+    title: Start from Scratch
+    features:
+      - Crystal jewel case
+      - 68 minutes
+      - 16-page booklet
+    blocks:
+      - text: <strong>Buy</strong> the CD on...
+        links:
+          - label: Season of Mist
+            url: http://shop.season-of-mist.com/benighted-soul-start-from-scratch-cd
+          - label: EMP
+            url: http://www.emp-online.fr/art_186691/
+          - label: Fnac
+            url: http://musique.fnac.com/a3417096/Benighted-Soul-Start-from-scratch-CD-album
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B004JKDXTW
+      - text: <strong>Download</strong> the album on...
+        links:
+          - label: iTunes
+            url: https://itunes.apple.com/fr/album/id459523644?affId=1108120
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B005JAVNIO
+  fr:
+    title: Start from Scratch
+    features:
+      - Boitier cristal
+      - 68 minutes
+      - Livret 16 pages
+    blocks:
+      - text: <strong>Acheter</strong> le CD sur...
+        links:
+          - label: Season of Mist
+            url: http://shop.season-of-mist.com/benighted-soul-start-from-scratch-cd
+          - label: EMP
+            url: http://www.emp-online.fr/art_186691/
+          - label: Fnac
+            url: http://musique.fnac.com/a3417096/Benighted-Soul-Start-from-scratch-CD-album
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B004JKDXTW
+      - text: <strong>Télécharger</strong> l'album sur...
+        links:
+          - label: iTunes
+            url: https://itunes.apple.com/fr/album/id459523644?affId=1108120
+          - label: Amazon
+            url: http://www.amazon.fr/dp/B005JAVNIO

@@ -4,79 +4,24 @@ block content
   
   section
     h2 Studio albums
-    section.album-shop
-      a.album-shop__cover-link(href="/#{lang}/discography")
-        img(src='/images/covers/kenotic.jpg', width="380" height="380" alt="")
-      div
-        h3.album-shop__heading Kenotic - Bonus Edition 2015
-        ul.album-shop__features
-          li.album-shop__feature Digital release
-          li.album-shop__feature 2 bonus tracks
-          li.album-shop__feature 78 minutes
-        div.album-shop__blocks
-          div.album-shop__block
-            p
-              strong Download
-              |  the album or the bonus tracks from...
-            .album-shop__buttons.button
-              a.album-shop__button.button__link(href="https://itunes.apple.com/us/album/kenotic-bonus-edition-2015/id1052161790") iTunes
-              a.album-shop__button.button__link(href="http://www.amazon.fr/dp/B0173AZ6AI") Amazon
-              a.album-shop__button.button__link(href="https://play.google.com/store/music/album/Benighted_Soul_Kenotic_Bonus_Edition_2015?id=Bhlqbma3cd46u44gv65rnvlhtd4&hl=fr") Google Play
-              a.album-shop__button.button__link(href="http://www.fnacjukebox.com/fr/album/kenotic-1149871") Fnac Jukebox
-            
-    section.album-shop
-      a.album-shop__cover-link(href="/#{lang}/discography")
-        img(src='/images/covers/kenotic.jpg', width="380" height="380" alt="")
-      div
-        h3.album-shop__heading Kenotic
-        ul.album-shop__features
-          li.album-shop__feature Digipack
-          li.album-shop__feature 68 minutes
-          li.album-shop__feature 16-page booklet
-        div.album-shop__blocks
-          div.album-shop__block
-            p
-              strong Buy
-              |  the CD on...
-            .album-shop__buttons.button
-              a.album-shop__button.button__link(href="http://shop.season-of-mist.com/benighted-soul-kenotic-cd-digipack") Season of Mist
-              a.album-shop__button.button__link(href="http://musique.fnac.com/a7874186/Benighted-Soul-Kenotic-CD-album") fnac
-              a.album-shop__button.button__link(href="http://www.amazon.fr/dp/B00P1ECAO4") Amazon
-          div.album-shop__block
-            p
-              strong Download
-              |  the album from...
-            .album-shop__buttons.button
-              a.album-shop__button.button__link(href="https://itunes.apple.com/us/album/kenotic/id929600908") iTunes
-              a.album-shop__button.button__link(href="http://www.amazon.fr/dp/B00OLRCUU6") Amazon
-        
-    section.album-shop
-      a.album-shop__cover-link(href="/#{lang}/discography")
-        img(src='/images/covers/start-from-scratch.jpg', width="380" height="380" alt="")
-      div
-        h3.album-shop__heading Start from Scratch
-        ul.album-shop__features
-          li.album-shop__feature Cristal jewel case
-          li.album-shop__feature 70 minutes
-          li.album-shop__feature 16-page booklet
-        div.album-shop__blocks
-          div.album-shop__block
-            p
-              strong Buy
-              |  the CD on...
-            .album-shop__buttons.button
-              a.album-shop__button.button__link(href="http://shop.season-of-mist.com/benighted-soul-start-from-scratch-cd") Season of Mist
-              a.album-shop__button.button__link(href="http://www.emp-online.fr/art_186691/") EMP
-              a.album-shop__button.button__link(href="http://musique.fnac.com/a3417096/Benighted-Soul-Start-from-scratch-CD-album") fnac
-              a.album-shop__button.button__link(href="http://www.amazon.fr/dp/B004JKDXTW") Amazon
-          div.album-shop__block
-            p
-              strong Download
-              |  the album from...
-            .album-shop__buttons.button
-              a.album-shop__button.button__link(href="https://itunes.apple.com/fr/album/id459523644?affId=1108120") iTunes
-              a.album-shop__button.button__link(href="http://www.amazon.fr/dp/B005JAVNIO") Amazon
-              
+    each album in data.shop.albums
+      - var albumData = data.shop[album]
+      section.album-shop
+        a.album-shop__cover-link(href="/#{lang}/discography")
+          img(src='/images/covers/#{albumData.cover}.jpg', width="380" height="380" alt="")
+        div
+          h3.album-shop__heading= albumData[lang].title
+          ul.album-shop__features
+            each feature in albumData[lang].features
+              li.album-shop__feature= feature
+          div.album-shop__blocks
+            each blk in albumData[lang].blocks
+              div.album-shop__block
+                p!= blk.text
+                .album-shop__buttons.button
+                  each link in blk.links
+                    a.album-shop__button.button__link(href=link.url)= link.label
+                    
   //-section
     h2 Other products
     ul.flex-grid
