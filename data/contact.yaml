@@ -1,6 +1,6 @@
 en:
   title: Contact 
-  description:
+  description: Get in touch with us on Facebook, Twitter and the like, or fill in the contact form on this page.
   intro: To get in touch with us, please fill in the form below.
   thankYou: Your message has been sent, <strong>thank you</strong>. We'll get back to you as soon as possible.
   form:
@@ -11,7 +11,7 @@ en:
 
 fr:
   title: Contact 
-  description:
+  description: Contactez-nous sur les réseaux sociaux, ou remplissez le formulaire sur cette page.
   intro: Pour nous contacter, remplissez le formulaire ci-dessous.
   thankYou: Votre message a été envoyé, <strong>merci</strong>. Nous vous répondrons dès que possible.
   form:

@@ -1,6 +1,6 @@
 en:
   title: Media
-  description:
+  description: Listen to our latest albums, watch some of our official music and live videos, and look at some photos of the band.
   audioHeading: Audio
   ctaPlaylist: Full playlist
   ctaYoutube: Visit our YouTube channel
@@ -8,7 +8,7 @@ en:
 
 fr:
   title: Média
-  description:
+  description: Ecoutez nos derniers albums, regardez nos vidéos et clips officiels, et découvrez des photos du groupe.
   audioHeading: Audio
   ctaPlaylist: Playlist complète
   ctaYoutube: Visitez notre chaîne YouTube
