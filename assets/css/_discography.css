@@ -98,6 +98,7 @@
     }
     
     &__link-cover {
+      flex: 1 0 auto;
       float: none;
       width: 380px;
       margin-right: 1.5rem;

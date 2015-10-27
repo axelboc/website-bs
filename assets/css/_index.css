@@ -178,6 +178,7 @@
     }
     
     &__poster {
+      flex: 1 0 auto;
       float: none;
       width: 130px;
       margin: 0;
