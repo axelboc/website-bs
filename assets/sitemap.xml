@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://benightedsoul.com/</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="canonical" hreflang="en" href="http://benightedsoul.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/en/</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="canonical" hreflang="en" href="http://benightedsoul.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/fr/</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/en/band</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/band" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/band" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/fr/band</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/band" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/band" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/en/discography/</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/discography/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/discography/" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/fr/discography/</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/discography/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/discography/" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/en/media</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/media" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/media" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/fr/media</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/media" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/media" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/en/shop</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/shop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/shop" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/fr/shop</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/shop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/shop" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/en/contact</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/contact" />
+  </url>
+  <url>
+    <loc>http://benightedsoul.com/fr/contact</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="http://benightedsoul.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="http://benightedsoul.com/fr/contact" />
+  </url>
+</urlset>

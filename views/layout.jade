@@ -1,22 +1,51 @@
-// Import functions and mixins
+//- Import functions and mixins
 include partials/_functions
 include partials/_mixins
 
-//- Initialise the page object and alias some common info
-- var page = initPage(_path);
-- var lang = page.lang;
-- var d = page.data;
+-
+  // Initialise the page object and alias some common info
+  var page = initPage(_path);
+  var lang = page.lang;
+  var d = page.data;
+  var meta = {
+    title: d.title + ' | ' + (d.titleSuffix || 'Benighted Soul'),
+    description: d.description || '',
+    image: "http://benightedsoul.com/images/index/kenotic-bird.png"
+  };
 
 doctype html
 html(lang=lang)
-  head
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#")
     meta(charset="utf-8")
-    title= d.title + ' | ' + (d.titleSuffix || 'Benighted Soul')
-    meta(name="description", content=(d.description || ''))
     meta(name="viewport", content="width=device-width, initial-scale=1")
+    
+    title= meta.title
+    meta(name="description", content=meta.description)
+    if page.isHome && lang === 'en'
+      link(rel="canonical", href="http://benightedsoul.com/")
+    each code in config.languages
+      link(rel="alternate", hreflang=code, href="http://benightedsoul.com/#{code}/#{page.path.substr(4)}")
+    
+    //- Twitter Card data
+    meta(name="twitter:card", content="summary")
+    meta(name="twitter:site", content="@benightedsoul")
+    meta(name="twitter:title", content=meta.title)
+    meta(name="twitter:description", content=meta.description)
+    meta(name="twitter:image:src", content=meta.image)
+
+    //- Open Graph data
+    meta(property="og:title", content=meta.title)
+    meta(property="og:type", content="article")
+    meta(property="og:url", content="http://benightedsoul.com/")
+    meta(property="og:image", content=meta.image)
+    meta(property="og:description", content=meta.description)
+    meta(property="og:site_name", content="Benighted Soul")
+    meta(property="fb:admins", content="19418788983")
+    
     //link rel="apple-touch-icon-precomposed" href="/favicon-196.png" />
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand:400|Open+Sans")
     != css('/')
+    
   body
     .symbols
       include partials/_icons.svg
