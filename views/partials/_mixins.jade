@@ -1,6 +1,6 @@
 // Wrap the logo with the appropriate element
 mixin logoWrap(classes)
-  if isIndex
+  if page.isHome
     h1(class=classes): block
   else
     div(class=classes): block

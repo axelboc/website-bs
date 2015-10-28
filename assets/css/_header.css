@@ -15,6 +15,10 @@
 .logo {
   margin: 1rem 0;
   
+  &::before {
+    content: none;
+  }
+  
   &__link {
     display: block;
     max-width: 477px;
