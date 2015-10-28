@@ -1,6 +1,6 @@
 en:
   title: Discography
-  description: 
+  description: Discover the full list of our studio albums and other releases.
   headings:
     albums: Studio albums
     other: Other releases
@@ -8,7 +8,7 @@ en:
     buy: Get it
     listen: Listen to it
     more: More info
-  releaseTypes:
+  releaseTypes: Découvrez la liste complète de nos albums studios et de nos autres sorties.
     album: Studio album
     ep: EP
     dvd: DVD

@@ -37,11 +37,11 @@ html(lang=lang)
     //- Open Graph data
     meta(property="og:title", content=meta.title)
     meta(property="og:type", content="article")
-    meta(property="og:url", content="http://benightedsoul.com#{page.path}")
+    meta(property="og:url", content="http://benightedsoul.com#{page.isHome && lang === 'en' ? '/' : page.path}")
     meta(property="og:image", content=meta.image)
     meta(property="og:description", content=meta.description)
     meta(property="og:site_name", content="Benighted Soul")
-    meta(property="fb:admin", content="geraldine.benightedsoul")
+    meta(property="fb:admins", content="geraldine.benightedsoul")
     
     //- Google+
     link(rel="publisher", href="https://plus.google.com/+Benightedsoulofficial/")
