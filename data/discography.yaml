@@ -8,7 +8,7 @@ en:
     buy: Get it
     listen: Listen to it
     more: More info
-  releaseTypes: Découvrez la liste complète de nos albums studios et de nos autres sorties.
+  releaseTypes:
     album: Studio album
     ep: EP
     dvd: DVD
@@ -16,7 +16,7 @@ en:
     
 fr:
   title: Discographie
-  description: 
+  description: Découvrez la liste complète de nos albums studios et de nos autres sorties.
   headings:
     albums: Albums studio
     other: Autres sorties
