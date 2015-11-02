@@ -1,5 +1,5 @@
 # Benighted Soul
 
-Future website of French symphonic, progressive metal band **Benighted Soul**.
+Website of **Benighted Soul**, the French symphonic, progressive metal band.
 
-**http://benightedsoul.com**
+**https://benightedsoul.com**
