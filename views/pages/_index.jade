@@ -2,13 +2,6 @@ extends ../layout
 
 block content
   main.main.layout__max
-    //-  - var homepage = contentful.homepages[0]
-    //-  
-    //-  case homepage.layout
-    //-    when 'simple'
-    //-      each widget in homepage.widgets
-    //-        +widget(widget)
-    
     section.banner.widget
       .banner__inner
         h2.banner__heading.widget__heading!= d.banner.heading

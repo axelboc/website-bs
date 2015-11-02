@@ -9,6 +9,3 @@ mixin logoWrap(classes)
 mixin icon(name, classes)
   svg.icon(class=classes)
     use(xlink:href="#icon-#{name}")
-
-mixin widget(entry)
-  p= entry.fields.label

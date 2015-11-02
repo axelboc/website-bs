@@ -9,7 +9,6 @@ cssPipeline = require 'css-pipeline'
 # Custom configuration in production
 config.browserify.minify = true;
 config.cssPipeline.minify = true;
-config.cssPipeline.hash = true;
 
 module.exports =
   ignores: config.ignores
