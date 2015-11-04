@@ -63,8 +63,8 @@
   
   &__message {
     padding: 1rem;
-    border-left: 5px solid rgb(51, 77, 51);
-    background-color: rgba(51, 77, 51, .1);
+    border-left: 5px solid var(--col-success);
+    background-color: var(--col-success-subtle);
     
     & > p {
       margin: 0;

@@ -13,6 +13,10 @@
   --col-accent-half: rgba(52, 58, 78, .5);
   --col-accent-subtle: rgba(52, 58, 78, .1);
   
+  /* Success colour */
+  --col-success: rgb(51, 77, 51);
+  --col-success-subtle: rgba(51, 77, 51, .1);
+  
   /* Grid layout gutters */
   --gutter-sml: .25rem;
   --gutter-med: .5rem;
