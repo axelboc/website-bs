@@ -6,16 +6,6 @@ en:
     heading: Kenotic<strong class="kenotic-divider">Bonus Edition 2015</strong>
     text: New <strong>digital release</strong> with <strong>2 bonus tracks</strong>.
     cta: Download it now
-  live:
-    heading: Live<strong class="kenotic-divider">Cradle of Filth</strong>
-    text: Come and see us open for <strong>Cradle of Filth</strong>! We're playing on the French dates of their European tour.
-    dates:
-      - day: Tuesday
-        date: OCT 27<sup>th</sup>
-        location: <strong>Strasbourg</strong> La Laiterie
-      - day: Wednesday
-        date: OCT 28<sup>th</sup>
-        location: <strong>Paris</strong> Cabaret Sauvage
   clips:
     heading: Music videos<strong class="kenotic-divider">Kenotic</strong>
     videos:
@@ -34,16 +24,6 @@ fr:
     heading: Kenotic<strong class="kenotic-divider">Edition Bonus 2015</strong>
     text: <strong>Sortie digitale</strong> avec <strong>2 pistes bonus</strong>.
     cta: Télécharger
-  live:
-    heading: Live<strong class="kenotic-divider">Cradle of Filth</strong>
-    text: Venez-nous voir jouer en ouverture de <strong>Cradle of Filth</strong>! Nous ouvrons pour les dates françaises de leur tournée européenne.
-    dates:
-      - day: Mardi
-        date: 27 OCT
-        location: <strong>Strasbourg</strong> La Laiterie
-      - day: Mercredi
-        date: 28 OCT
-        location: <strong>Paris</strong> Cabaret Sauvage
   clips:
     heading: Clips officiels<strong class="kenotic-divider">Kenotic</strong>
     videos:

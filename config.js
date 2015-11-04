@@ -7,6 +7,19 @@ var config = require('./package.json').config;
 // Markdown filter for use in Jade templates
 config.marked = require('marked');
 
+// Moment.js for manipulating dates inside Jade templates
+config.moment = require('moment');
+// French locale
+config.moment.locale('fr', {
+  monthsShort: [
+    'janv', 'févr', 'mars', 'avr', 'mai', 'juin',
+    'juil', 'août', 'sept', 'oct', 'nov', 'déc'
+  ],
+  weekdays: [
+    'dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'
+  ]
+});
+
 // Globs for Roots to ignore
 config.ignores = [
   '*.md',
@@ -65,6 +78,9 @@ config.contentful = {
       filters: {
         order: 'fields.order'
       }
+    },
+    widgetsLive: {
+      id: config.contentTypeIds.widgetLive
     }
   }
 };

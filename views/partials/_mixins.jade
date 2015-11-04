@@ -9,3 +9,26 @@ mixin logoWrap(classes)
 mixin icon(name, classes)
   svg.icon(class=classes)
     use(xlink:href="#icon-#{name}")
+
+// Homepage widget - Live
+mixin widgetLive(widgetData, classes)
+  section.widget-live.widget(class=classes)
+    h2.widget__heading.widget__heading--sub Live
+      strong.kenotic-divider= widgetData[lang + 'Title']
+    .widget-live__inner
+      .widget-live__poster
+        a.widget-live__poster__link(href=widgetData.poster.fields.file.url)
+          img(src=asset(widgetData.poster, { w: 220, q: 80 }, width="220", alt="Poster"))
+      .widget-live__content
+        != config.marked(widgetData[lang + (widgetData.isUpcoming ? 'Upcoming' : 'Past') + 'Text'])
+        ul.widget-live__list
+          each event in widgetData.events
+            li.widget-live__item(class={ 'widget-live__item--past': !widgetData.isUpcoming })
+              .widget-live__date.date
+                - config.moment.locale(lang);
+                - var moment = config.moment(event.fields.date);
+                .date__day= moment.format('dddd')
+                .date__label= moment.format(lang === 'fr' ? 'D MMM' : 'MMM D')
+              .widget-live__location
+                strong= event.fields[lang + 'City'] + ', ' + event.fields[lang + 'Country']
+                = event.fields.hall

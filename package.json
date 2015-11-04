@@ -32,7 +32,8 @@
       "photoGallery": "5Q3m23TGzmCuSOyOi82i6o",
       "release": "4dQwa7ovxCwuAeAi0KE80G",
       "section": "4E63J3zDjOUE8k0ek0OM2K",
-      "videoPlaylist": "FHhldBBlWmoG42s8meawu"
+      "videoPlaylist": "FHhldBBlWmoG42s8meawu",
+      "widgetLive": "4z9xsNLGa4uimCiigQQ2Ow"
     }
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "0.0.x",
     "marked": "0.3.x",
+    "moment": "^2.10.6",
     "postcss": "^5.0.8",
     "postcss-custom-media": "^5.0.0",
     "postcss-custom-properties": "^5.0.0",

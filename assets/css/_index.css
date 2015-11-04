@@ -153,6 +153,11 @@
     background-color: var(--col-accent-subtle);
     border-left: 5px solid var(--col-accent);
     
+    &--past {
+      background-color: var(--col-success-subtle);
+      border-left-color: var(--col-success);
+    }
+    
     & > p {
       margin: 0;
     }
@@ -201,21 +206,16 @@
  */
 .date {
   font-weight: bold;
+  text-transform: uppercase;
   
   &__day {
     padding-top: .2rem;
     font-size: .75rem;
-    text-transform: uppercase;
   }
   
   &__label {
     line-height: 1.2;
     font-size: 1.2rem;
-    
-    & > sup {
-      margin-left: .1rem;
-      font-size: .8rem;
-    }
   }
 }
 

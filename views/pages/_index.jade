@@ -12,22 +12,6 @@ block content
   
     .two-column
       .two-column__main
-        section.widget-live.widget.widget--left-col
-          h2.widget__heading.widget__heading--sub!= d.live.heading
-          .widget-live__inner
-            .widget-live__poster
-              a.widget-live__poster__link(href="/images/index/craddle.jpg")
-                img(src="/images/index/craddle--thumb.jpg", width="220", height="311" alt="Craddle of Filth, Inquisitional Tourture 2015")
-            .widget-live__content
-              p!= d.live.text
-              ul.widget-live__list
-                each date in d.live.dates
-                  li.widget-live__item
-                    .widget-live__date.date
-                      .date__day= date.day
-                      .date__label!= date.date
-                    .widget-live__location!= date.location
-                    
         section.widget-clips.widget.widget--left-col
           h2.widget__heading.widget__heading--sub!= d.clips.heading
           .widget-clips__chapters
@@ -40,6 +24,8 @@ block content
                   else
                     .video__inner.widget-clips__soon
                       p= video.soon
+                      
+        +widgetLive(contentful.widgetsLive[0], "widget--left-col")
           
       aside.fb-feed.widget
         #fb-root
