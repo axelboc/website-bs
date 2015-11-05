@@ -46,10 +46,7 @@ config.contentful = {
       }
     },
     homepages: {
-      id: config.contentTypeIds.homepage,
-      filter: {
-        'fields.isCurrent': true
-      }
+      id: config.contentTypeIds.homepage
     },
     members: {
       id: config.contentTypeIds.member,
@@ -78,9 +75,6 @@ config.contentful = {
       filters: {
         order: 'fields.order'
       }
-    },
-    widgetsLive: {
-      id: config.contentTypeIds.widgetLive
     }
   }
 };

@@ -2,6 +2,8 @@ extends ../layout
 
 block content
   main.main.layout__max
+    - var homepage = contentful.homepages[0];
+    
     section.banner.widget
       .banner__inner
         h2.banner__heading.widget__heading!= d.banner.heading
@@ -25,7 +27,7 @@ block content
                     .video__inner.widget-clips__soon
                       p= video.soon
                       
-        +widgetLive(contentful.widgetsLive[0], "widget--left-col")
+        +widgetLive(homepage.widgets[0].fields, "widget--left-col")
           
       aside.fb-feed.widget
         #fb-root
