@@ -46,7 +46,7 @@ block content
                       img.fb-feed__image(src=post.picture)
                   - var messages = post.message.split('\n').filter(function (msg) { return msg.length > 0; });
                   if messages.length === 2
-                    p= messages[lang === 'fr' ? 0 : 1]
+                    p= messages[lang === 'en' ? 0 : 1]
                   else
                     p= post.message
           .button
