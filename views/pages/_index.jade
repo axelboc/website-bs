@@ -30,10 +30,25 @@ block content
         +widgetLive(homepage.widgets[0].fields, "widget--left-col")
           
       aside.fb-feed.widget
-        #fb-root
-        .fb-feed__loading(hidden)
-          img.fb-feed__spinner(src="/images/spinner.png", alt="", width="100", height="100")
-          p= d.fbFeed.loading
-        .fb-feed__feed.fb-page(data-href="https://www.facebook.com/benightedsoul", data-width="500", data-height="660", data-show-facepile="false", data-show-posts="true", data-hide-cta="true")
-          .fb-xfbml-parse-ignore
+        - config.moment.locale(lang);
+        - momentFormat = lang === 'fr' ? 'D MMMM' : 'MMMM D';
+        h2.widget__heading.widget__heading--sub= d.news.heading
+        .fb-feed__posts
+          each post in records.fbPosts
+            if post.message
+              .fb-feed__post
+                p.fb-feed__date= config.moment(post.created_time).format(momentFormat)
+                .fb-feed__message
+                  if post.picture
+                    if post.link
+                      a.fb-feed__image(href=post.link): img(src=post.picture)
+                    else
+                      img.fb-feed__image(src=post.picture)
+                  - var messages = post.message.split('\n').filter(function (msg) { return msg.length > 0; });
+                  if messages.length === 2
+                    p= messages[lang === 'fr' ? 0 : 1]
+                  else
+                    p= post.message
+          .button
+            a.button__link(href=config.socialUrls.facebook)= d.news.cta
     

@@ -6,6 +6,9 @@ en:
     heading: Kenotic<strong class="kenotic-divider">Bonus Edition 2015</strong>
     text: New <strong>digital release</strong> with <strong>2 bonus tracks</strong>.
     cta: Download it now
+  news:
+    heading: Latest news
+    cta: Stay tuned
   clips:
     heading: Music videos<strong class="kenotic-divider">Kenotic</strong>
     videos:
@@ -13,8 +16,6 @@ en:
         url: https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0
       - title: Chapter 2
         soon: Coming soon
-  fbFeed:
-    loading: Retrieving latest news from Facebook.
   
 fr:
   title: Benighted Soul
@@ -24,6 +25,9 @@ fr:
     heading: Kenotic<strong class="kenotic-divider">Edition Bonus 2015</strong>
     text: <strong>Sortie digitale</strong> avec <strong>2 pistes bonus</strong>.
     cta: Télécharger
+  news:
+    heading: Dernières actus
+    cta: Toutes les actus
   clips:
     heading: Clips officiels<strong class="kenotic-divider">Kenotic</strong>
     videos:
@@ -31,6 +35,4 @@ fr:
         url: https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0
       - title: Chapitre 2
         soon: Bientôt disponible
-  fbFeed:
-    loading: Chargement des dernières nouvelles.
   
