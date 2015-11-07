@@ -223,26 +223,32 @@
  * Facebook feed
  */
 .fb-feed {
-  position: relative;
-  text-align: center;
-  
-  &__loading {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 10rem;
-    max-width: 10rem;
-    margin: 3rem 0 0 -5rem;
-    text-align: center;
-    font-size: .9rem;
+  &__posts {
+    padding: 0 1rem;
   }
   
-  &__spinner {
-    margin: 2rem auto;
+  &__date {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: normal;
+  }
+  
+  &__image {
+    float: left;
+    margin: .2rem .8rem .5rem 0;
+  }
+  
+  &__message {
+    font-size: .9rem;
+    
+    & > p:first-of-type {
+      margin-top: .55rem;
+    }
   }
 
   @media (--bp-lge) {
     width: 380px;
-    min-height: 660px;
   }
 }
