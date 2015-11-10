@@ -36,7 +36,7 @@ block content
         .fb-feed__posts
           each post in records.fbPosts
             if post.message
-              .fb-feed__post
+              .fb-feed__post.clearfix
                 p.fb-feed__date= config.moment(post.created_time).format(momentFormat)
                 .fb-feed__message
                   if post.picture
@@ -49,6 +49,6 @@ block content
                     p= messages[lang === 'en' ? 0 : 1]
                   else
                     p= post.message
-          .button
+          .fb-feed__cta.button
             a.button__link(href=config.socialUrls.facebook)= d.news.cta
     

@@ -4,12 +4,7 @@ en:
   headings:
     albums: Studio albums
     other: Other releases
-  links:
-    buy: Get it
-    listen: Listen to it
-    more: More info
   releaseTypes:
-    album: Studio album
     ep: EP
     dvd: DVD
     demo: Demo
@@ -20,61 +15,28 @@ fr:
   headings:
     albums: Albums studio
     other: Autres sorties
-  links:
-    buy: Acheter
-    listen: Ecouter
-    more: Plus d'infos
   releaseTypes:
-    album: Album studio
     ep: EP
     dvd: DVD
     demo: Démo
 
-albums:
-  - kenotic
-  - start-from-scratch
-otherReleases:
-  - anesidora
-  - catharsis-live
-  - catharsis
-  - enchantment
-
 kenotic:
-  buyUrl: http://shop.season-of-mist.com/benighted-soul-kenotic-cd-digipack
-  infoUrl: https://kenoticalbum.wordpress.com/
   en:
     title: Kenotic
     description: 
-    quote: Grandiloquent instrumentations, complex structures, female vocals far from the clichés of the genre for a complete freedom; it goes without saying that the show is unique and driven by a magnificent concept.
-    quoteSource: Metallian
-    special: <strong>New!</strong> Bonus Edition 2015, <a href="/en/shop">digital release</a>
-    credits: ℗ &amp; © 2014 Benighted Soul. Distributed by <em>Season of Mist</em>, courtesy of <em>Savage Prod</em>. Engineered and mixed by Flavien Morel, mastered by Chris Edrich. Artwork by Pierre-Alain/<em>3mmi Design</em>.
   fr:
     title: Kenotic
     description: 
-    quote: Instrumentations grandiloquentes, structures complexes, chant féminin loin des poncifs du genre pour une liberté totale, il va s'en dire que le spectacle est unique et rythmé par un concept magnifique.
-    quoteSource: Metallian
-    special: <strong>Nouveau !</strong> Edition Bonus 2015, <a href="/fr/shop">sortie digitale</a>
-    credits: ℗ &amp; © 2014 Benighted Soul. Distribué par <em>Season of Mist</em>, avec l'aimable autorisation de <em>Savage Prod</em>. Enregistré et mixé par Flavien Morel, masterisé par Chris Edrich. Artwork par Pierre-Alain/<em>3mmi Design</em>.
 
 start-from-scratch:
-  buyUrl: http://shop.season-of-mist.com/benighted-soul-start-from-scratch-cd
   en:
     title: Start from Scratch
     description: 
-    quote: This first attempt, adventurous, intelligent, and surprisingly mature nears a master stroke.
-    quoteSource: Metal Obs'
-    credits: ℗ &amp; © 2010 Benighted Soul. Distributed by <em>Season of Mist</em>. Soundworks courtesy of <em>Savage Prod</em>. Engineered and mixed by Flavien Morel, mastered by arnoS @ <em>MF'Studio</em>. Artwork by Eliran Kantor.
   fr:
     title: Start from Scratch
     description: 
-    quote: Ce premier essai aventureux, intelligent, et étonnement mature frise le coup de maître.
-    quoteSource: Metal Obs'
-    credits: ℗ &amp; © 2010 Benighted Soul. Distributé par <em>Season of Mist</em> avec l'aimable autorisation de <em>Savage Prod</em>. Enregistré et mixé par Flavien Morel, masterisé par arnoS @ <em>MF'Studio</em>. Artwork par Eliran Kantor.
 
 anesidora:
-  type: ep
-  year: 2008
   en:
     title: Anesidora
     description: 
@@ -83,8 +45,6 @@ anesidora:
     description: 
 
 catharsis-live:
-  type: dvd
-  year: 2006
   en:
     title: Catharsis Live
     description: 
@@ -93,8 +53,6 @@ catharsis-live:
     description: 
 
 catharsis:
-  type: demo
-  year: 2006
   en:
     title: Catharsis
     description: 
@@ -103,8 +61,6 @@ catharsis:
     description: 
 
 enchantment:
-  type: demo
-  year: 2004
   en:
     title: Enchantment
     description: 

@@ -227,6 +227,10 @@
     padding: 0 1rem;
   }
   
+  &__post {
+    margin-bottom: .5rem;
+  }
+  
   &__date {
     margin: 0;
     font-family: var(--font-serif);
@@ -245,9 +249,14 @@
     
     & > p:first-of-type {
       margin-top: .55rem;
+      margin-bottom: .5rem;
     }
   }
-
+  
+  &__cta {
+    margin-top: 1rem;
+  }
+  
   @media (--bp-lge) {
     width: 380px;
   }

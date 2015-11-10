@@ -57,6 +57,10 @@
   &__credits {
     font-size: .72rem;
     font-size: .75rem;
+    
+    & > p:last-child {
+      margin-bottom: 0;
+    }
   }
   
   @media (--bp-x-med) {

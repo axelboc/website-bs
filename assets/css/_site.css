@@ -143,6 +143,12 @@ blockquote {
   fill: currentColor;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /**
  * Layout
  */

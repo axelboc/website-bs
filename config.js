@@ -57,7 +57,7 @@ config.records = {
         return ((post.status_type === 'mobile_status_update'
           || post.status_type === 'shared_story')
           && post.type !== 'video');
-      }).slice(0, 2);
+      }).slice(0, 3);
     }
   }
 };
@@ -75,8 +75,8 @@ config.contentful = {
     albums: {
       id: config.contentTypeIds.release,
       filters: {
-        'fields.type': 'Studio album',
-        order: '-fields.date'
+        'fields.type': 'studio-album',
+        order: '-fields.releaseDate'
       }
     },
     homepages: {
@@ -91,8 +91,8 @@ config.contentful = {
     otherReleases: {
       id: config.contentTypeIds.release,
       filters: {
-        'fields.type[ne]': 'Studio album',
-        order: '-fields.date'
+        'fields.type[nin]': 'studio-album,special-edition',
+        order: '-fields.releaseDate'
       }
     },
     photoGalleries: {
