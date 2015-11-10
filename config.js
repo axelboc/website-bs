@@ -57,7 +57,7 @@ config.records = {
         return ((post.status_type === 'mobile_status_update'
           || post.status_type === 'shared_story')
           && post.type !== 'video');
-      }).slice(0, 2);
+      }).slice(0, 3);
     }
   }
 };
