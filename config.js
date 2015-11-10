@@ -4,21 +4,34 @@ require('dotenv').load({ silent: true });
 // Load initial config from package.json
 var config = require('./package.json').config;
 
-// Markdown filter for use in Jade templates
+
+/**
+ * Template helpers.
+ */
+
+// Markdown filter
 config.marked = require('marked');
 
-// Moment.js for manipulating dates inside Jade templates
+// Moment.js for manipulating dates
 config.moment = require('moment');
-// French locale
+
+// Configure French locale
 config.moment.locale('fr', {
+  months: [
+    'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+    'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'
+  ],
   monthsShort: [
     'janv', 'févr', 'mars', 'avr', 'mai', 'juin',
     'juil', 'août', 'sept', 'oct', 'nov', 'déc'
   ],
-  weekdays: [
-    'dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'
-  ]
+  weekdays: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
 });
+
+
+/**
+ * Roots configuration.
+ */
 
 // Globs for Roots to ignore
 config.ignores = [
@@ -28,12 +41,33 @@ config.ignores = [
   'views/layout.jade'
 ];
 
-// YAML (Roots extension)
+
+/**
+ * Roots extensions.
+ */
+
+// Records
+config.records = {
+  // Facebook posts
+  fbPosts: {
+    url: ('https://graph.facebook.com/v2.5/benightedsoul?fields=posts{created_time,type,status_type,message,picture,link,source}&access_token=' + process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET),
+    hook: function (data) {
+      // Keep only the last two posts of a supported type
+      return data.posts.data.filter(function (post) {
+        return ((post.status_type === 'mobile_status_update'
+          || post.status_type === 'shared_story')
+          && post.type !== 'video');
+      }).slice(0, 2);
+    }
+  }
+};
+
+// YAML
 config.yaml = {
   source: 'data'
 };
 
-// Contentfull (Roots extension)
+// Contentfull
 config.contentful = {
   access_token: process.env.CONTENTFUL_KEY,
   space_id: 'v8by0dt6oh1j',
@@ -79,19 +113,24 @@ config.contentful = {
   }
 };
 
-// Browserify (Roots extension)
+// Browserify
 config.browserify = {
   files: 'assets/js/main.js',
   out: 'js/build.js'
 };
 
-// CSS pipeline (Roots extension)
+// CSS pipeline
 config.cssPipeline = {
   files: 'assets/css/main.css',
   out: 'css/build.css'
 };
 
-// PostCSS (Roots plugin)
+
+/**
+ * Roots compilers.
+ */
+
+// PostCSS
 config.postcss = {
   use: [
     require('postcss-import')({ path: 'assets/css' }),
@@ -102,4 +141,6 @@ config.postcss = {
   ]
 };
 
+
+// Export configuration
 module.exports = config;
