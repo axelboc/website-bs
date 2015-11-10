@@ -41,8 +41,8 @@ config.contentful = {
     albums: {
       id: config.contentTypeIds.release,
       filters: {
-        'fields.type': 'Studio album',
-        order: '-fields.date'
+        'fields.type': 'studio-album',
+        order: '-fields.releaseDate'
       }
     },
     homepages: {
@@ -57,8 +57,8 @@ config.contentful = {
     otherReleases: {
       id: config.contentTypeIds.release,
       filters: {
-        'fields.type[ne]': 'Studio album',
-        order: '-fields.date'
+        'fields.type[nin]': 'studio-album,special-edition',
+        order: '-fields.releaseDate'
       }
     },
     photoGalleries: {

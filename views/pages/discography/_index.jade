@@ -6,41 +6,40 @@ block content
   section.albums
     h2= d.headings.albums
     .albums__list
-      each album in disco.albums
+      each album in contentful.albums
         section.album
-          - var albumData = disco[album]
           //a.album__link-cover(href=page.path + '/' + album)
           .album__link-cover
-            img.album__cover(src='/images/covers/' + album + '.jpg', width="380" height="380" alt="")
+            img.album__cover(src=asset(album.cover, { w: 380, h: 380, q: 80 }), width="380" height="380" alt="")
           div.album__content
             h3.album__heading
               //a.album__link(href=page.path + '/' + album)= albumData[lang].title
-              .album__link= albumData[lang].title
+              .album__link= album[lang + 'Title']
             blockquote.quote
-              p.quote__text= albumData[lang].quote
-              cite.quote__cite= albumData[lang].quoteSource
+              - var quote = album.discographyQuote.fields;
+              p.quote__text= quote[lang + 'Quote']
+              cite.quote__cite= quote[lang + 'Source']
             .album__buttons.button
-              a.album__button.button__link(href=albumData.buyUrl)= d.links.buy
-              a.album__button.button__link(href="/#{lang}/media#audio")= d.links.listen
-              if albumData.infoUrl
-                a.album__button.button__link(href=albumData.infoUrl)= d.links.more
-            if albumData[lang].special
-              .special: p!= albumData[lang].special
-            div.album__credits!= albumData[lang].credits
+              each btn in album.discographyButtonGroup.fields.buttons
+                a.album__button.button__link(href=btn.fields[lang + 'Url'])= btn.fields[lang + 'Text']
+            - var special = album[lang + 'DiscographySpecial']
+            if special
+              .special: p!= config.marked(special)
+            div.album__credits!= config.marked(album[lang + 'Credits'])
   
   section.releases
     h2= d.headings.other
     ol.releases__list.flex-grid
-      each release in disco.otherReleases
-        - var releaseData = disco[release]
-        li.release.flex-grid__item(class=(releaseData.type === 'dvd' ? 'release--dvd' : null))
+      each release in contentful.otherReleases
+        li.release.flex-grid__item(class=(release.type === 'dvd' ? 'release--dvd' : null))
           //a.release__link(href=page.path + '/' + release)
           .release__link
             .release__cover
-              img.release__img(src='/images/covers/' + release + '.jpg', width="200" height="200" alt="")
+              img.release__img(src=asset(release.cover, { w: 200, h: 200, q: 80 }), width="200" height="200" alt="")
             p.release__content
-              strong.release__title= releaseData[lang].title
+              - var releaseDate = config.moment(release.releaseDate).format('YYYY');
+              strong.release__title= release[lang + 'Title']
               |  
-              span= releaseData.year + ', ' + disco[lang].releaseTypes[releaseData.type]
+              span= releaseDate + ', ' + disco[lang].releaseTypes[release.type]
     
     
