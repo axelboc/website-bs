@@ -28,6 +28,8 @@ kenotic-bonus:
             url: https://play.google.com/store/music/album/Benighted_Soul_Kenotic_Bonus_Edition_2015?id=Bhlqbma3cd46u44gv65rnvlhtd4&hl=fr
           - label: Amazon
             url: http://www.amazon.fr/dp/B0173AZ6AI
+      - text: <strong>Listen</strong> to the new tracks on...
+        links:
           - label: Fnac Jukebox
             url: http://www.fnacjukebox.com/fr/album/kenotic-1149871
   fr:
@@ -45,6 +47,8 @@ kenotic-bonus:
             url: https://play.google.com/store/music/album/Benighted_Soul_Kenotic_Bonus_Edition_2015?id=Bhlqbma3cd46u44gv65rnvlhtd4&hl=fr
           - label: Amazon
             url: http://www.amazon.fr/dp/B0173AZ6AI
+      - text: <strong>Ecouter</strong> les nouvelles pistes sur...
+        links:
           - label: Fnac Jukebox
             url: http://www.fnacjukebox.com/fr/album/kenotic-1149871
 
