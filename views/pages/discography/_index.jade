@@ -6,40 +6,42 @@ block content
   section.albums
     h2= d.headings.albums
     .albums__list
-      each album in contentful.albums
-        section.album
-          //a.album__link-cover(href=page.path + '/' + album)
-          .album__link-cover
-            img.album__cover(src=asset(album.cover, { w: 380, h: 380, q: 80 }), width="380" height="380" alt="")
-          div.album__content
-            h3.album__heading
-              //a.album__link(href=page.path + '/' + album)= albumData[lang].title
-              .album__link= album[lang + 'Title']
-            blockquote.quote
-              - var quote = album.discographyQuote.fields;
-              p.quote__text= quote[lang + 'Quote']
-              cite.quote__cite= quote[lang + 'Source']
-            .album__buttons.button
-              each btn in album.discographyButtonGroup.fields.buttons
-                a.album__button.button__link(href=btn.fields[lang + 'Url'])= btn.fields[lang + 'Text']
-            - var special = album[lang + 'DiscographySpecial']
-            if special
-              .special: p!= config.marked(special)
-            div.album__credits!= config.marked(album[lang + 'Credits'])
+      each album in contentful.releases
+        if album.type === 'studio-album'
+          section.album
+            //a.album__link-cover(href=page.path + '/' + album)
+            .album__link-cover
+              img.album__cover(src=asset(album.cover, { w: 380, h: 380, q: 80 }), width="380" height="380" alt="")
+            div.album__content
+              h3.album__heading
+                //a.album__link(href=page.path + '/' + album)= albumData[lang].title
+                .album__link= album[lang + 'Title']
+              blockquote.quote
+                - var quote = album.discographyQuote.fields;
+                p.quote__text= quote[lang + 'Quote']
+                cite.quote__cite= quote[lang + 'Source']
+              .album__buttons.button
+                each btn in album.discographyButtonGroup.fields.buttons
+                  a.album__button.button__link(href=btn.fields[lang + 'Url'])= btn.fields[lang + 'Text']
+              - var special = album[lang + 'DiscographySpecial']
+              if special
+                .special: p!= config.marked(special)
+              div.album__credits!= config.marked(album[lang + 'Credits'])
   
   section.releases
     h2= d.headings.other
     ol.releases__list.flex-grid
-      each release in contentful.otherReleases
-        li.release.flex-grid__item(class=(release.type === 'dvd' ? 'release--dvd' : null))
-          //a.release__link(href=page.path + '/' + release)
-          .release__link
-            .release__cover
-              img.release__img(src=asset(release.cover, { w: 200, h: 200, q: 80 }), width="200" height="200" alt="")
-            p.release__content
-              - var releaseDate = config.moment(release.releaseDate).format('YYYY');
-              strong.release__title= release[lang + 'Title']
-              |  
-              span= releaseDate + ', ' + disco[lang].releaseTypes[release.type]
+      each release in contentful.releases
+        if ['studio-album', 'special-edition'].indexOf(release.type) === -1
+          li.release.flex-grid__item(class=(release.type === 'dvd' ? 'release--dvd' : null))
+            //a.release__link(href=page.path + '/' + release)
+            .release__link
+              .release__cover
+                img.release__img(src=asset(release.cover, { w: 200, h: 200, q: 80 }), width="200" height="200" alt="")
+              p.release__content
+                - var releaseDate = config.moment(release.releaseDate).format('YYYY');
+                strong.release__title= release[lang + 'Title']
+                |  
+                span= releaseDate + ', ' + disco[lang].releaseTypes[release.type]
     
     

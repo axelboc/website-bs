@@ -4,23 +4,27 @@ block content
   
   section
     h2 Studio albums
-    each album in data.shop.albums
-      - var albumData = data.shop[album]
-      section.album-shop
-        a.album-shop__cover-link(href="/#{lang}/discography")
-          img(src='/images/covers/#{albumData.cover}.jpg', width="380" height="380" alt="")
-        div
-          h3.album-shop__heading= albumData[lang].title
-          ul.album-shop__features
-            each feature in albumData[lang].features
-              li.album-shop__feature= feature
-          div.album-shop__blocks
-            each blk in albumData[lang].blocks
-              div.album-shop__block
-                p!= blk.text
-                .album-shop__buttons.button
-                  each link in blk.links
-                    a.album-shop__button.button__link(href=link.url)= link.label
+    each release in contentful.releases
+      if ['studio-album', 'special-edition'].indexOf(release.type) > -1
+        section.album-shop
+          a.album-shop__cover-link(href="/#{lang}/discography")
+            img(src=asset(release.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="")
+          div
+            h3.album-shop__heading= release[lang + 'Title']
+            ul.album-shop__features
+              each feature in release[lang + 'ShopFeatures']
+                li.album-shop__feature= feature
+            div.album-shop__blocks
+              each btnGroup in release.shopButtonGroups
+                div.album-shop__block
+                  - var leadSplit = btnGroup.fields[lang + 'Lead'].split(' ');
+                  p
+                    strong= leadSplit[0] + ' '
+                    = leadSplit.slice(1).join(' ')
+                  .album-shop__buttons.button
+                    each btn in btnGroup.fields.buttons
+                      a.album-shop__button.button__link(href=btn.fields[lang + 'Url'])
+                        = btn.fields[lang + 'Text']
                     
   //-section
     h2 Other products

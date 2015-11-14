@@ -72,13 +72,6 @@ config.contentful = {
   access_token: process.env.CONTENTFUL_KEY,
   space_id: 'v8by0dt6oh1j',
   content_types: {
-    albums: {
-      id: config.contentTypeIds.release,
-      filters: {
-        'fields.type': 'studio-album',
-        order: '-fields.releaseDate'
-      }
-    },
     homepages: {
       id: config.contentTypeIds.homepage
     },
@@ -88,17 +81,16 @@ config.contentful = {
         order: 'fields.order'
       }
     },
-    otherReleases: {
-      id: config.contentTypeIds.release,
-      filters: {
-        'fields.type[nin]': 'studio-album,special-edition',
-        order: '-fields.releaseDate'
-      }
-    },
     photoGalleries: {
       id: config.contentTypeIds.photoGallery,
       filters: {
         order: 'fields.order'
+      }
+    },
+    releases: {
+      id: config.contentTypeIds.release,
+      filters: {
+        order: '-fields.releaseDate'
       }
     },
     sections: {
