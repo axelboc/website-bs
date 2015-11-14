@@ -1,17 +1,4 @@
 
-// Dependencies
-var FacebookFeed = require('./facebook-feed').FacebookFeed;
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  var fbFeedElem = document.querySelector('.fb-feed');
-  if (fbFeedElem) {
-    // Initialise the Facebook feed
-    new FacebookFeed(fbFeedElem);
-  }
-});
-
-
 // Track JS errors
 window.addEventListener('error', function (evt) {
   /*ga('send', 'exception', {
