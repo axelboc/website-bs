@@ -13,7 +13,7 @@ en:
     heading: Music videos<strong class="kenotic-divider">Kenotic</strong>
     videos:
       - title: Chapter 1 - <strong>Halcyon Days</strong>
-        url: https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0
+        url: https://www.youtube.com/watch?v=wjbkqMicYz4
       - title: Chapter 2
         soon: Coming soon
   
@@ -32,7 +32,7 @@ fr:
     heading: Clips officiels<strong class="kenotic-divider">Kenotic</strong>
     videos:
       - title: Chapitre 1 - <strong>Halcyon Days</strong>
-        url: https://www.youtube.com/embed/wjbkqMicYz4?rel=0&amp;showinfo=0
+        url: https://www.youtube.com/watch?v=wjbkqMicYz4
       - title: Chapitre 2
         soon: Bientôt disponible
   
