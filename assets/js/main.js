@@ -1,5 +1,13 @@
 "use strict";
 
+var YOUTUBE_URL = 'https://www.youtube.com/embed/';
+var YOUTUBE_PARAMS = [
+  'autoplay=1',
+  'rel=0',
+  'showinfo=0',
+  'iv_load_policy=3'
+];
+
 // Track JS errors
 window.addEventListener('error', function (evt) {
   if (!('ga' in window)) { return; }
@@ -27,10 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (videoId) {
       evt.preventDefault();
       link.removeEventListener('click', handleLinkPreviewClick);
+      
+      // Add page language to YouTube params
+      var params = YOUTUBE_PARAMS.slice(0);
+      params.push('hl=' + document.documentElement.getAttribute('lang') || 'en');
 
       var iframe = document.createElement('iframe');
       iframe.className = 'video__inner';
-      iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?rel=0&amp;showinfo=0');
+      iframe.setAttribute('src', YOUTUBE_URL + videoId + '?' + params.join('&amp;'));
       iframe.setAttribute('width', link.getAttribute('data-width') || 640);
       iframe.setAttribute('height', link.getAttribute('data-height') || 360);
       iframe.setAttribute('frameborder', 0);
