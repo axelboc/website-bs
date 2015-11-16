@@ -21,10 +21,7 @@ block content
       h2= playlist[lang + 'Title']
       .playlist__inner
         each index in [1, 2]
-          - var videoUrl = playlist['video' + index];
-          .playlist__video.video
-            - var videoId = videoUrl.match(/watch\?v=(.+)/)[1];
-            a.video__preview(href=videoUrl, data-width="640", height="360", data-video-id=videoId, style="background-image: url(https://img.youtube.com/vi/#{videoId}/sddefault.jpg);") Watch video
+          +video(playlist['video' + index], "640", "360")
         a.playlist__link(href=playlist.playlistUrl)= d.ctaPlaylist
   .button.media-cta.media-cta--youtube
     a.button__link(href=config.socialUrls.youtube)= d.ctaYoutube
