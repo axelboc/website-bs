@@ -310,6 +310,7 @@ blockquote {
   margin: 1rem 0;
   padding-bottom: 56.25%;
   
+  &__preview,
   &__inner {
     position: absolute;
     top: 0;
@@ -317,5 +318,58 @@ blockquote {
     width: 100%;
     height: 100%;
     background-color: #000;
+  }
+  
+  &__preview {
+    opacity: 1;
+    z-index: 1;
+    padding: 0;
+    border: 0;
+    background-position: center;
+    background-size: cover;
+    transition: opacity .7s ease;
+    
+    /* Hide button label from view */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 4rem;
+      height: 3rem;
+      margin-top: -1.5rem;
+      margin-left: -2rem;
+      border-radius: .6rem;
+      background-color: rgba(30, 30, 30, .7);
+      transition: background-color .1s ease;
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -.65rem;
+      margin-left: -.5rem;
+      border-left: 1.2rem solid #eee;
+      border-right: 0 solid #eee;
+      border-top: .65rem solid transparent;
+      border-bottom: .65rem solid transparent;
+    }
+    
+    &:not(&--loading):hover {
+      &::before {
+        background-color: #cc181e;
+      }
+    }
+    
+    &--loading {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }

@@ -10,6 +10,12 @@ mixin icon(name, classes)
   svg.icon(class=classes)
     use(xlink:href="#icon-#{name}")
 
+// Output a video preview link
+mixin video(url, width, height)
+  .playlist__video.video
+    - var id = url.match(/watch\?v=(.+)/)[1];
+    a.video__preview(href=url, data-width=width, data-height=height, data-video-id=id, style="background-image: url(https://img.youtube.com/vi/#{id}/sddefault.jpg);") Watch video
+
 // Homepage widget - Live
 mixin widgetLive(widgetData, classes)
   section.widget-live.widget(class=classes)

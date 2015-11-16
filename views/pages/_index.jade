@@ -22,7 +22,7 @@ block content
                 h3.widget-clips__title!= video.title
                 .video.widget-clips__video
                   if video.url
-                    iframe.video__inner(width="640", height="360", src=video.url, frameborder="0", allowfullscreen)
+                    +video(video.url, "640", "360")
                   else
                     .video__inner.widget-clips__soon
                       p= video.soon
