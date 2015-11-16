@@ -321,10 +321,13 @@ blockquote {
   }
   
   &__preview {
-    border: 0;
+    opacity: 1;
+    z-index: 1;
     padding: 0;
+    border: 0;
     background-position: center;
     background-size: cover;
+    transition: opacity .7s ease;
     
     /* Hide button label from view */
     text-indent: 100%;
@@ -353,14 +356,20 @@ blockquote {
       margin-top: -.65rem;
       margin-left: -.5rem;
       border-left: 1.2rem solid #eee;
+      border-right: 0 solid #eee;
       border-top: .65rem solid transparent;
       border-bottom: .65rem solid transparent;
     }
     
-    &:hover {
+    &:not(&--loading):hover {
       &::before {
         background-color: #cc181e;
       }
+    }
+    
+    &--loading {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }
