@@ -38,6 +38,17 @@
       "section": "4E63J3zDjOUE8k0ek0OM2K",
       "videoPlaylist": "FHhldBBlWmoG42s8meawu",
       "widgetLive": "4z9xsNLGa4uimCiigQQ2Ow"
+    },
+    "facebook": {
+      "postsCount": 3,
+      "supportedStatusTypes": [
+        "added_photos",
+        "mobile_status_update",
+        "shared_story"
+      ],
+      "unsupportedPostTypes": [
+        "video"
+      ]
     }
   },
   "dependencies": {
