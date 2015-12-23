@@ -14,8 +14,8 @@ en:
     videos:
       - title: Chapter 1 - <strong>Halcyon Days</strong>
         url: https://www.youtube.com/watch?v=wjbkqMicYz4
-      - title: Chapter 2
-        soon: Coming soon
+      - title: Chapter 2 - <strong>Martingale</strong>
+        soon: https://www.youtube.com/watch?v=83WKeJYIujI
   
 fr:
   title: Benighted Soul
