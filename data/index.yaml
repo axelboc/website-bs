@@ -15,7 +15,7 @@ en:
       - title: Chapter 1 - <strong>Halcyon Days</strong>
         url: https://www.youtube.com/watch?v=wjbkqMicYz4
       - title: Chapter 2 - <strong>Martingale</strong>
-        soon: https://www.youtube.com/watch?v=83WKeJYIujI
+        url: https://www.youtube.com/watch?v=83WKeJYIujI
   
 fr:
   title: Benighted Soul
@@ -34,5 +34,5 @@ fr:
       - title: Chapitre 1 - <strong>Halcyon Days</strong>
         url: https://www.youtube.com/watch?v=wjbkqMicYz4
       - title: Chapitre 2 - <strong>Martingale</strong>
-        soon: https://www.youtube.com/watch?v=83WKeJYIujI
+        url: https://www.youtube.com/watch?v=83WKeJYIujI
   
