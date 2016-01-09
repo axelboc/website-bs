@@ -52,13 +52,15 @@ config.records = {
   fbPosts: {
     url: ('https://graph.facebook.com/v2.5/benightedsoul?fields=posts{created_time,type,status_type,message,picture,link,source}&access_token=' + process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET),
     hook: function (data) {
+      //console.log(data.posts);
       // Keep only the last posts of a supported type
-      return data.posts.data.filter(function (post) {
-        //console.log(post);
+      var posts = data.posts.data.filter(function (post) {
         var isStatusTypeSupported = config.facebook.supportedStatusTypes.indexOf(post.status_type) > -1;
         var isPostTypeSupported = config.facebook.unsupportedPostTypes.indexOf(post.type) === -1;
-        return (isStatusTypeSupported && isPostTypeSupported);
+        return (isStatusTypeSupported && isPostTypeSupported && post.message);
       }).slice(0, config.facebook.postsCount);
+      //console.log(posts);
+      return posts;
     }
   }
 };
