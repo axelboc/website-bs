@@ -10,7 +10,7 @@ include partials/_mixins
   var meta = {
     title: d.title + ' | ' + (d.titleSuffix || 'Benighted Soul'),
     description: d.description || '',
-    image: "https://benightedsoul.com/images/index/kenotic-bird.png"
+    image: "#{data.shared.domain}/images/index/kenotic-bird.png"
   };
 
 doctype html
@@ -22,9 +22,9 @@ html(lang=lang)
     title= meta.title
     meta(name="description", content=meta.description)
     if page.isHome && lang === 'en'
-      link(rel="canonical", href="https://benightedsoul.com/")
+      link(rel="canonical", href="#{data.shared.domain}/")
     each code in config.languages
-      link(rel="alternate", hreflang=code, href="https://benightedsoul.com/#{code}/#{page.path.substr(4)}")
+      link(rel="alternate", hreflang=code, href="#{data.shared.domain}/#{code}/#{page.path.substr(4)}")
     
     //- Twitter Card data
     meta(name="twitter:card", content="summary")
@@ -37,7 +37,7 @@ html(lang=lang)
     //- Open Graph data
     meta(property="og:title", content=meta.title)
     meta(property="og:type", content="website")
-    meta(property="og:url", content="https://benightedsoul.com#{page.isHome && lang === 'en' ? '/' : page.path}")
+    meta(property="og:url", content="#{data.shared.domain}#{page.isHome && lang === 'en' ? '/' : page.path}")
     meta(property="og:image", content=meta.image)
     meta(property="og:description", content=meta.description)
     meta(property="og:site_name", content="Benighted Soul")

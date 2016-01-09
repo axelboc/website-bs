@@ -8,7 +8,7 @@ mixin logoWrap(classes)
 // Output an SVG icon
 mixin icon(name, classes)
   svg.icon(class=classes)
-    use(xlink:href="#icon-#{name}")
+    use(xlink:href="#{data.shared.domain}/#icon-#{name}")
 
 // Output a video preview link
 mixin video(url, width, height)
