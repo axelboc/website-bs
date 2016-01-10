@@ -42,7 +42,6 @@
     "facebook": {
       "postsCount": 3,
       "supportedStatusTypes": [
-        "added_photos",
         "mobile_status_update",
         "shared_story"
       ],

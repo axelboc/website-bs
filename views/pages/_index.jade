@@ -33,7 +33,6 @@ block content
         h2.widget__heading.widget__heading--sub= d.news.heading
         .fb-feed__posts
           each post in records.fbPosts
-            - var message = post.message.replace(/https?:\/\/\S+/g, '');
             +linkWrap(post.link, post.link, 'fb-feed__post' + (post.link ? ' fb-feed__link' : ''))
               - config.moment.locale(lang);
               - momentFormat = lang === 'fr' ? 'D MMMM' : 'MMMM D';
@@ -41,11 +40,11 @@ block content
               .fb-feed__message.clearfix
                 if post.picture
                   img.fb-feed__image(src=post.picture)
-                - var messages = message.split('\n').filter(function (msg) { return msg.length > 0; });
+                - var messages = post.message.split('\n\n');
                 if messages.length === 2
-                  p= messages[lang === 'en' ? 0 : 1]
+                  p!= messages[lang === 'en' ? 0 : 1]
                 else
-                  p= message
+                  p!= post.message
           .fb-feed__cta.button
             a.button__link(href=config.socialUrls.facebook)= d.news.cta
     
