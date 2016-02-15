@@ -39,8 +39,8 @@ config.ignores = [
   '.git*',
   '.env',
   'config.js',
-  '**/_*',
-  '!assets/_redirects',
+  'assets/css/_*',
+  'views/**/_*',
   'views/layout.jade'
 ];
 
