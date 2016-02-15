@@ -37,7 +37,10 @@ config.moment.locale('fr', {
 config.ignores = [
   '*.md',
   '.git*',
+  '.env',
+  'config.js',
   '**/_*',
+  '!assets/_redirects',
   'views/layout.jade'
 ];
 
