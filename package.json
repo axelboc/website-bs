@@ -43,7 +43,8 @@
       "postsCount": 3,
       "supportedStatusTypes": [
         "mobile_status_update",
-        "shared_story"
+        "shared_story",
+        "added_photos"
       ],
       "unsupportedPostTypes": [
         "video"
