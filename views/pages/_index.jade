@@ -4,7 +4,7 @@ block content
   main.main.layout__max
     - var homepage = contentful.homepages[0];
     
-    section.banner.widget
+    section.banner.widget.clearfix
       .banner__inner
         h2.banner__heading.widget__heading!= d.banner.heading
         p!= d.banner.text
@@ -14,7 +14,7 @@ block content
   
     .two-column
       .two-column__main
-        section.widget-clips.widget.widget--left-col
+        section.widget-clips.widget.widget--left-col.clearfix
           h2.widget__heading.widget__heading--sub!= d.clips.heading
           .widget-clips__chapters
             each video in d.clips.videos
@@ -27,19 +27,23 @@ block content
                     .video__inner.widget-clips__soon
                       p= video.soon
                       
-        +widgetLive(homepage.widgets[0].fields, "widget--left-col")
+        +widgetLive(homepage.widgets[0].fields, "widget--left-col clearfix")
           
-      aside.fb-feed.widget
+      aside.fb-feed.widget.clearfix
         h2.widget__heading.widget__heading--sub= d.news.heading
         .fb-feed__posts
           each post in records.fbPosts
-            +linkWrap(post.link, post.link, 'fb-feed__post' + (post.link ? ' fb-feed__link' : ''))
+            a(href=(post.link || config.socialUrls.facebook), class='fb-feed__link')
               - config.moment.locale(lang);
               - momentFormat = lang === 'fr' ? 'D MMMM' : 'MMMM D';
               p.fb-feed__date= config.moment(post.created_time).format(momentFormat)
               .fb-feed__message.clearfix
-                if post.picture
-                  img.fb-feed__image(src=post.picture)
+                if post.attachments && post.attachments.data.length > 0
+                  - var attachment = post.attachments.data[0];
+                  if attachment.media && attachment.media.image
+                    - var image = attachment.media.image;
+                    .fb-feed__image-wrap
+                      .fb-feed__image(style="max-width: " + image.width + "px; background-image: url(" + image.src + ");")
                 - var messages = post.message.split('\n\n');
                 if messages.length === 2
                   p!= messages[lang === 'en' ? 0 : 1]

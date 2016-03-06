@@ -5,13 +5,6 @@ mixin logoWrap(classes)
   else
     div(class=classes): block
 
-// Wrap a block with an anchor based on a condition
-mixin linkWrap(condition, href, classes)
-  if condition
-    a(href=href, class=classes): block
-  else
-    div(class=classes): block
-
 // Output an SVG icon
 mixin icon(name, classes)
   svg.icon(class=classes)

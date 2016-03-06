@@ -1,5 +1,6 @@
 // Load environment configuration
 require('dotenv').load({ silent: true });
+var FACEBOOK_ACCESS_TOKEN = process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET;
 
 // Load initial config from package.json
 var config = require('./package.json').config;
@@ -53,17 +54,11 @@ config.ignores = [
 config.records = {
   // Facebook posts
   fbPosts: {
-    url: ('https://graph.facebook.com/v2.5/benightedsoul?fields=posts{created_time,type,status_type,message,picture,link,source}&access_token=' + process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET),
+    url: (config.facebook.apiUrl + config.facebook.query + '&access_token=' + FACEBOOK_ACCESS_TOKEN),
     hook: function (data) {
-      //console.log(data.posts);
-      // Keep only the last posts of a supported type
-      var posts = data.posts.data.filter(function (post) {
-        var isStatusTypeSupported = config.facebook.supportedStatusTypes.indexOf(post.status_type) > -1;
-        var isPostTypeSupported = config.facebook.unsupportedPostTypes.indexOf(post.type) === -1;
-        return (isStatusTypeSupported && isPostTypeSupported && post.message);
-      }).slice(0, config.facebook.postsCount);
-      //console.log(posts);
-      return posts;
+      return data.posts.data.filter(function (post) {
+        return !!post.message;
+      });
     }
   }
 };

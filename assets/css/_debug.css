@@ -2,7 +2,7 @@
 /**
  * Breakpoint debugger.
  */
-body:before {
+body::before {
   content: "none";
   position: fixed;
   top: 0;

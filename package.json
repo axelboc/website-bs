@@ -40,15 +40,8 @@
       "widgetLive": "4z9xsNLGa4uimCiigQQ2Ow"
     },
     "facebook": {
-      "postsCount": 3,
-      "supportedStatusTypes": [
-        "mobile_status_update",
-        "shared_story",
-        "added_photos"
-      ],
-      "unsupportedPostTypes": [
-        "video"
-      ]
+      "apiUrl": "https://graph.facebook.com/v2.5",
+      "query": "/benightedsoul?fields=posts.limit(2){id,created_time,type,message,link,attachments{type,media}}"
     }
   },
   "dependencies": {

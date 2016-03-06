@@ -143,10 +143,16 @@ blockquote {
   fill: currentColor;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
 }
 
 /**
