@@ -36,13 +36,13 @@ config.moment.locale('fr', {
 
 // Globs for Roots to ignore
 config.ignores = [
-  '*.md',
-  '.git*',
   '.env',
-  'config.js',
+  '.git*',
+  '*.md',
   'assets/css/_*',
   'views/**/_*',
-  'views/layout.jade'
+  'views/layout.jade',
+  'data'
 ];
 
 

@@ -9,8 +9,8 @@
     "url": "https://github.com/axelboc/website-bs"
   },
   "engines": {
-    "node": "~0.12.7",
-    "npm": "~2.14.3"
+    "node": "^4.3.2",
+    "npm": "^3.8.0"
   },
   "scripts": {
     "start": "roots watch",
@@ -48,22 +48,22 @@
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
-    "browserify": "^12.0.1",
+    "browserify": "^13.0.0",
     "css-pipeline": "^0.3.1",
-    "cssnano": "^3.3.2",
-    "dotenv": "^1.2.0",
+    "cssnano": "^3.5.2",
+    "dotenv": "^2.0.0",
     "jade": "^1.11.0",
     "marked": "^0.3.5",
-    "moment": "^2.10.6",
-    "postcss": "^5.0.12",
-    "postcss-custom-media": "^5.0.0",
+    "moment": "^2.12.0",
+    "postcss": "^5.0.19",
+    "postcss-custom-media": "^5.0.1",
     "postcss-custom-properties": "^5.0.0",
-    "postcss-import": "^7.1.3",
+    "postcss-import": "^8.0.2",
     "postcss-nested": "^1.0.0",
-    "roots": "^3.1.0",
+    "roots": "^4.0.1",
     "roots-browserify": "^0.5.0",
     "roots-config": "^0.0.2",
-    "roots-contentful": "^0.0.8",
+    "roots-contentful": "^0.0.9",
     "roots-records": "^0.5.1",
     "roots-yaml": "^0.0.4"
   }
