@@ -34,16 +34,22 @@ config.moment.locale('fr', {
  * Roots configuration.
  */
 
-// Globs for Roots to ignore
+// Globs for Roots to ignore when compiling
 config.ignores = [
   '.env',
   '.git*',
   '*.md',
+  'config.js',
   'assets/css/_*',
   'views/**/_*',
-  'views/layout.jade',
-  'data'
+  'views/layout.jade'
 ];
+
+// Globs for Roots to ignore when watching
+config.watcherIgnores = [];
+
+// Transparent root folders (e.g. assets/images/** -> output/images/**)
+config.dumpDirs = ['assets', 'data', 'views'];
 
 
 /**
@@ -108,14 +114,8 @@ config.contentful = {
 
 // Browserify
 config.browserify = {
-  files: 'assets/js/main.js',
-  out: 'js/build.js'
-};
-
-// CSS pipeline
-config.cssPipeline = {
-  files: 'assets/css/main.css',
-  out: 'css/build.css'
+  files: 'assets/js/index.js',
+  out: 'js/index.js'
 };
 
 
