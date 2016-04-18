@@ -46,7 +46,9 @@ config.ignores = [
 ];
 
 // Globs for Roots to ignore when watching
-config.watcherIgnores = [];
+config.watcherIgnores = [
+  '.git*'
+];
 
 // Transparent root folders (e.g. assets/images/** -> output/images/**)
 config.dumpDirs = ['assets', 'data', 'views'];
