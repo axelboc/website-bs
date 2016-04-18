@@ -95,3 +95,30 @@
     }
   }
 }
+
+/**
+ * Merchandising
+ */
+.merch {
+  &__item {
+    width: 100%;
+  }
+  
+  &__photo {
+    background-position: center;
+    background-size: cover;
+    padding-top: 100%;
+  }
+  
+  @media (--bp-x-sml) {
+    &__item {
+      width: 50%;
+    }
+  }
+  
+  @media (--bp-lge) {
+    &__item {
+      width: 33.33%;
+    }
+  }
+}
