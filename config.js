@@ -96,6 +96,9 @@ config.contentful = {
         order: 'fields.order'
       }
     },
+    products: {
+      id: config.contentTypeIds.product
+    },
     releases: {
       id: config.contentTypeIds.release,
       filters: {

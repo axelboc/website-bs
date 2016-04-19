@@ -23,7 +23,7 @@ block content
         each index in [1, 2]
           +video(playlist['video' + index], "640", "360")
         a.playlist__link(href=playlist.playlistUrl)= d.ctaPlaylist
-  .button.media-cta.media-cta--youtube
+  .button.button--centered.button--youtube
     a.button__link(href=config.socialUrls.youtube)= d.ctaYoutube
     
   each gallery in contentful.photoGalleries
@@ -33,5 +33,5 @@ block content
         each photo in gallery.photos
           li.gallery__item.flex-grid__item
             img.gallery__photo(src=asset(photo, { w: 400, h: 400, q: 80 }), alt="")
-  .button.media-cta.media-cta--instagram
+  .button.button--centered.button--instagram
     a.button__link(href=config.socialUrls.instagram)= d.ctaInstagram
