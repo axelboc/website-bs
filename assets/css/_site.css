@@ -134,10 +134,6 @@ blockquote {
   quotes: "“" "”";
 }
 
-.symbols {
-  display: none;
-}
-
 .icon {
   max-width: 100%;
   fill: currentColor;
