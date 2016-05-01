@@ -1,7 +1,7 @@
 header.header.layout__max
-  +logoWrap(['logo', 'header__logo'])
-    a.logo__link(href="/#{lang}/")
-      img.logo__img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)
+  +logoWrap
+    a.logo__link(href="/#{lang}/")&attributes(getSchemaAttr('logoLink'))
+      img.logo__img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)&attributes(getSchemaAttr('logoImg'))
 
   ul.social.header__social
     each url, name in config.socialUrls

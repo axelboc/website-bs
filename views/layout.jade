@@ -6,7 +6,7 @@ include partials/_mixins
   // Initialise the page object and alias some common info
   var page = initPage(_path);
   var lang = page.lang;
-  var d = page.data;
+  var d = page.data[lang];
   var meta = {
     title: d.title + ' | ' + (d.titleSuffix || 'Benighted Soul'),
     description: d.description || '',
@@ -50,7 +50,7 @@ html(lang=lang)
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand:400|Open+Sans")
     link(rel="stylesheet", href="/css/index.css")
     
-  body
+  body&attributes(getSchemaAttr('body'))
     .symbols
       include partials/_icons.svg
     

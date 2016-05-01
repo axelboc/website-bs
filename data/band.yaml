@@ -5,3 +5,13 @@ en:
 fr:
   title: Biographie
   description: La biographie du groupe depuis sa création jusqu'à son dernier album, et un aperçu des cinq membres qui le composent.
+
+schema:
+  body:
+    itemscope: true
+    itemtype: http://schema.org/MusicGroup
+  logoLink:
+    itemprop: url
+  logoImg:
+    itemprop: image
+  

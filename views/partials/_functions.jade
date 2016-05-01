@@ -42,8 +42,13 @@
       crumbs: crumbs,
       isHome: isHome,
       isSpecial: isSpecial,
-      data: pageData[lang]
+      data: pageData
     };
+  }
+  
+  // Get schema attributes definied in page data, under the `schema` key
+  function getSchemaAttr(type) {
+    return (page.data.schema && page.data.schema[type]) || {};
   }
   
   // Translate a value with a dictionary
