@@ -6,12 +6,12 @@ block content
     h2 Studio albums
     each release in contentful.releases
       if ['studio-album', 'special-edition'].indexOf(release.type) > -1
-        section.album-shop
+        section.album-shop(itemscope, itemtype="http://schema.org/Product")
           a.album-shop__cover-link(href="/#{lang}/discography")
-            img(src=asset(release.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="")
+            img(src=asset(release.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="", itemprop="image")
           div
-            h3.album-shop__heading= release[lang + 'Title']
-            ul.album-shop__features
+            h3.album-shop__heading(itemprop="name")= release[lang + 'Title']
+            ul.album-shop__features(itemprop="description")
               each feature in release[lang + 'ShopFeatures']
                 li.album-shop__feature= feature
             div.album-shop__blocks
@@ -30,10 +30,10 @@ block content
     h2 Merchandising
     ul.merch__list.flex-grid
       each product in contentful.products
-        li.merch__item.flex-grid__item
-          a.merch__link(href="#{product.url}")
-            div.merch__photo(style="background-image: url(#{asset(product.photo, { w: 370, h: 370, q: 80 })});")
-            p.merch__title= product[lang + 'Title']
+        li.merch__item.flex-grid__item(itemscope, itemtype="http://schema.org/Product")
+          a.merch__link(href="#{product.url}", itemprop="url")
+            div.merch__photo(itemprop="image", style="background-image: url(#{asset(product.photo, { w: 370, h: 370, q: 80 })});")
+            p.merch__title(itemprop="name")= product[lang + 'Title']
     .button.button--centered
       a.button__link(href=data.shared.shopUrl)= d.ctaShop
     
