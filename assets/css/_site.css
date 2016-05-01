@@ -220,9 +220,7 @@ blockquote {
   }
   
   @media (--bp-med) {
-    &__list {
-      margin: 0 -var(--gutter-med);
-    }
+    margin: 0 -var(--gutter-med);
     
     &__item {
       padding: 0 var(--gutter-med) var(--gutter-lge);

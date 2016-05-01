@@ -51,6 +51,9 @@ html(lang=lang)
     link(rel="stylesheet", href="/css/index.css")
     
   body&attributes(getSchemaAttr('body'))
+    if page.crumbs[0] === 'band'
+      link(itemprop="sameAs", href="https://fr.wikipedia.org/wiki/Benighted_Soul")
+  
     .symbols
       include partials/_icons.svg
     
