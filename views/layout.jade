@@ -57,7 +57,7 @@ html(lang=lang)
     include partials/_header
     include partials/_nav
     
-    if page.isHome || page.is404
+    if page.isSpecial
       block content
     else
       main.main.layout__max

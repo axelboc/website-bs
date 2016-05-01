@@ -1,23 +1,32 @@
 -
   // Parse the page's path and retrieve its data
   function initPage(path) {
-    path = path === '/index.html' ? '/en/index.html' : path;
+    // Convert backslashes and remove html extension
     path = path.replace('\\', '/').replace('.html', '');
     
-    // Get the language and breadcrumbs
-    var lang = path.substr(1, 2);
-    var crumbs = path.substr(4).split('/');
+    // Get the language and remaining breadcrumbs
+    var isSpecial = !/^\/(en|fr)\//.test(path); // homepage, 404
+    var lang = !isSpecial ? path.substr(1, 2) : 'en';
+    var crumbs = path.substr(isSpecial ? 1 : 4).split('/');
     
     // Use the crumbs to retrieve the page's data from the global `data` object
     var isHome = false;
     var pageData = crumbs.reduce(function (pageData, crumb, num) {
       if (crumb === 'index') {
+        // Homepage - set flag and return data of index.yaml
         if (num === 0) {
           isHome = true;
           return pageData.index;
         }
+        
+        // Directory index (unused; for future-proofing only)
+        // Remove need for an `index` key in the YAML file of the previous crumb by returning the same object
         return pageData;
       }
+      
+      // Drill depper into the data object
+      // - if `num` is 0, `crumb` refers to a YAML file
+      // - otherwise, it refers to a key or sub-key inside a YAML file
       return pageData[crumb];
     }, data);
     
@@ -32,7 +41,7 @@
       lang: lang,
       crumbs: crumbs,
       isHome: isHome,
-      is404: /404/.test(path),
+      isSpecial: isSpecial,
       data: pageData[lang]
     };
   }
