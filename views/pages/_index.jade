@@ -46,7 +46,7 @@ block content
                       .fb-feed__image(style="max-width: " + image.width + "px; background-image: url(" + image.src + ");")
                 - var messages = post.message.split('\n\n');
                 if messages.length === 2
-                  p!= messages[lang === 'en' ? 0 : 1]
+                  p!= messages[lang === 'fr' ? 0 : 1]
                 else
                   p!= post.message
         .fb-feed__cta.button
