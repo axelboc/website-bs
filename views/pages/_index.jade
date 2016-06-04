@@ -33,17 +33,18 @@ block content
         h2.widget__heading.widget__heading--sub= d.news.heading
         .fb-feed__posts
           each post in records.fbPosts
-            a(href=(post.link || config.socialUrls.facebook), class='fb-feed__link')
+            a(href=(post.link || post.permalink_url || config.socialUrls.facebook), class='fb-feed__link')
               - config.moment.locale(lang);
               - momentFormat = lang === 'fr' ? 'D MMMM' : 'MMMM D';
               p.fb-feed__date= config.moment(post.created_time).format(momentFormat)
               .fb-feed__message.clearfix
-                if post.attachments && post.attachments.data.length > 0
-                  - var attachment = post.attachments.data[0];
-                  if attachment.media && attachment.media.image
-                    - var image = attachment.media.image;
-                    .fb-feed__image-wrap
-                      .fb-feed__image(style="max-width: " + image.width + "px; background-image: url(" + image.src + ");")
+                - var att = post.attachments && post.attachments.data.length > 0 && post.attachments.data[0];
+                - var image = att && att.media && att.media.image;
+                - var subatt = att && att.subattachments && att.subattachments.data.length > 0 && att.subattachments.data[0];
+                - image = image || subatt && subatt.media && subatt.media.image;
+                if image
+                  .fb-feed__image-wrap
+                    .fb-feed__image(style="max-width: " + image.width + "px; background-image: url(" + image.src + ");")
                 - var messages = post.message.split('\n\n');
                 if messages.length === 2
                   p!= messages[lang === 'fr' ? 0 : 1]
