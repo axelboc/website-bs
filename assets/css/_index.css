@@ -233,7 +233,7 @@
   }
   
   &__link {
-    flex: 1;
+    flex: 1 0 auto;
     display: block;
     padding: .5rem 1rem;
     color: inherit;
@@ -291,6 +291,10 @@
     &__posts {
       flex-direction: row;
     }
+
+    &__link {
+      flex: 1 1 50%;
+    }
     
     &__image-wrap {
       margin: .5rem 0;
@@ -304,6 +308,10 @@
       flex-direction: column;
     }
     
+    &__link {
+      flex: 1 1 auto;
+    }
+
     &__image-wrap {
       margin: .5rem -1rem;
     }
