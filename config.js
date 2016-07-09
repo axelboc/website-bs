@@ -37,7 +37,6 @@ config.moment.locale('fr', {
 // Globs for Roots to ignore when compiling
 config.ignores = [
   '.env',
-  '.git*',
   '*.md',
   'config.js',
   'assets/css/_*',
@@ -46,9 +45,7 @@ config.ignores = [
 ];
 
 // Globs for Roots to ignore when watching
-config.watcherIgnores = [
-  '.git*'
-];
+config.watcherIgnores = [];
 
 // Transparent root folders (e.g. assets/images/** -> output/images/**)
 config.dumpDirs = ['assets', 'data', 'views'];
