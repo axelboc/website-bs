@@ -61,9 +61,10 @@ config.records = {
   fbPosts: {
     url: (config.facebook.apiUrl + config.facebook.query + '&access_token=' + FACEBOOK_ACCESS_TOKEN),
     hook: function (data) {
+      console.log(data.posts.data);
       return data.posts.data.filter(function (post) {
         return !!post.message;
-      });
+      }).slice(0, config.facebook.postsCount);
     }
   }
 };

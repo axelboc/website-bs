@@ -42,7 +42,8 @@
     },
     "facebook": {
       "apiUrl": "https://graph.facebook.com/v2.5",
-      "query": "/benightedsoul?fields=posts.limit(2){id,created_time,type,message,link,permalink_url,attachments{type,media,subattachments{type, media}}}"
+      "postsCount": 2,
+      "query": "/benightedsoul?fields=posts.limit(5){id,created_time,type,message,link,permalink_url,attachments{type,media,subattachments{type, media}}}"
     }
   },
   "dependencies": {
