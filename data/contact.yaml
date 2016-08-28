@@ -6,6 +6,7 @@ en:
   form:
     name: Name
     email: Email
+    yum: Keep this field blank
     message: Message
     send: Send
 
@@ -17,6 +18,7 @@ fr:
   form:
     name: Nom
     email: Email
+    yum: Ne remplissez pas ce champ
     message: Message
     send: Envoyer
     
