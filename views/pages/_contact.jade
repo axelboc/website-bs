@@ -12,15 +12,15 @@ block content
       fieldset.contact__inner
         .contact__info
           label.contact__label(for="name")= d.form.name
-          input.contact__field#name(name="name", type="text")
+          input.contact__field#name(name="name", type="text", required)
         .contact__info
           label.contact__label(for="email")= d.form.email
-          input.contact__field#email(name="email", type="text")
+          input.contact__field#email(name="email", type="email", required)
         .contact__info.contact__info--yum
           label.contact__label(for="yum")= d.form.yum
           input.contact__field#yum(name="yum", type="text", tabindex="-1")
         .contact__info
           label.contact__label(for="message")= d.form.message
-          textarea.contact__field.contact__field--area#message(name="message", rows="5")
+          textarea.contact__field.contact__field--area#message(name="message", rows="5", required)
       .contact__submit.button
         button.button__link= d.form.send
