@@ -8,7 +8,7 @@ block content
   .contact__wrap
     p!= d.intro
 
-    form.contact(name="contact", action="/#{lang}/contact#thank-you", netlify, netlify-honeypot="yum")
+    form.contact(name="contact", action="/#{lang}/contact#thank-you", netlify)
       fieldset.contact__inner
         .contact__info
           label.contact__label(for="name")= d.form.name
@@ -16,11 +16,13 @@ block content
         .contact__info
           label.contact__label(for="email")= d.form.email
           input.contact__field#email(name="email", type="email", required)
-        .contact__info.contact__info--yum
-          label.contact__label(for="yum")= d.form.yum
-          input.contact__field#yum(name="yum", type="text", tabindex="-1")
         .contact__info
           label.contact__label(for="message")= d.form.message
           textarea.contact__field.contact__field--area#message(name="message", rows="5", required)
+        .contact__info.contact__info--no-label
+          .g-recaptcha(data-sitekey=config.reCaptchaSiteKey)
       .contact__submit.button
         button.button__link= d.form.send
+    
+block footer-scripts
+  script(src="https://www.google.com/recaptcha/api.js?hl=#{lang}", async, defer)

@@ -14,16 +14,14 @@
     display: flex;
     margin: 1rem 0;
 
-    /* Honeypot */
-    &--yum {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
+    /* Without a label */
+    &--no-label::before {
+      content: '';
+      display: block;
     }
   }
   
+  &__info--no-label::before,
   &__label {
     min-width: 6rem;
     font-weight: bold;
@@ -43,6 +41,7 @@
   }
   
   @media (--bp-lge) {
+    &__info--no-label::before,
     &__label {
       min-width: 8rem;
       font-size: 1.1rem;

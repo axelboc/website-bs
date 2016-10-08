@@ -44,7 +44,8 @@
       "apiUrl": "https://graph.facebook.com/v2.5",
       "postsCount": 2,
       "query": "/benightedsoul?fields=posts.limit(5){id,created_time,type,message,link,permalink_url,attachments{type,media,subattachments{type, media}}}"
-    }
+    },
+    "reCaptchaSiteKey": "6LcQtwgUAAAAAHiTHPH5Q2kfnLjnoi7ygDmsZ9MN"
   },
   "dependencies": {
     "normalize.css": "~4.2.0"
