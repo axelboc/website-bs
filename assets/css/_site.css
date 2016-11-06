@@ -301,13 +301,16 @@ blockquote {
 /**
  * Kenotic divider
  */
-.kenotic-divider::before {
-  content: "|";
-  position: relative;
-  top: -.11rem;
-  margin: 0 .8rem;
-  font-size: 80%;
-  font-weight: normal;
+.kenotic-divider{
+  color: #1a1a1a;
+
+  &::before {
+    content: "|";
+    position: relative;
+    top: -.11rem;
+    margin: 0 .8rem;
+    font-size: 82%;
+  }
 }
 
 /**
