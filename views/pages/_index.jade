@@ -20,7 +20,7 @@ block content
             each video in d.clips.videos
               .widget-clips__chapter
                 h3.widget-clips__title!= video.title
-                .video.widget-clips__video
+                .widget-clips__video
                   if video.url
                     +video(video.url, "640", "360")
                   else

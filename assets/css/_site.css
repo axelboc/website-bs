@@ -63,7 +63,8 @@ h2 {
   margin: 1.5rem 0;
   font-family: var(--font-heading);
   font-weight: normal;
-  line-height: 1.4;
+  line-height: 1.3;
+  letter-spacing: -.02em;
   text-transform: uppercase;
 }
 
@@ -86,7 +87,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   font-size: 1.6rem;
   
   h1 + section > & {
@@ -111,6 +112,16 @@ h2 {
 h3 {
   margin: 1rem 0;
   font-size: 1.5rem;
+}
+
+/* fancy H3 */
+.h3 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
 }
 
 a,
@@ -162,7 +173,7 @@ blockquote {
     margin: 0 auto;
     
     @media (--bp-med) {
-      max-width: 45em;
+      max-width: 50em;
     }
     
     @media (--bp-lge) {
@@ -185,7 +196,7 @@ blockquote {
     
     &__inner {
       margin-bottom: .5rem;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
     }
   }
 }
@@ -247,7 +258,7 @@ blockquote {
   
   &__link {
     display: inline-block;
-    padding: .75rem .65rem;
+    padding: .5rem .65rem;
     border: 2px solid #000;
     border-radius: .3rem;
     background-color: #f0f0f0;
@@ -272,6 +283,13 @@ blockquote {
       color: #fff;
     }
   }
+
+  @media (--bp-med) {
+    &__link {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+  }
 }
 
 /**
@@ -279,12 +297,13 @@ blockquote {
  */
 .quote {
   margin: 1rem 0;
+  line-height: 1.4;
   
   &__text {
     display: inline;
     margin: 0;
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-style: italic;
 
     &::before {
@@ -303,6 +322,14 @@ blockquote {
     &::before {
       content: " — ";
     }
+  }
+
+  @media (--bp-sml) {
+    font-size: .9rem;
+  }
+
+  @media (--bp-med) {
+    font-size: 1rem;
   }
 }
 

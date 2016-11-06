@@ -10,7 +10,7 @@ block content
           a.album-shop__cover-link(href="/#{lang}/discography")
             img(src=asset(release.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="", itemprop="image")
           div
-            h3.album-shop__heading(itemprop="name")= release[lang + 'Title']
+            h3.album-shop__heading.h3(itemprop="name")= release[lang + 'Title']
             ul.album-shop__features(itemprop="description")
               each feature in release[lang + 'ShopFeatures']
                 li.album-shop__feature= feature
