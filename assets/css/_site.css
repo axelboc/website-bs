@@ -4,9 +4,9 @@
  */
 :root {
   /* Fonts */
-  --font-text: 'Open Sans', sans-serif;
-  --font-heading: 'Quicksand', sans-serif;
-  --font-serif: 'Georgia', sans-serif;
+  --font-text: 'Open Sans', 'Arial', sans-serif;
+  --font-heading: 'Quicksand', 'Helvetica', 'Arial', sans-serif;
+  --font-serif: 'Georgia', 'Times', 'Times New Roman', serif;
   
   /* Accent colour */
   --col-accent: rgb(52, 58, 78);
