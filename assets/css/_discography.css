@@ -11,7 +11,7 @@
 }
 
 .album {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   
   & + & {
     padding-top: 2rem;
@@ -19,26 +19,24 @@
   }
   
   &__cover {
+    float: right;
     display: block;
-    width: 380px;
+    width: 100px;
     max-width: 100%;
-    margin-bottom: .5rem;
+    margin: .25rem 0 .5rem .5rem;
   }
   
   &__content {
     margin-bottom: 2rem;
   }
   
-  &__heading {
-    font-size: 1.8rem;
-  }
-  
   &__buttons {
     margin: 1rem 0;
+    font-size: .85rem;
   }
   
   &__button {
-    margin: .5rem 1rem .5rem 0;
+    margin: .25rem .5rem .25rem 0;
     
     &:last-child {
       margin-right: 0;
@@ -48,18 +46,30 @@
   &__credits {
     font-size: .72rem;
     font-size: .75rem;
-    
-    & > p:last-child {
-      margin-bottom: 0;
+
+    & > p {
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  @media (--bp-x-sml) {
+    &__cover {
+      width: 150px;
+    }
+  }
+
+  @media (--bp-sml) {
+    &__cover {
+      width: 180px;
     }
   }
   
   @media (--bp-x-med) {
     &__cover {
       float: left;
-      width: 250px;
       margin-right: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     
     &__heading {
@@ -68,15 +78,14 @@
     
     &__buttons {
       margin: 1.25rem 0;
-      font-size: .8rem;
     }
     
-    &__button {
-      margin: .25rem .5rem .25rem 0;
-    }
-  
     &__content {
       margin-bottom: 0;
+
+      &__group {
+        overflow: hidden;
+      }
     }
     
     &__credits {
@@ -84,8 +93,15 @@
     }
   }
   
+  @media (--bp-med) {
+    &__cover {
+      width: 250px;
+    }
+  }
+
   @media (--bp-lge) {
     display: flex;
+    align-items: flex-start;
   
     & + & {
       padding-top: 0;
@@ -116,8 +132,8 @@
  */
 .special {
   clear: left;
-  margin: 1rem 0 1.5rem;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
   background-color: var(--col-accent-subtle);
   border-left: 5px solid var(--col-accent);
   
@@ -131,6 +147,7 @@
  */
 .release {
   width: 50%;
+  max-width: 150px;
   text-align: center;
   
   &__content {
@@ -155,6 +172,7 @@
   
   @media (--bp-med) {
     width: 25%;
+    max-width: none;
   }
   
   @media (--bp-lge) {
