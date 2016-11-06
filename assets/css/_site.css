@@ -160,7 +160,6 @@ blockquote {
 .layout{
   &__max {
     margin: 0 auto;
-    padding: 0 .5rem;
     
     @media (--bp-med) {
       max-width: 45em;
@@ -177,11 +176,16 @@ blockquote {
  */
 .main {
   &__inner {
-    padding: 2rem 0;
-
-    @media (--bp-x-med) {
+    background-color: var(--col-accent-subtle);
+    padding: 2rem 1rem;
+  }
+  
+  @media (--bp-x-med) {
+    padding: 0 .5rem;
+    
+    &__inner {
+      margin-bottom: .5rem;
       padding: 2rem;
-      background-color: var(--col-accent-subtle);
     }
   }
 }
