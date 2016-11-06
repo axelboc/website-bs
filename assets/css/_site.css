@@ -44,6 +44,7 @@
 
 html {
   font-size: 90%;
+  line-height: 1.6;
   
   @media (min-width: 30em) {
     font-size: 100%;
