@@ -21,6 +21,7 @@
   &__link {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: .3rem .5rem;
     background-color: #000;
     color: #fff;
