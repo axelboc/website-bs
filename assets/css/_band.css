@@ -2,6 +2,8 @@
  * Members
  */
 .members {
+  line-height: 1.3;
+  
   &__list {
     @media (--bp-lge) {
       flex-wrap: nowrap;
