@@ -57,6 +57,10 @@
       flex-wrap: nowrap;
     }
 
+    &__item {
+      flex-basis: 0%;
+    }
+
     &__link {
       font-size: .9rem;
       
