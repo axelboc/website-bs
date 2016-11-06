@@ -2,6 +2,8 @@
  * Header.
  */
 .header {
+  padding: 0 .5rem;
+
   @media (--bp-lge) {
     display: flex;
     justify-content: center;
