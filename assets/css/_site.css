@@ -12,6 +12,7 @@
   --col-accent: rgb(52, 58, 78);
   --col-accent-half: rgba(52, 58, 78, .5);
   --col-accent-subtle: rgba(52, 58, 78, .1);
+  --col-accent-dark: rgb(33, 35, 44);
   
   /* Success colour */
   --col-success: rgb(51, 77, 51);
@@ -260,7 +261,7 @@ blockquote {
     }
     
     &:hover {
-      border-color: var(--col-accent);
+      border-color: var(--col-accent-dark);
       background-color: var(--col-accent);
       color: #fff;
     }
