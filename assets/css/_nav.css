@@ -36,7 +36,6 @@
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color .15s ease, color .15s ease;
     white-space: nowrap;
     
     &:hover,

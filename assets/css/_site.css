@@ -247,13 +247,15 @@ blockquote {
   
   &__link {
     display: inline-block;
-    padding: 1rem .65rem;
+    padding: .75rem .65rem;
     border: 2px solid #000;
     border-radius: .3rem;
     background-color: #f0f0f0;
     color: #000;
+    font-family: var(--font-heading);
     font-size: 100%;
     font-weight: bold;
+    letter-spacing: -.05em;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
