@@ -2,8 +2,8 @@ extends ../layout
 
 block content
   
-  section
-    h2 Studio albums
+  section.albums
+    h2= d.headings.albums
     each release in contentful.releases
       if ['studio-album', 'special-edition'].indexOf(release.type) > -1
         section.album-shop(itemscope, itemtype="http://schema.org/Product")
@@ -27,7 +27,7 @@ block content
                         = btn.fields[lang + 'Text']
 
   section.merch
-    h2 Merchandising
+    h2= d.headings.merch
     ul.merch__list.flex-grid
       each product in contentful.products
         li.merch__item.flex-grid__item(itemscope, itemtype="http://schema.org/Product")

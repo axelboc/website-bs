@@ -2,8 +2,14 @@ en:
   title: Shop
   description: Discover where to buy and download our latest albums, and get yourself some official merchandising.
   ctaShop: Visit the official shop
+  headings:
+    albums: Studio albums
+    merch: Merchandising
 
 fr:
   title: Shop
   description: Découvrez où acheter et télécharger nos derniers albums, et jetez un oeil à notre merchandising.
   ctaShop: Visitez la boutique officielle
+  headings:
+    albums: Albums studio
+    merch: Merchandising
