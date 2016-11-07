@@ -122,6 +122,10 @@ h3 {
   line-height: 1.2;
   letter-spacing: -.02em;
   text-transform: uppercase;
+
+  @media (--bp-x-lge) {
+    font-size: 1.75rem;
+  }
 }
 
 a,
@@ -298,6 +302,7 @@ blockquote {
 .quote {
   margin: 1rem 0;
   line-height: 1.4;
+  overflow: hidden;
   
   &__text {
     display: inline;
@@ -308,6 +313,7 @@ blockquote {
 
     &::before {
       content: open-quote;
+      margin-right: .1em;
     }
 
     &::after {
@@ -326,10 +332,18 @@ blockquote {
 
   @media (--bp-sml) {
     font-size: .9rem;
+
+    &--short {
+      font-size: 1rem;
+    }
   }
 
   @media (--bp-med) {
     font-size: 1rem;
+    
+    &--short {
+      font-size: 1.2rem;
+    }
   }
 }
 

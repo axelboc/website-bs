@@ -1,15 +1,6 @@
-
 /**
  * Studio albmus
  */
-.albums {
-  &__list {
-    margin: 0 0 3rem;
-    padding: 0;
-    list-style: none;
-  }
-}
-
 .album {
   margin: 2.5rem 0;
   
@@ -19,15 +10,18 @@
   }
   
   &__cover {
-    float: right;
     display: block;
-    width: 100px;
-    max-width: 100%;
-    margin: .25rem 0 .5rem .5rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
   }
   
   &__content {
     margin-bottom: 2rem;
+  }
+
+  &__heading--two {
+    display: none;
   }
   
   &__buttons {
@@ -53,39 +47,28 @@
     }
   }
 
-  @media (--bp-x-sml) {
-    &__cover {
-      width: 150px;
-    }
-  }
-
   @media (--bp-sml) {
     &__cover {
-      width: 180px;
-    }
-  }
-  
-  @media (--bp-x-med) {
-    &__cover {
       float: left;
-      margin-right: 1rem;
-      margin-bottom: 1rem;
+      width: 150px;
+      max-width: none;
+      margin: .25rem 1rem 1rem 0;
     }
     
     &__heading {
       margin-top: 0;
+
+      &--one { display: none; }
+      &--two { display: block; }
     }
     
     &__buttons {
+      clear: left;
       margin: 1.25rem 0;
     }
     
     &__content {
       margin-bottom: 0;
-
-      &__group {
-        overflow: hidden;
-      }
     }
     
     &__credits {
@@ -96,6 +79,10 @@
   @media (--bp-med) {
     &__cover {
       width: 250px;
+    }
+
+    &__buttons {
+      clear: none;
     }
   }
 
