@@ -1,8 +1,8 @@
 /**
- * Studio albmus
+ * Studio albums (also used on Shop page)
  */
 .album {
-  margin: 2.5rem 0;
+  margin: 1.5rem 0 2.5rem;
   
   & + & {
     padding-top: 2rem;
@@ -20,12 +20,13 @@
     margin-bottom: 2rem;
   }
 
+  /* only show mobile heading (above album cover) */
   &__heading--two {
     display: none;
   }
   
   &__buttons {
-    margin: 1rem 0;
+    margin: 1rem -.5rem 1rem 0; /* compensate for right margin on links */
     font-size: .85rem;
   }
   
@@ -47,6 +48,16 @@
     }
   }
 
+  &--shop {
+    .album__buttons {
+      margin: .5rem -.5rem .5rem 0;
+    }
+
+    .album__button {
+      margin: 0 .5rem .5rem 0;
+    }
+  }
+
   @media (--bp-sml) {
     &__cover {
       float: left;
@@ -58,6 +69,7 @@
     &__heading {
       margin-top: 0;
 
+      /* swap headings */
       &--one { display: none; }
       &--two { display: block; }
     }
@@ -73,6 +85,22 @@
     
     &__credits {
       clear: left;
+    }
+  }
+  
+  @media (--bp-sml) and (max-width: 44.99em) {
+    &--shop {
+      .album__cover {
+        width: 200px;
+      }
+    }
+  }
+
+  @media (--bp-x-med) {
+    &--shop {
+      .album__buttons {
+        clear: none;
+      }
     }
   }
   

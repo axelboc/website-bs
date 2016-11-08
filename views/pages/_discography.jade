@@ -3,7 +3,7 @@ extends ../layout
 block content
   - var disco = data.discography
   
-  section.albums
+  section
     h2= d.headings.albums
     each album in contentful.releases
       if album.type === 'studio-album'
@@ -23,7 +23,7 @@ block content
             - var special = album[lang + 'DiscographySpecial']
             if special
               .special: p!= config.marked(special)
-            div.album__credits!= config.marked(album[lang + 'Credits'])
+            .album__credits!= config.marked(album[lang + 'Credits'])
   
   section.releases
     h2= d.headings.other
