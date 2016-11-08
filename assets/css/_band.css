@@ -52,6 +52,8 @@
  * Biography
  */
 .bio {
+  text-align: justify;
+
   @media (--bp-lge) {
     margin-right: 2rem;
   }
