@@ -4,14 +4,15 @@
  */
 :root {
   /* Fonts */
-  --font-text: 'Open Sans', sans-serif;
-  --font-heading: 'Quicksand', sans-serif;
-  --font-serif: 'Georgia', sans-serif;
+  --font-text: 'Open Sans', 'Arial', sans-serif;
+  --font-heading: 'Quicksand', 'Helvetica', 'Arial', sans-serif;
+  --font-serif: 'Georgia', 'Times', 'Times New Roman', serif;
   
   /* Accent colour */
   --col-accent: rgb(52, 58, 78);
   --col-accent-half: rgba(52, 58, 78, .5);
   --col-accent-subtle: rgba(52, 58, 78, .1);
+  --col-accent-dark: rgb(33, 35, 44);
   
   /* Success colour */
   --col-success: rgb(51, 77, 51);
@@ -44,6 +45,7 @@
 
 html {
   font-size: 90%;
+  line-height: 1.6;
   
   @media (min-width: 30em) {
     font-size: 100%;
@@ -61,6 +63,8 @@ h2 {
   margin: 1.5rem 0;
   font-family: var(--font-heading);
   font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -.02em;
   text-transform: uppercase;
 }
 
@@ -83,7 +87,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   font-size: 1.6rem;
   
   h1 + section > & {
@@ -108,6 +112,20 @@ h2 {
 h3 {
   margin: 1rem 0;
   font-size: 1.5rem;
+}
+
+/* fancy H3 */
+.h3 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+
+  @media (--bp-x-lge) {
+    font-size: 1.75rem;
+  }
 }
 
 a,
@@ -157,10 +175,9 @@ blockquote {
 .layout{
   &__max {
     margin: 0 auto;
-    padding: 0 .5rem;
     
     @media (--bp-med) {
-      max-width: 45em;
+      max-width: 50em;
     }
     
     @media (--bp-lge) {
@@ -174,11 +191,16 @@ blockquote {
  */
 .main {
   &__inner {
-    padding: 2rem 0;
-
-    @media (--bp-x-med) {
-      padding: 2rem;
-      background-color: var(--col-accent-subtle);
+    background-color: var(--col-accent-subtle);
+    padding: 2rem 1rem;
+  }
+  
+  @media (--bp-x-med) {
+    padding: 0 .5rem;
+    
+    &__inner {
+      margin-bottom: .5rem;
+      padding: 2.5rem 2rem;
     }
   }
 }
@@ -240,13 +262,15 @@ blockquote {
   
   &__link {
     display: inline-block;
-    padding: 1rem .65rem;
+    padding: .5rem .65rem;
     border: 2px solid #000;
     border-radius: .3rem;
     background-color: #f0f0f0;
     color: #000;
+    font-family: var(--font-heading);
     font-size: 100%;
     font-weight: bold;
+    letter-spacing: -.05em;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
@@ -258,9 +282,16 @@ blockquote {
     }
     
     &:hover {
-      border-color: var(--col-accent);
+      border-color: var(--col-accent-dark);
       background-color: var(--col-accent);
       color: #fff;
+    }
+  }
+
+  @media (--bp-med) {
+    &__link {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
     }
   }
 }
@@ -270,16 +301,19 @@ blockquote {
  */
 .quote {
   margin: 1rem 0;
+  line-height: 1.4;
+  overflow: hidden;
   
   &__text {
     display: inline;
     margin: 0;
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-style: italic;
 
     &::before {
       content: open-quote;
+      margin-right: .1em;
     }
 
     &::after {
@@ -290,9 +324,32 @@ blockquote {
   &__cite {
     font-style: normal;
     font-weight: bold;
+    line-height: 1.68; /* match quote text: 1.4 * 1.2em */
+    white-space: nowrap;
     
     &::before {
       content: " — ";
+    }
+  }
+
+  @media (--bp-sml) {
+    font-size: .9rem;
+
+    &--short {
+      font-size: 1rem;
+    }
+  }
+
+  @media (--bp-med) {
+    font-size: 1rem;
+    
+    &--short {
+      font-size: 1.2rem;
+      line-height: 1.5;
+
+      .quote__cite {
+        line-height: 1.8;
+      }
     }
   }
 }
@@ -300,13 +357,16 @@ blockquote {
 /**
  * Kenotic divider
  */
-.kenotic-divider::before {
-  content: "|";
-  position: relative;
-  top: -.11rem;
-  margin: 0 .8rem;
-  font-size: 80%;
-  font-weight: normal;
+.kenotic-divider{
+  color: #1a1a1a;
+
+  &::before {
+    content: "|";
+    position: relative;
+    top: -.11rem;
+    margin: 0 .8rem;
+    font-size: 82%;
+  }
 }
 
 /**

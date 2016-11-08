@@ -2,19 +2,16 @@
  * Audio section
  */
 .audio {
-  /* Give section padding to add some space above the heading when visiting `#audio` */
-  margin-top: -1rem;
-  padding-top: .5rem;
-  
-  &__heading {
-    margin-top: .5rem;
-  }
+  margin-top: .5rem;
   
   &__inner {
     display: flex;
+    flex-wrap: wrap;
   }
   
   &__player {
+    flex: 1 0 100%;
+    height: 300px;
     border-right: 2px solid transparent;
     
     &--minor {
@@ -23,23 +20,30 @@
   }
     
   &__iframe {
-    display: none;
-    width: 220px;
-    height: 300px;
+    display: block;
+    width: 100%;
+    height: 100%;
     background-color: #000;
   }
   
   &__listen {
-    flex: 1;
+    flex: 1 0 100%;
+    order: -1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    min-width: 15rem;
+    margin-bottom: .5rem;
     font-size: 1.5rem;
     
     & > p {
       margin: 0;
     }
+  }
+
+  &__heading {
+    margin: 0;
   }
   
   &__ctas {
@@ -51,12 +55,18 @@
   }
   
   @media (--bp-sml) {
-    &__iframe {
-      display: block;
+    &__inner {
+      flex-wrap: nowrap;
+    }
+
+    &__player {
+      flex-basis: 0%;
     }
     
     &__listen {
+      flex-basis: 0%;
       padding-left: 1rem;
+      order: 0;
     }
   
     &__ctas {
@@ -69,22 +79,32 @@
       }
     }
   }
-  
+
   @media (--bp-x-med) {
-    &__iframe {
-      width: 300px;
-      height: 380px;
-    }
-    
     &__listen {
-      padding: .5rem 0 .5rem 2rem;
+      padding-left: 1.5rem;
       font-size: 1.5rem;
     }
   }
+
+  @media (--bp-med) {
+    &__player {
+      height: 320px;
+    }
+  }
   
-  @media (--bp-lge) {
-    &__player--minor {
-      display: block;
+  @media (min-width: 50em) {
+    &__player {
+      height: 350px;
+      max-width: 300px;
+      
+      &--minor {
+        display: block;
+      }
+    }
+
+    &__listen {
+      min-width: 18rem;
     }
   }
 }
@@ -131,9 +151,10 @@
     }
   }
   
-  @media (--bp-lge) {
+  @media (--bp-med) {
     &__inner {
       display: flex;
+      flex-wrap: wrap;
       margin: 0 -2rem;
     }
     
@@ -142,7 +163,10 @@
       height: auto;
       margin: 0;
       padding-bottom: 0;
-      border-right: 2px solid transparent;
+
+      &:first-child {
+        border-right: 2px solid transparent;
+      }
       
       &::after {
         content: "";
@@ -151,12 +175,29 @@
         padding-bottom: 56.25%;
       }
     }
-    
+
     &__link {
+      flex-basis: 100%;
+      margin-top: 2px;
+    }
+  }
+  
+  @media (--bp-lge) {
+    &__inner {
+      flex-wrap: nowrap;
+    }
+
+    &__video {
+      border-right: 2px solid transparent;
+    }
+
+    &__link {
+      flex-basis: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 6.5rem;
+      margin-top: 0;
       font-size: 1.2rem;
       text-align: left;
     }

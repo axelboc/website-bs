@@ -2,40 +2,43 @@
  * Nav bar.
  */
 .nav {
-  padding: 0;
+  line-height: 1.4;
   
   &__list {
-    max-width: 22rem;
-    margin: 0 auto .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1px;
     padding: 0;
     list-style: none;
     text-align: center;
   }
   
   &__item {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 1px .4rem;
+    flex: 5 1 33.33%;
+    display: flex;
+    align-items: stretch;
+    margin: 1px;
+    
+    &--icon {
+      flex: 2;
+    }
   }
   
   &__link {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: .3rem .5rem;
     background-color: #000;
     color: #fff;
     font-family: var(--font-heading);
     font-size: 1rem;
-    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color .3s ease, color .3s ease;
+    white-space: nowrap;
     
-    &:not(&--current):hover {
-      background-color: var(--col-accent-subtle);
-      color: #000;
-    }
-
+    &:hover,
     &--current {
       background-color: var(--col-accent);
       color: #fff;
@@ -50,9 +53,13 @@
   
   @media (--bp-sml) {
     &__list {
-      max-width: none;
+      flex-wrap: nowrap;
     }
-    
+
+    &__item {
+      flex-basis: 0%;
+    }
+
     &__link {
       font-size: .9rem;
       
@@ -81,25 +88,8 @@
   
   @media (--bp-x-med) {
     padding: 0 .5rem;
-    
-    &__list {
-      display: flex;
-      margin: 0 -1px;
-    }
-    
-    &__item {
-      flex: 5;
-      display: flex;
-      align-items: stretch;
-      margin: 0 1px;
-      
-      &--icon {
-        flex: 2;
-      }
-    }
-    
+
     &__link {
-      width: 100%;
       font-size: 1rem;
     }
     
@@ -109,7 +99,7 @@
     }
   }
   
-  @media (--bp-x-lge) {
+  @media (--bp-lge) {
     &__link {
       font-size: 1.2rem;
     }
