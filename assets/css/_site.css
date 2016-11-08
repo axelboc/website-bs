@@ -324,6 +324,8 @@ blockquote {
   &__cite {
     font-style: normal;
     font-weight: bold;
+    line-height: 1.68; /* match quote text: 1.4 * 1.2em */
+    white-space: nowrap;
     
     &::before {
       content: " — ";
@@ -343,6 +345,11 @@ blockquote {
     
     &--short {
       font-size: 1.2rem;
+      line-height: 1.5;
+
+      .quote__cite {
+        line-height: 1.8;
+      }
     }
   }
 }
