@@ -80,6 +80,7 @@
     font-size: 1.2rem;
     font-style: italic;
     font-weight: normal;
+    white-space: nowrap;
   }
   
   &__soon {
@@ -122,6 +123,10 @@
       &:last-child {
         border-left: 1px solid transparent;
       }
+    }
+    
+    &__title {
+      text-align: center;
     }
   }
 }
