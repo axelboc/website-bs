@@ -1,6 +1,6 @@
 //- Import functions and mixins
-include partials/_functions
-include partials/_mixins
+include partials/_functions.pug
+include partials/_mixins.pug
 
 -
   // Initialise the page object and alias some common info
@@ -24,7 +24,7 @@ html(lang=lang)
     if page.isHome && lang === 'en'
       link(rel="canonical", href="https://benightedsoul.com/")
     each code in config.languages
-      link(rel="alternate", hreflang=code, href="https://benightedsoul.com/#{code}/#{page.path.substr(4)}")
+      link(rel="alternate", hreflang=code, href=`https://benightedsoul.com/${code}/${page.path.substr(4)}`)
     
     //- Twitter Card data
     meta(name="twitter:card", content="summary")
@@ -37,7 +37,7 @@ html(lang=lang)
     //- Open Graph data
     meta(property="og:title", content=meta.title)
     meta(property="og:type", content="website")
-    meta(property="og:url", content="https://benightedsoul.com#{page.isHome && lang === 'en' ? '/' : page.path}")
+    meta(property="og:url", content=`https://benightedsoul.com${page.isHome && lang === 'en' ? '/' : page.path}`)
     meta(property="og:image", content=meta.image)
     meta(property="og:description", content=meta.description)
     meta(property="og:site_name", content="Benighted Soul")
@@ -57,8 +57,8 @@ html(lang=lang)
     div(hidden)
       include partials/_icons.svg
     
-    include partials/_header
-    include partials/_nav
+    include partials/_header.pug
+    include partials/_nav.pug
     
     if page.isSpecial
       block content
@@ -68,6 +68,5 @@ html(lang=lang)
           h1= d.title
           block content
       
-    include partials/_footer    
+    include partials/_footer.pug
     script(src="/js/index.js")
-    

@@ -1,4 +1,4 @@
-extends ../layout
+extends ../layout.pug
 
 block content
   
@@ -8,7 +8,7 @@ block content
       if ['studio-album', 'special-edition'].indexOf(release.type) > -1
         section.album.album--shop(itemscope, itemtype="http://schema.org/Product")
           h3.album__heading.album__heading--one.h3(itemprop="name")= release[lang + 'Title']
-          a.album__cover(href="/#{lang}/discography")
+          a.album__cover(href=`/${lang}/discography`)
             img(src=asset(release.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="", itemprop="image")
           div
             h3.album__heading.album__heading--two.h3(itemprop="name")= release[lang + 'Title']
@@ -24,7 +24,7 @@ block content
                     = leadSplit.slice(1).join(' ')
                   .album__buttons.button
                     each btn in btnGroup.fields.buttons
-                      a.album__button.button__link(href=btn.fields[lang + 'Url'])
+                      a.album__button.button__link(href=btn.fields[`${lang}Url`])
                         = btn.fields[lang + 'Text']
 
   section.merch
@@ -32,9 +32,8 @@ block content
     ul.merch__list.flex-grid
       each product in contentful.products
         li.merch__item.flex-grid__item(itemscope, itemtype="http://schema.org/Product")
-          a.merch__link(href="#{product.url}", itemprop="url")
-            .merch__photo(itemprop="image", style="background-image: url(#{asset(product.photo, { w: 370, h: 370, q: 80 })});")
+          a.merch__link(href=product.url, itemprop="url")
+            .merch__photo(itemprop="image", style=`background-image: url(${asset(product.photo, { w: 370, h: 370, q: 80 })});`)
             p.merch__title(itemprop="name")= product[lang + 'Title']
     .button.button--centered
       a.button__link(href=data.shared.shopUrl)= d.ctaShop
-    

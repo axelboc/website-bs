@@ -1,4 +1,4 @@
-extends ../layout
+extends ../layout.pug
 
 block content
   main.main.layout__max
@@ -9,7 +9,7 @@ block content
         h2.banner__heading.widget__heading!= d.banner.heading
         p!= d.banner.text
         .button.banner__cta
-          a.button__link(href="/#{lang}/shop")= d.banner.cta
+          a.button__link(href=`/${lang}/shop`)= d.banner.cta
         iframe.banner__player(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1NGM4fJaIO2TJsxhKjl8Bn", width="230", height="310", frameborder="0", allowtransparency="true")
   
     .two-column
@@ -33,7 +33,7 @@ block content
         h2.widget__heading.widget__heading--sub= d.news.heading
         .fb-feed__posts
           each post in records.fbPosts
-            a(href=(post.link || post.permalink_url || config.socialUrls.facebook), class='fb-feed__link')
+            a.fb-feed__link(href=(post.link || post.permalink_url || config.socialUrls.facebook))
               - config.moment.locale(lang);
               - momentFormat = lang === 'fr' ? 'D MMMM' : 'MMMM D';
               p.fb-feed__date= config.moment(post.created_time).format(momentFormat)
@@ -44,7 +44,7 @@ block content
                 - image = image || subatt && subatt.media && subatt.media.image;
                 if image
                   .fb-feed__image-wrap
-                    .fb-feed__image(style="max-width: " + image.width + "px; background-image: url(" + image.src + ");")
+                    .fb-feed__image(style=`max-width: ${image.width}px; background-image: url(${image.src});`)
                 - var messages = post.message.split('\n\n');
                 if messages.length === 2
                   p!= messages[lang === 'fr' ? 0 : 1]
@@ -52,4 +52,3 @@ block content
                   p!= post.message
         .fb-feed__cta.button
           a.button__link(href=config.socialUrls.facebook)= d.news.cta
-    

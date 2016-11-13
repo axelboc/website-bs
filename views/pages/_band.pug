@@ -1,4 +1,4 @@
-extends ../layout
+extends ../layout.pug
 
 block content
   .two-column.two-column--reverse
@@ -16,4 +16,3 @@ block content
   
     article.bio.two-column__main(itemprop="description")
       != config.marked(getSection('Biography'))
-    
