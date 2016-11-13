@@ -2,8 +2,12 @@
  * Members
  */
 .members {
-  &__list {
-    @media (--bp-lge) {
+  line-height: 1.4;
+  
+  @media (--bp-lge) {
+    margin-top: -6rem; /* MAGIC NUMBER: brings members sidebar up against h1 */
+
+    &__list {
       flex-wrap: nowrap;
       flex-direction: column;
       margin: 1rem 0 0;
@@ -13,13 +17,14 @@
 
 .member {
   width: 50%;
+  margin-bottom: .5rem;
   
   &__inner {
     max-width: 216px;
   }
   
   &__content {
-    margin-top: .5rem;
+    margin: .5rem 0;
     text-align: center;
   }
   
@@ -33,7 +38,9 @@
   
   @media (--bp-lge) {
     width: 100%;
+    margin-bottom: 1.5rem;
     padding: 0;
+    background-color: var(--col-accent-subtle);
   
     &__name {
       font-size: 1.1rem;
@@ -45,6 +52,8 @@
  * Biography
  */
 .bio {
+  text-align: justify;
+
   @media (--bp-lge) {
     margin-right: 2rem;
   }

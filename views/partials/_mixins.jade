@@ -26,7 +26,7 @@ mixin widgetLive(widgetData, classes)
         a.widget-live__poster__link(href=widgetData.poster.fields.file.url)
           img(src=asset(widgetData.poster, { w: 220, q: 80 }, width="220", alt="Poster"))
       .widget-live__content
-        div!= config.marked(widgetData[lang + (widgetData.isUpcoming ? 'Upcoming' : 'Past') + 'Text'])
+        != config.marked(widgetData[lang + (widgetData.isUpcoming ? 'Upcoming' : 'Past') + 'Text'])
         ul.widget-live__list
           each event in widgetData.events
             li.widget-live__item(class={ 'widget-live__item--past': !widgetData.isUpcoming })

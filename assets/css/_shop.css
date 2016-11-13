@@ -1,27 +1,17 @@
 /**
- * Album on the shop
+ * Album features
  */
-.album-shop {
-  margin: 0 0 2.5rem;
+.shop-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 1rem -.5rem 1rem 0;
+  padding: 0;
   
-  &__cover-link {
-    display: block;
-  }
-  
-  &__heading {
-    margin-bottom: .8rem;
-  }
-
-  &__features {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    margin: 0 0 1rem;
-    padding: 0;
-  }
-  
-  &__feature {
-    margin: .2rem 0;
+  &__item {
+    margin: 0 .5rem 0 0;
+    white-space: nowrap;
     
     &::before {
       content: "✓ ";
@@ -29,70 +19,41 @@
     }
   }
   
-  &__block > p {
-    margin: .5rem 0;
-  }
-  
-  &__buttons {
-    margin: .5rem 0 .5rem 0;
-  }
-  
-  &__button {
-    margin: 0 .5rem .5rem 0;
-  }
-  
-  @media (--bp-sml) {
-    &__cover-link {
-      float: left;
-      width: 180px;
-      margin: 0 1rem 1rem 0;
-    }
-    
-    &__heading {
-      margin-top: 0;
-    }
-    
-    &__blocks {
-      clear: left;
+  @media (--bp-sml) and (max-width: 39.99rem) {
+    flex-direction: column;
+
+    &__item {
+      margin: .2rem 0;
     }
   }
-  
-  @media (--bp-med) {
-    display: flex;
-    
-    &__cover-link {
-      flex: 0 0 auto;
-      float: none;
-    }
-    
-    &__features {
-      flex-direction: row;
-      margin: 0 -.5rem 1rem;
-    }
-    
-    &__feature {
-      margin: 0 .5rem;
-    }
-  }
-  
+
   @media (--bp-lge) {
-    &__cover-link {
-      width: auto;
+    margin: 1.5rem -1rem 1.5rem 0;
+    font-size: 1.1rem;
+
+    &__item {
+      margin-right: 1rem;
     }
-    
-    &__heading {
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-    }
-    
-    &__features {
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-    }
-    
-    &__block > p {
-      margin: 1rem 0;
-    }
+  }
+}
+
+/**
+ * Action blocks
+ */
+.shop-actions {
+  overflow: hidden; /* keep all blocks together when cover is floated */
+
+  /* fix partially hidden focus outline */
+  margin-left: -1px;
+  padding-left: 1px;
+  
+  &__text {
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+  
+  @media (--bp-sml) and (max-width: 39.99rem) {
+    clear: left;
   }
 }
 

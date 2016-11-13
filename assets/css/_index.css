@@ -28,37 +28,34 @@
  */
 .banner {
   position: relative;
-  min-height: 380px;
-  padding: 1.5rem 2rem 0;
+  padding: 2.5rem 1rem 8rem;
   background: var(--col-accent-subtle) url(/images/index/kenotic-bird--mob.png) no-repeat bottom right;
   
   &__heading {
-    margin-top: 0;
+    margin: 0 0 1rem;
   }
   
   &__cta {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
   }
   
   &__player {
     display: none;
   }
   
-  @media (--bp-x-med) {
-    padding: 2.5rem 1rem 0 48%;
-    background-position: top left;
-    background-size: auto 100%;
+  @media (min-width: 35em) {
+    min-height: 23rem;
+    padding: 3rem 1rem 0 14rem;
+    background-position: bottom -3rem left -7rem;
+    background-size: auto 110%;
     background-image: url(/images/index/kenotic-bird.png);
-  }
-  
-  @media (--bp-med) {
-    min-height: 450px;
-    padding: 4rem 2rem 0 52%;
   }
   
   @media (--bp-lge) {
     min-height: 501px;
-    padding: 5rem 2rem 0 42%;
+    padding: 4.5rem 1rem 0 24rem;
+    background-position: bottom left;
+    background-size: auto 100%;
     
     &__player {
       position: absolute;
@@ -66,6 +63,10 @@
       right: 0;
       display: block;
     }
+  }
+  
+  @media (min-width: 65em) {
+    padding: 4.5rem 1rem 0 26rem;
   }
 }
 
@@ -79,7 +80,7 @@
     font-size: 1.2rem;
     font-style: italic;
     font-weight: normal;
-    text-align: center;
+    white-space: nowrap;
   }
   
   &__soon {
@@ -96,7 +97,17 @@
       border-bottom: 1px solid #fff;
     }
   }
-  
+
+  &__video > .video {
+    margin: 0;
+  }
+
+  @media (max-width: 39.99em) {
+    &__chapter:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
   @media (--bp-x-med) {
     &__chapters {
       display: flex;
@@ -114,8 +125,8 @@
       }
     }
     
-    &__video {
-      margin: 0;
+    &__title {
+      text-align: center;
     }
   }
 }
@@ -275,7 +286,7 @@
   }
   
   &__message {
-    font-size: .9rem;
+    font-size: .85rem;
     
     & > p:first-of-type {
       margin: .5rem 0 .25rem;
