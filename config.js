@@ -36,6 +36,7 @@ config.moment.locale('fr', {
 
 // Globs for Roots to ignore when compiling
 config.ignores = [
+  '.*',
   '.*/**',
   '.env',
   '*.md',
