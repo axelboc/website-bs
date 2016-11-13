@@ -63,7 +63,6 @@
     "postcss-nested": "^1.0.0",
     "pug": "^2.0.0-beta6",
     "pug-lint": "^2.3.0",
-    "pug-lint-config-migration-v2": "^1.0.2",
     "roots": "~4.1.1",
     "roots-browserify": "~0.5.0",
     "roots-config": "~0.0.2",
