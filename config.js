@@ -42,7 +42,7 @@ config.ignores = [
   'config.js',
   'assets/css/_*',
   'views/**/_*',
-  'views/layout.jade'
+  'views/layout.pug'
 ];
 
 // Globs for Roots to ignore when watching
