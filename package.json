@@ -13,6 +13,7 @@
     "npm": "3.10.3"
   },
   "scripts": {
+    "prestart": "nvm use 6.5.0",
     "start": "roots watch",
     "clean": "roots clean",
     "build": "roots compile",
