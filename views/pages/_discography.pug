@@ -1,8 +1,8 @@
-extends ../layout
+extends ../layout.pug
 
 block content
   - var disco = data.discography
-  
+
   section
     h2= d.headings.albums
     each album in contentful.releases
@@ -24,7 +24,7 @@ block content
             if special
               .special: p!= config.marked(special)
             .album__credits!= config.marked(album[lang + 'Credits'])
-  
+
   section.releases
     h2= d.headings.other
     ol.releases__list.flex-grid
@@ -36,7 +36,6 @@ block content
             p.release__content
               - var releaseDate = config.moment(release.releaseDate).format('YYYY');
               strong.release__title= release[lang + 'Title']
-              |  
+              |
               span= releaseDate + ', ' + disco[lang].releaseTypes[release.type]
-    
-    
+

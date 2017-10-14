@@ -1,14 +1,14 @@
-extends ../layout
+extends ../layout.pug
 
 block content
   #thank-you.success
     .success__message
       p!= d.thankYou
-  
+
   .contact__wrap
     p!= d.intro
 
-    form.contact(name="contact", action="/#{lang}/contact#thank-you", netlify, netlify-honeypot="yum")
+    form.contact(name="contact", action=`/${lang}/contact#thank-you`, netlify, netlify-honeypot="yum")
       fieldset.contact__inner
         .contact__info
           label.contact__label(for="name")= d.form.name

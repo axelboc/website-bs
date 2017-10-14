@@ -1,8 +1,8 @@
-extends ../layout
+extends ../layout.pug
 
 block content
   .two-column.two-column--reverse
-  
+
     aside.members.two-column__sidebar
       ul.members__list.flex-grid
         each member in contentful.members
@@ -11,9 +11,8 @@ block content
               img.member__img(src!=asset(member.photo), alt=member.pseudo, itemprop="image")
               p.member__content
                 strong.member__name(itemprop="name")= member.name
-                |  
+                |
                 span(itemprop="jobTitle")= member[lang + 'Role']
-  
+
     article.bio.two-column__main(itemprop="description")
       != config.marked(getSection('Biography'))
-    

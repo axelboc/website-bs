@@ -1,6 +1,6 @@
 header.header.layout__max
   +logoWrap
-    a.logo__link(href="/#{lang}/")&attributes(getSchemaAttr('logoLink'))
+    a.logo__link(href=`/${lang}/`)&attributes(getSchemaAttr('logoLink'))
       img.logo__img(src="/images/logo.png", width="477", height="150", alt=data.index[lang].title)&attributes(getSchemaAttr('logoImg'))
 
   ul.social.header__social
@@ -17,4 +17,4 @@ header.header.layout__max
             if lang === code
               span.languages__link.languages__link--current(title=label)= code.toUpperCase()
             else
-              a.languages__link(href="/#{code}/#{page.path.substr(4)}", title=label)= code.toUpperCase()
+              a.languages__link(href=`/${code}/${page.path.substr(4)}`, title=label)= code.toUpperCase()
