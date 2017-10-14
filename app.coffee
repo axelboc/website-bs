@@ -24,7 +24,7 @@ module.exports =
     browserify config.browserify
   ]
   postcss: config.postcss
-  jade:
+  pug:
     pretty: true
   server:
     clean_urls: true
