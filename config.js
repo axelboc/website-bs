@@ -1,5 +1,5 @@
 // Load environment configuration
-require('dotenv').load({ silent: true });
+require('dotenv').config();
 var FACEBOOK_ACCESS_TOKEN = process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET;
 
 // Load initial config from package.json
@@ -36,13 +36,13 @@ config.moment.locale('fr', {
 
 // Globs for Roots to ignore when compiling
 config.ignores = [
+  '.*',
   '.*/**',
-  '.env',
   '*.md',
   'config.js',
   'assets/css/_*',
   'views/**/_*',
-  'views/layout.jade'
+  'views/layout.pug'
 ];
 
 // Globs for Roots to ignore when watching

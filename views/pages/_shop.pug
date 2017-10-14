@@ -1,40 +1,39 @@
-extends ../layout
+extends ../layout.pug
 
 block content
-  
+
   section
     h2= d.headings.albums
     each release in contentful.releases
       if ['studio-album', 'special-edition'].indexOf(release.type) > -1
         section.album.album--shop(itemscope, itemtype="http://schema.org/Product")
-          h3.album__heading.album__heading--one.h3(itemprop="name")= release[lang + 'Title']
-          a.album__cover(href="/#{lang}/discography")
+          h3.album__heading.album__heading--one.h3(itemprop="name")= release[`${lang}Title`]
+          a.album__cover(href=`/${lang}/discography`)
             img(src=asset(release.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="", itemprop="image")
           div
-            h3.album__heading.album__heading--two.h3(itemprop="name")= release[lang + 'Title']
+            h3.album__heading.album__heading--two.h3(itemprop="name")= release[`${lang}Title`]
             ul.shop-features(itemprop="description")
-              each feature in release[lang + 'ShopFeatures']
+              each feature in release[`${lang}ShopFeatures`]
                 li.shop-features__item= feature
             .shop-actions
               each btnGroup in release.shopButtonGroups
                 .shop-actions__item
-                  - var leadSplit = btnGroup.fields[lang + 'Lead'].split(' ');
+                  - var leadSplit = btnGroup.fields[`${lang}Lead`].split(' ');
                   p.shop-actions__text
-                    strong= leadSplit[0] + ' '
+                    strong= `${leadSplit[0]} `
                     = leadSplit.slice(1).join(' ')
                   .album__buttons.button
                     each btn in btnGroup.fields.buttons
-                      a.album__button.button__link(href=btn.fields[lang + 'Url'])
-                        = btn.fields[lang + 'Text']
+                      a.album__button.button__link(href=btn.fields[`${lang}Url`])
+                        = btn.fields[`${lang}Text`]
 
   section.merch
     h2= d.headings.merch
     ul.merch__list.flex-grid
       each product in contentful.products
         li.merch__item.flex-grid__item(itemscope, itemtype="http://schema.org/Product")
-          a.merch__link(href="#{product.url}", itemprop="url")
-            .merch__photo(itemprop="image", style="background-image: url(#{asset(product.photo, { w: 370, h: 370, q: 80 })});")
-            p.merch__title(itemprop="name")= product[lang + 'Title']
+          a.merch__link(href=product.url, itemprop="url")
+            .merch__photo(itemprop="image", style=`background-image: url(${asset(product.photo, { w: 370, h: 370, q: 80 })});`)
+            p.merch__title(itemprop="name")= product[`${lang}Title`]
     .button.button--centered
       a.button__link(href=data.shared.shopUrl)= d.ctaShop
-    

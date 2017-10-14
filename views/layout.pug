@@ -1,6 +1,6 @@
 //- Import functions and mixins
-include partials/_functions
-include partials/_mixins
+include partials/_functions.pug
+include partials/_mixins.pug
 
 -
   // Initialise the page object and alias some common info
@@ -18,14 +18,14 @@ html(lang=lang)
   head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    
+
     title= meta.title
     meta(name="description", content=meta.description)
     if page.isHome && lang === 'en'
       link(rel="canonical", href="https://benightedsoul.com/")
     each code in config.languages
-      link(rel="alternate", hreflang=code, href="https://benightedsoul.com/#{code}/#{page.path.substr(4)}")
-    
+      link(rel="alternate", hreflang=code, href=`https://benightedsoul.com/${code}/${page.path.substr(4)}`)
+
     //- Twitter Card data
     meta(name="twitter:card", content="summary")
     meta(name="twitter:site", content="@benightedsoul")
@@ -37,29 +37,29 @@ html(lang=lang)
     //- Open Graph data
     meta(property="og:title", content=meta.title)
     meta(property="og:type", content="website")
-    meta(property="og:url", content="https://benightedsoul.com#{page.isHome && lang === 'en' ? '/' : page.path}")
+    meta(property="og:url", content=`https://benightedsoul.com${page.isHome && lang === 'en' ? '/' : page.path}`)
     meta(property="og:image", content=meta.image)
     meta(property="og:description", content=meta.description)
     meta(property="og:site_name", content="Benighted Soul")
     meta(property="fb:admins", content="geraldine.benightedsoul")
-    
+
     //- Google+
     link(rel="publisher", href="https://plus.google.com/+Benightedsoulofficial/")
-    
+
     link(rel="apple-touch-icon-precomposed", href="/favicon-196.png")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400,700")
     link(rel="stylesheet", href="/css/index.css")
-    
+
   body&attributes(getSchemaAttr('body'))
     if page.crumbs[0] === 'band'
       link(itemprop="sameAs", href="https://fr.wikipedia.org/wiki/Benighted_Soul")
-  
+
     div(hidden)
       include partials/_icons.svg
-    
-    include partials/_header
-    include partials/_nav
-    
+
+    include partials/_header.pug
+    include partials/_nav.pug
+
     if page.isSpecial
       block content
     else
@@ -67,7 +67,6 @@ html(lang=lang)
         .main__inner
           h1= d.title
           block content
-      
-    include partials/_footer    
+
+    include partials/_footer.pug
     script(src="/js/index.js")
-    

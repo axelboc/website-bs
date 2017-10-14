@@ -1,33 +1,33 @@
-extends ../layout
+extends ../layout.pug
 
 block content
 
   section#audio.audio
-    div.audio__inner
+    .audio__inner
       .audio__player
         iframe.audio__iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1NGM4fJaIO2TJsxhKjl8Bn", width="300", height="380", frameborder="0", allowtransparency="true")
       .audio__player.audio__player--minor
         iframe.audio__iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5nDZjlk3EwybWy9J27A0ei", width="300", height="380", frameborder="0", allowtransparency="true")
-      div.audio__listen
+      .audio__listen
         h2.audio__heading= d.listenText
         .audio__ctas.button
           a.button__link(href="https://play.spotify.com/artist/3MtjDKooE6Vf3g4uyeyX4L") Spotify
           a.button__link(href="http://www.deezer.com/artist/1416188") Deezer
           a.button__link(href="http://www.fnacjukebox.com/fr/artist/benighted-soul-983291") Fnac Jukebox
-  
+
   each playlist in contentful.videoPlaylists
     section.playlist
-      h2= playlist[lang + 'Title']
+      h2= playlist[`${lang}Title`]
       .playlist__inner
         each index in [1, 2]
           +video(playlist['video' + index], "640", "360")
         a.playlist__link(href=playlist.playlistUrl)= d.ctaPlaylist
   .button.button--centered.button--youtube
     a.button__link(href=config.socialUrls.youtube)= d.ctaYoutube
-    
+
   each gallery in contentful.photoGalleries
     section.gallery
-      h2= gallery[lang + 'Title']
+      h2= gallery[`${lang}Title`]
       ul.gallery__list.flex-grid
         each photo in gallery.photos
           li.gallery__item.flex-grid__item
