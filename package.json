@@ -9,11 +9,11 @@
     "url": "https://github.com/axelboc/website-bs"
   },
   "engines": {
-    "node": "6.5.0",
-    "npm": "3.10.3"
+    "node": "6.11.4",
+    "yarn": "*"
   },
   "scripts": {
-    "prestart": "nvm use 6.5.0",
+    "prestart": "nvm use 6.11.4",
     "start": "roots watch",
     "clean": "roots clean",
     "build": "roots compile",
