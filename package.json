@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Website of symphonic metal band Benighted Soul.",
   "author": "Axel Bocciarelli",
+  "private": true,
   "license": "LICENSE.md",
   "repository": {
     "type": "git",
