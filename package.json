@@ -50,13 +50,13 @@
     }
   },
   "dependencies": {
-    "normalize.css": "~5.0.0"
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-    "browserify": "^13.0.1",
+    "browserify": "^14.4.0",
     "cssnano": "^3.7.1",
-    "dotenv": "^2.0.0",
-    "marked": "^0.3.6",
+    "dotenv": "^4.0.0",
+    "marked": "~0.3.6",
     "moment": "^2.14.1",
     "postcss": "^5.0.21",
     "postcss-custom-media": "^5.0.1",

@@ -1,5 +1,5 @@
 // Load environment configuration
-require('dotenv').load({ silent: true });
+require('dotenv').config();
 var FACEBOOK_ACCESS_TOKEN = process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET;
 
 // Load initial config from package.json
