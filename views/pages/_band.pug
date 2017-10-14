@@ -12,7 +12,7 @@ block content
               p.member__content
                 strong.member__name(itemprop="name")= member.name
                 |
-                span(itemprop="jobTitle")= member[lang + 'Role']
+                span(itemprop="jobTitle")= member[`${lang}Role`]
 
     article.bio.two-column__main(itemprop="description")
       != config.marked(getSection('Biography'))

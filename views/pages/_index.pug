@@ -33,7 +33,7 @@ block content
         h2.widget__heading.widget__heading--sub= d.news.heading
         .fb-feed__posts
           each post in records.fbPosts
-            a(href=(post.link || post.permalink_url || config.socialUrls.facebook), class='fb-feed__link')
+            a.fb-feed__link(href=(post.link || post.permalink_url || config.socialUrls.facebook))
               - config.moment.locale(lang);
               - momentFormat = lang === 'fr' ? 'D MMMM' : 'MMMM D';
               p.fb-feed__date= config.moment(post.created_time).format(momentFormat)
@@ -44,7 +44,7 @@ block content
                 - image = image || subatt && subatt.media && subatt.media.image;
                 if image
                   .fb-feed__image-wrap
-                    .fb-feed__image(style="max-width: " + image.width + "px; background-image: url(" + image.src + ");")
+                    .fb-feed__image(style=`max-width: ${image.width}px; background-image: url('${image.src}');`)
                 - var messages = post.message.split('\n\n');
                 if messages.length === 2
                   p!= messages[lang === 'fr' ? 0 : 1]

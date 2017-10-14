@@ -3,12 +3,12 @@
   function initPage(path) {
     // Convert backslashes and remove html extension
     path = path.replace('\\', '/').replace('.html', '');
-    
+
     // Get the language and remaining breadcrumbs
     var isSpecial = !/^\/(en|fr)\//.test(path); // homepage, 404
     var lang = !isSpecial ? path.substr(1, 2) : 'en';
     var crumbs = path.substr(isSpecial ? 1 : 4).split('/');
-    
+
     // Use the crumbs to retrieve the page's data from the global `data` object
     var isHome = false;
     var pageData = crumbs.reduce(function (pageData, crumb, num) {
@@ -18,24 +18,24 @@
           isHome = isSpecial = true;
           return pageData.index;
         }
-        
+
         // Directory index (unused; for future-proofing only)
         // Remove need for an `index` key in the YAML file of the previous crumb by returning the same object
         return pageData;
       }
-      
+
       // Drill depper into the data object
       // - if `num` is 0, `crumb` refers to a YAML file
       // - otherwise, it refers to a key or sub-key inside a YAML file
       return pageData[crumb];
     }, data);
-    
+
     // Debugging
     if (!pageData || !pageData[lang]) {
       console.log(path, lang, crumbs);
       throw new Error('unable to retrieve page data');
     }
-    
+
     return {
       path: path.replace(/\/?index/, ''),
       lang: lang,
@@ -45,31 +45,30 @@
       data: pageData
     };
   }
-  
+
   // Get schema attributes definied in page data, under the `schema` key
   function getSchemaAttr(type) {
     return (page.data.schema && page.data.schema[type]) || {};
   }
-  
+
   // Translate a value with a dictionary
   // Useful for translating fields displayed as drop-down menus in Contentful
   function translate(value, dict) {
     if (dict && dict[value]) {
       return dict[value];
     }
-      
+
     return value;
   }
-  
+
   // Filter an array of objects by the value of one of their keys
   function filterByValue(arr, key, value) {
     return arr.filter(function (obj) {
       return obj[key] === value;
     });
   }
-  
+
   // Retrieve the localised content of a section by name
   function getSection(name) {
     return filterByValue(contentful.sections, 'name', name)[0][lang];
   }
-  

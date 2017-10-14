@@ -18,7 +18,8 @@
     "start": "roots watch",
     "clean": "roots clean",
     "build": "roots compile",
-    "prod": "roots compile -e production"
+    "prod": "roots compile -e production",
+    "lint": "pug-lint ."
   },
   "config": {
     "languages": [
@@ -64,8 +65,8 @@
     "postcss-nested": "^1.0.0",
     "pug": "^2.0.0-rc.4",
     "pug-lint": "^2.5.0",
-    "roots": "~5.0.0",
-    "roots-browserify": "~0.5.0",
+    "roots": "^5.2.0",
+    "roots-browserify": "^0.7.0",
     "roots-config": "~0.0.2",
     "roots-contentful": "~0.0.9",
     "roots-records": "~0.5.1",
