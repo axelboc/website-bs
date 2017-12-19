@@ -47,6 +47,10 @@
       "apiUrl": "https://graph.facebook.com/v2.5",
       "postsCount": 2,
       "query": "/benightedsoul?fields=posts.limit(5){id,created_time,type,message,link,permalink_url,attachments{type,media,subattachments{type, media}}}"
+    },
+    "contactFormUrls": {
+      "en": "https://benightedsoul.typeform.com/to/XAJm9N",
+      "fr": "https://benightedsoul.typeform.com/to/rDjTg2"
     }
   },
   "dependencies": {
