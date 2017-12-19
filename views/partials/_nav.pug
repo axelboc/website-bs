@@ -8,5 +8,5 @@ nav.nav.layout__max
         a.nav__link(class={ 'nav__link--current': page.crumbs[0] === item }, href=`/${lang}/${item}`)
           = data[item][lang].title
     li.nav__item.nav__item--icon
-      a.nav__link(class={ 'nav__link--current': page.crumbs[0] === 'contact' }, href=`/${lang}/contact`, title="Contact")
+      a.nav__link(class={ 'nav__link--current': page.crumbs[0] === 'contact' }, href=config.contactFormUrls[lang], title="Contact")
         +icon('contact', 'nav__icon')

@@ -68,16 +68,4 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://benightedsoul.com/en/shop" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://benightedsoul.com/fr/shop" />
   </url>
-  <url>
-    <loc>https://benightedsoul.com/en/contact</loc>
-    <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="en" href="https://benightedsoul.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://benightedsoul.com/fr/contact" />
-  </url>
-  <url>
-    <loc>https://benightedsoul.com/fr/contact</loc>
-    <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="en" href="https://benightedsoul.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://benightedsoul.com/fr/contact" />
-  </url>
 </urlset>
