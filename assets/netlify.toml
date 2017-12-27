@@ -1,0 +1,14 @@
+[[redirects]]
+from = "/cluster_b"
+to = "https://clusterb592481087.wordpress.com:443/"
+status = 200
+
+[[redirects]]
+from = "/pro"
+to = "https://benightedsoulproenglish.wordpress.com:443"
+status = 200
+
+[[redirects]]
+from = "/*"
+to = "/en/:splat"
+status = 200
