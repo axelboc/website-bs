@@ -7,7 +7,7 @@ header.header.layout__max
     each url, name in config.socialUrls
       li.social__item
         a.social__link(href=url)
-          +icon(name, { 'social__icon': true, 'social__icon--smaller': name === 'googleplus' })
+          +icon(name, { 'social__icon': true })
           span.social__label= data.shared.social[name]
     li.social__item.languages
       ul.languages__list
@@ -18,3 +18,5 @@ header.header.layout__max
               span.languages__link.languages__link--current(title=label)= code.toUpperCase()
             else
               a.languages__link(href=`/${code}/${page.path.substr(4)}`, title=label)= code.toUpperCase()
+    li.social__item.social__item--fake
+    

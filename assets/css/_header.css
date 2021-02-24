@@ -82,14 +82,13 @@
     width: 80%;
     height: 80%;
     margin: 0 auto .1rem;
-    
-    &--smaller {
-      width: 75%;
-      height: 75%;
-    }
   }
   
   &__label {
+    display: none;
+  }
+
+  &__item--fake {
     display: none;
   }
   
@@ -102,11 +101,6 @@
     &__icon {
       width: 65%;
       height: 65%;
-      
-      &--smaller {
-        width: 60%;
-        height: 60%;
-      }
     }
   }
 
@@ -119,11 +113,6 @@
     &__icon {
       width: 60%;
       height: 60%;
-      
-      &--smaller {
-        width: 55%;
-        height: 55%;
-      }
     }
 
     &__label {
@@ -141,6 +130,19 @@
       width: 4.8rem;
       height: 4.8rem;
       margin: .2rem 0;
+
+      &:nth-child(-n+3) {
+        order: 0;
+      }
+
+      &:nth-child(n+3) {
+        order: 2;
+      }
+      
+      &--fake {
+        display: block;
+        order: 1 !important;
+      }
     }
   }
 }
