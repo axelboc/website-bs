@@ -27,4 +27,5 @@ block content
                     .video__inner.widget-clips__soon
                       p= video.soon
 
-        +widgetLive(homepage.widgets[0].fields, "widget--left-col clearfix")
+        if homepage.widgets
+          +widgetLive(homepage.widgets[0].fields, "widget--left-col clearfix")
