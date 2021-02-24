@@ -355,9 +355,9 @@ blockquote {
 }
 
 /**
- * Kenotic divider
+ * Divider
  */
-.kenotic-divider{
+.divider{
   color: #1a1a1a;
 
   &::before {

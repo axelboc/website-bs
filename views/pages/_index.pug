@@ -7,23 +7,23 @@ block content
     section.banner.widget.clearfix
       .banner__inner
         h2.banner__heading.widget__heading!= d.banner.heading
-        p!= d.banner.text
+        //- p!= d.banner.text
         .button.banner__cta
-          a.button__link(href=`/${lang}/shop`)= d.banner.cta
+          a.button__link(href=d.banner.link)= d.banner.cta
         iframe.banner__player(src="https://open.spotify.com/embed/album/0By3jmOpnrdxfhf8oHQAWu", width="230", height="310", frameborder="0", allowtransparency="true")
 
     section.widget-clips.widget.clearfix
-      h2.widget__heading.widget__heading--sub!= d.clips.heading
+      //- h2.widget__heading.widget__heading--sub!= d.clips.heading
       .widget-clips__chapters
         each video in d.clips.videos
           .widget-clips__chapter
-            h3.widget-clips__title!= video.title
             .widget-clips__video
               if video.url
                 +video(video.url, "640", "360")
               else
                 .video__inner.widget-clips__soon
                   p= video.soon
+            p.widget-clips__title!= video.title
 
     if homepage.widgets
       +widgetLive(homepage.widgets[0].fields, "clearfix")

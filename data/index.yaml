@@ -3,33 +3,34 @@ en:
   titleSuffix: Official Website
   description: Official website of Benighted Soul, the French symphonic and progressive metal band.
   banner:
-    heading: Kenotic<strong class="kenotic-divider">Bonus Edition&nbsp;2015</strong>
-    text: New <strong>digital release</strong> with <strong>2 bonus tracks</strong>.
-    cta: Download it now
+    heading: <strong>Cluster_B</strong><span class="divider">Out Now</span>
+    # text: 
+    cta: Get it from our store
+    link: https://www.difymusic.com/benightedsoul#!cd-cluster-b
   news:
     heading: Latest news
     cta: Stay tuned
   clips:
-    heading: Music videos<strong class="kenotic-divider">Kenotic</strong>
+    # heading: Music videos
     videos:
-      - title: Chapter 1 - <strong>Halcyon Days</strong>
+      - title: Cluster_B - <strong>Chameleon</strong>
+        url: https://www.youtube.com/watch?v=x_nSnRV2UGM
+      - title: Kenotic - <strong>Martingale</strong>
         url: https://www.youtube.com/watch?v=wjbkqMicYz4
-      - title: Chapter 2 - <strong>Martingale</strong>
-        url: https://www.youtube.com/watch?v=83WKeJYIujI
   
 fr:
   title: Benighted Soul
   titleSuffix: Site Officiel
   description: Site officiel de Benighted Soul, le groupe français de metal symphonique et progressif.
   banner:
-    heading: Kenotic<strong class="kenotic-divider">Edition Bonus&nbsp;2015</strong>
+    heading: Kenotic<strong class="divider">Edition Bonus&nbsp;2015</strong>
     text: <strong>Sortie digitale</strong> avec <strong>2 pistes bonus</strong>.
     cta: Télécharger
   news:
     heading: Dernières actus
     cta: Toutes les actus
   clips:
-    heading: Clips officiels<strong class="kenotic-divider">Kenotic</strong>
+    heading: Clips officiels<strong class="divider">Kenotic</strong>
     videos:
       - title: Chapitre 1 - <strong>Halcyon Days</strong>
         url: https://www.youtube.com/watch?v=wjbkqMicYz4
