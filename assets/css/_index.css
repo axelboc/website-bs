@@ -15,12 +15,6 @@
       font-size: 1.6rem;
     }
   }
-  
-  @media (--bp-lge) {
-    &--left-col {
-      margin-right: 1.5rem;
-    }
-  }
 }
 
 /**
