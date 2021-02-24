@@ -5,15 +5,14 @@ block content
   section#audio.audio
     .audio__inner
       .audio__player
-        iframe.audio__iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1NGM4fJaIO2TJsxhKjl8Bn", width="300", height="380", frameborder="0", allowtransparency="true")
+        iframe.audio__iframe(src="https://open.spotify.com/embed/album/0By3jmOpnrdxfhf8oHQAWu", width="300", height="380", frameborder="0", allowtransparency="true" allow="encrypted-media")
       .audio__player.audio__player--minor
-        iframe.audio__iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5nDZjlk3EwybWy9J27A0ei", width="300", height="380", frameborder="0", allowtransparency="true")
+        iframe.audio__iframe(src="https://open.spotify.com/embed/album/1NGM4fJaIO2TJsxhKjl8Bn", width="300", height="380", frameborder="0", allowtransparency="true" allow="encrypted-media")
       .audio__listen
         h2.audio__heading= d.listenText
         .audio__ctas.button
           a.button__link(href="https://play.spotify.com/artist/3MtjDKooE6Vf3g4uyeyX4L") Spotify
           a.button__link(href="http://www.deezer.com/artist/1416188") Deezer
-          a.button__link(href="http://www.fnacjukebox.com/fr/artist/benighted-soul-983291") Fnac Jukebox
 
   each playlist in contentful.videoPlaylists
     section.playlist
