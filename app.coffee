@@ -2,7 +2,6 @@ config = require './config'
 
 # Extensions
 rootsConfig = require 'roots-config'
-records = require 'roots-records'
 yaml = require 'roots-yaml'
 contentful = require 'roots-contentful'
 browserify = require 'roots-browserify'
@@ -18,7 +17,6 @@ module.exports =
   dump_dirs: config.dumpDirs
   extensions: [
     rootsConfig config
-    records config.records
     yaml config.yaml
     contentful config.contentful
     browserify config.browserify

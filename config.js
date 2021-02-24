@@ -1,6 +1,5 @@
 // Load environment configuration
 require('dotenv').config();
-var FACEBOOK_ACCESS_TOKEN = process.env.FACEBOOK_APP_ID + '|' + process.env.FACEBOOK_SECRET;
 
 // Load initial config from package.json
 var config = require('./package.json').config;
@@ -50,25 +49,6 @@ config.watcherIgnores = [];
 
 // Transparent root folders (e.g. assets/images/** -> output/images/**)
 config.dumpDirs = ['assets', 'data', 'views'];
-
-
-/**
- * Roots extensions.
- */
-
-// Records
-config.records = {
-  // Facebook posts
-  fbPosts: {
-    url: (config.facebook.apiUrl + config.facebook.query + '&access_token=' + FACEBOOK_ACCESS_TOKEN),
-    hook: function (data) {
-      console.log(data.posts.data);
-      return data.posts.data.filter(function (post) {
-        return !!post.message;
-      }).slice(0, config.facebook.postsCount);
-    }
-  }
-};
 
 // YAML
 config.yaml = {

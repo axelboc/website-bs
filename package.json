@@ -10,11 +10,10 @@
     "url": "https://github.com/axelboc/website-bs"
   },
   "engines": {
-    "node": "6.11.4",
+    "node": "6.*",
     "yarn": "*"
   },
   "scripts": {
-    "prestart": "nvm use 6.11.4",
     "start": "roots watch",
     "clean": "roots clean",
     "build": "roots compile",
@@ -43,11 +42,6 @@
       "videoPlaylist": "FHhldBBlWmoG42s8meawu",
       "widgetLive": "4z9xsNLGa4uimCiigQQ2Ow"
     },
-    "facebook": {
-      "apiUrl": "https://graph.facebook.com/v2.12",
-      "postsCount": 2,
-      "query": "/benightedsoul?fields=posts.limit(5){id,created_time,type,message,link,permalink_url,attachments{type,media,subattachments{type, media}}}"
-    },
     "contactFormUrls": {
       "en": "https://benightedsoul.typeform.com/to/XAJm9N",
       "fr": "https://benightedsoul.typeform.com/to/rDjTg2"
@@ -73,7 +67,6 @@
     "roots-browserify": "^0.7.0",
     "roots-config": "~0.0.2",
     "roots-contentful": "~0.0.9",
-    "roots-records": "~0.5.1",
     "roots-yaml": "~0.0.4"
   }
 }

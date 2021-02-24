@@ -16,7 +16,7 @@ block content
               each feature in release[`${lang}ShopFeatures`]
                 li.shop-features__item= feature
             .shop-actions
-              each btnGroup in release.shopButtonGroups
+              each btnGroup in release.shopButtonGroups || []
                 .shop-actions__item
                   - var leadSplit = btnGroup.fields[`${lang}Lead`].split(' ');
                   p.shop-actions__text

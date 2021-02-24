@@ -12,14 +12,16 @@ block content
           img.album__cover(src=asset(album.cover, { w: 380, h: 380, q: 80 }), width="380", height="380", alt="", itemprop="image")
           .album__content
             h3.album__heading.album__heading--two.h3(itemprop="name")= album[`${lang}Title`]
-            - var quote = album.discographyQuote.fields;
-            - var quoteTxt = quote[`${lang}Quote`];
-            blockquote.quote(class=(quoteTxt.length < 200 ? 'quote--short' : null), itemprop="review", itemscope, itemtype="http://schema.org/Review")
-              p.quote__text(itemprop="reviewBody")= quoteTxt
-              cite.quote__cite(itemprop="author")= quote[`${lang}Source`]
-            .album__buttons.button
-              each btn in album.discographyButtonGroup.fields.buttons
-                a.album__button.button__link(href=btn.fields[`${lang}Url`])= btn.fields[`${lang}Text`]
+            if album.discographyQuote
+              - var quote = album.discographyQuote.fields;
+              - var quoteTxt = quote[`${lang}Quote`];
+              blockquote.quote(class=(quoteTxt.length < 200 ? 'quote--short' : null), itemprop="review", itemscope, itemtype="http://schema.org/Review")
+                p.quote__text(itemprop="reviewBody")= quoteTxt
+                cite.quote__cite(itemprop="author")= quote[`${lang}Source`]
+            if album.discographyButtonGroup
+              .album__buttons.button
+                each btn in album.discographyButtonGroup.fields.buttons
+                  a.album__button.button__link(href=btn.fields[`${lang}Url`])= btn.fields[`${lang}Text`]
             - var special = album[`${lang}DiscographySpecial`]
             if special
               .special: p!= config.marked(special)

@@ -15,7 +15,7 @@ Website of **Benighted Soul**, the French symphonic, progressive metal band. The
 - YSlow grade: **B** (84%)
 - Page load time: **5.6s**
 
-Note that the Spotify player is the only performance drain. The YouTube embeds are loaded on demand, and the rest of the page (including the Facebook feed) is entirely static.
+Note that the Spotify player is the only performance drain. The YouTube embeds are loaded on demand, and the rest of the page is entirely static.
 
 **Band** page (no third-party widget):
 
@@ -42,7 +42,3 @@ The site is available in two languages: English and French. The `views/pages` fo
 The layout detects the language code of the template being compiled (`en` or `fr`) from its path. The translations are then retrieved from the site's content thanks to the following conventions:
 - In YAML, the translations are simply nested under their language code.
 - In Contentful, each internationalised piece of content is represented with one field per language. The fields are named in this precise format: `<code><FieldName>`. For instance, the title of an album is represented with two fields named `enTitle` and `frTitle`; it can therefore be retrieved as follows: `album[`${lang}Title`]`.
-
-### Facebook posts
-
-The news widget on the homepage displays the most recent posts from the band's [Facebook page](https://www.facebook.com/benightedsoul/). These posts are retrieved at compile time from the Facebook Graph API with the help of the [`roots-records` extension](https://github.com/carrot/roots-records). The posts are then filtered, passed to the templating context and compiled into static HTML. The final piece of the puzzle combines a Netlify webhook with an [IFTTT](http://ifttt.com/) recipe to automatically rebuild and deploy the site whenever a new post is created on the Facebook page.
